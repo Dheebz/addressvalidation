@@ -1,0 +1,8 @@
+.env
+**/bin/
+**/obj/
+.vs/
+.idea/
+quality/coverage/
+__pycache__/
+.ruff_cache/

@@ -1,0 +1,8162 @@
+{
+  "label": "baseline",
+  "startedUtc": "2026-10-04T03:49:07.029408+00:00",
+  "finishedUtc": "2026-10-04T03:49:52.060557+00:00",
+  "targetRate": 20.0,
+  "concurrency": 8,
+  "durationSeconds": 45.03,
+  "requests": 900,
+  "successes": 900,
+  "errors": 0,
+  "actualRps": 20.0,
+  "p50Ms": 6.2,
+  "p95Ms": 31.3,
+  "p99Ms": 57.8,
+  "longestSuccessGapSeconds": 0.18,
+  "statusCounts": {
+    "200": 900
+  },
+  "instanceCounts": {
+    "api-b": 450,
+    "api-a": 450
+  },
+  "byOperation": {
+    "validate": {
+      "requests": 180,
+      "errors": 0,
+      "p50Ms": 6.0,
+      "p95Ms": 14.8,
+      "p99Ms": 57.8
+    },
+    "id": {
+      "requests": 180,
+      "errors": 0,
+      "p50Ms": 5.5,
+      "p95Ms": 22.8,
+      "p99Ms": 55.7
+    },
+    "validate_negative": {
+      "requests": 180,
+      "errors": 0,
+      "p50Ms": 25.6,
+      "p95Ms": 43.8,
+      "p99Ms": 116.2
+    },
+    "match": {
+      "requests": 180,
+      "errors": 0,
+      "p50Ms": 5.8,
+      "p95Ms": 13.9,
+      "p99Ms": 37.6
+    },
+    "suggest": {
+      "requests": 180,
+      "errors": 0,
+      "p50Ms": 6.0,
+      "p95Ms": 16.1,
+      "p99Ms": 76.3
+    }
+  },
+  "samples": [
+    {
+      "at": "2026-10-04T03:49:07.066557+00:00",
+      "second": 0.037,
+      "operation": "id",
+      "status": 200,
+      "instance": "api-b",
+      "latencyMs": 31.6,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:07.188219+00:00",
+      "second": 0.158,
+      "operation": "match",
+      "status": 200,
+      "instance": "api-b",
+      "latencyMs": 8.0,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:07.191453+00:00",
+      "second": 0.162,
+      "operation": "validate",
+      "status": 200,
+      "instance": "api-a",
+      "latencyMs": 11.0,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:07.209384+00:00",
+      "second": 0.179,
+      "operation": "suggest",
+      "status": 200,
+      "instance": "api-a",
+      "latencyMs": 29.4,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:07.332264+00:00",
+      "second": 0.302,
+      "operation": "id",
+      "status": 200,
+      "instance": "api-a",
+      "latencyMs": 6.0,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:07.373334+00:00",
+      "second": 0.343,
+      "operation": "validate_negative",
+      "status": 200,
+      "instance": "api-b",
+      "latencyMs": 47.4,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:07.402278+00:00",
+      "second": 0.372,
+      "operation": "suggest",
+      "status": 200,
+      "instance": "api-a",
+      "latencyMs": 6.3,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:07.401540+00:00",
+      "second": 0.372,
+      "operation": "match",
+      "status": 200,
+      "instance": "api-b",
+      "latencyMs": 5.3,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:07.524890+00:00",
+      "second": 0.495,
+      "operation": "validate",
+      "status": 200,
+      "instance": "api-a",
+      "latencyMs": 7.3,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:07.544357+00:00",
+      "second": 0.514,
+      "operation": "validate_negative",
+      "status": 200,
+      "instance": "api-b",
+      "latencyMs": 26.5,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:07.636105+00:00",
+      "second": 0.606,
+      "operation": "id",
+      "status": 200,
+      "instance": "api-a",
+      "latencyMs": 9.0,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:07.643111+00:00",
+      "second": 0.613,
+      "operation": "suggest",
+      "status": 200,
+      "instance": "api-b",
+      "latencyMs": 15.9,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:07.694382+00:00",
+      "second": 0.664,
+      "operation": "match",
+      "status": 200,
+      "instance": "api-b",
+      "latencyMs": 8.6,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:07.695146+00:00",
+      "second": 0.665,
+      "operation": "validate",
+      "status": 200,
+      "instance": "api-a",
+      "latencyMs": 9.0,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:07.838167+00:00",
+      "second": 0.808,
+      "operation": "id",
+      "status": 200,
+      "instance": "api-a",
+      "latencyMs": 7.6,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:07.872082+00:00",
+      "second": 0.842,
+      "operation": "validate_negative",
+      "status": 200,
+      "instance": "api-b",
+      "latencyMs": 43.2,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:07.890393+00:00",
+      "second": 0.86,
+      "operation": "suggest",
+      "status": 200,
+      "instance": "api-b",
+      "latencyMs": 26.7,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:07.979764+00:00",
+      "second": 0.95,
+      "operation": "match",
+      "status": 200,
+      "instance": "api-b",
+      "latencyMs": 11.7,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:07.980026+00:00",
+      "second": 0.95,
+      "operation": "validate",
+      "status": 200,
+      "instance": "api-a",
+      "latencyMs": 11.5,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:08.087346+00:00",
+      "second": 1.057,
+      "operation": "id",
+      "status": 200,
+      "instance": "api-a",
+      "latencyMs": 9.3,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:08.106400+00:00",
+      "second": 1.076,
+      "operation": "validate_negative",
+      "status": 200,
+      "instance": "api-b",
+      "latencyMs": 28.6,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:08.155756+00:00",
+      "second": 1.126,
+      "operation": "suggest",
+      "status": 200,
+      "instance": "api-b",
+      "latencyMs": 6.8,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:08.155485+00:00",
+      "second": 1.126,
+      "operation": "match",
+      "status": 200,
+      "instance": "api-a",
+      "latencyMs": 6.2,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:08.260290+00:00",
+      "second": 1.23,
+      "operation": "validate",
+      "status": 200,
+      "instance": "api-a",
+      "latencyMs": 6.5,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:08.278592+00:00",
+      "second": 1.249,
+      "operation": "validate_negative",
+      "status": 200,
+      "instance": "api-b",
+      "latencyMs": 24.4,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:08.373598+00:00",
+      "second": 1.344,
+      "operation": "suggest",
+      "status": 200,
+      "instance": "api-b",
+      "latencyMs": 15.1,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:08.374592+00:00",
+      "second": 1.345,
+      "operation": "id",
+      "status": 200,
+      "instance": "api-a",
+      "latencyMs": 16.2,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:08.430235+00:00",
+      "second": 1.4,
+      "operation": "match",
+      "status": 200,
+      "instance": "api-a",
+      "latencyMs": 5.8,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:08.495703+00:00",
+      "second": 1.466,
+      "operation": "validate",
+      "status": 200,
+      "instance": "api-a",
+      "latencyMs": 6.0,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:08.515510+00:00",
+      "second": 1.486,
+      "operation": "validate_negative",
+      "status": 200,
+      "instance": "api-b",
+      "latencyMs": 25.6,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:08.623886+00:00",
+      "second": 1.594,
+      "operation": "suggest",
+      "status": 200,
+      "instance": "api-b",
+      "latencyMs": 7.3,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:08.623767+00:00",
+      "second": 1.594,
+      "operation": "id",
+      "status": 200,
+      "instance": "api-a",
+      "latencyMs": 7.4,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:08.732340+00:00",
+      "second": 1.702,
+      "operation": "validate",
+      "status": 200,
+      "instance": "api-b",
+      "latencyMs": 6.0,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:08.731696+00:00",
+      "second": 1.702,
+      "operation": "match",
+      "status": 200,
+      "instance": "api-a",
+      "latencyMs": 5.5,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:08.824890+00:00",
+      "second": 1.795,
+      "operation": "id",
+      "status": 200,
+      "instance": "api-a",
+      "latencyMs": 5.5,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:08.850770+00:00",
+      "second": 1.821,
+      "operation": "validate_negative",
+      "status": 200,
+      "instance": "api-b",
+      "latencyMs": 31.7,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:08.927194+00:00",
+      "second": 1.897,
+      "operation": "match",
+      "status": 200,
+      "instance": "api-b",
+      "latencyMs": 6.2,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:08.927745+00:00",
+      "second": 1.898,
+      "operation": "suggest",
+      "status": 200,
+      "instance": "api-a",
+      "latencyMs": 7.1,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:09.019297+00:00",
+      "second": 1.989,
+      "operation": "validate",
+      "status": 200,
+      "instance": "api-b",
+      "latencyMs": 6.2,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:09.037366+00:00",
+      "second": 2.007,
+      "operation": "validate_negative",
+      "status": 200,
+      "instance": "api-a",
+      "latencyMs": 24.0,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:09.132821+00:00",
+      "second": 2.103,
+      "operation": "id",
+      "status": 200,
+      "instance": "api-a",
+      "latencyMs": 4.5,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:09.134075+00:00",
+      "second": 2.104,
+      "operation": "suggest",
+      "status": 200,
+      "instance": "api-b",
+      "latencyMs": 5.4,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:09.188147+00:00",
+      "second": 2.158,
+      "operation": "validate",
+      "status": 200,
+      "instance": "api-b",
+      "latencyMs": 6.3,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:09.187778+00:00",
+      "second": 2.158,
+      "operation": "match",
+      "status": 200,
+      "instance": "api-a",
+      "latencyMs": 6.1,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:09.310186+00:00",
+      "second": 2.28,
+      "operation": "id",
+      "status": 200,
+      "instance": "api-a",
+      "latencyMs": 6.3,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:09.333364+00:00",
+      "second": 2.303,
+      "operation": "validate_negative",
+      "status": 200,
+      "instance": "api-b",
+      "latencyMs": 29.6,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:09.405207+00:00",
+      "second": 2.375,
+      "operation": "match",
+      "status": 200,
+      "instance": "api-b",
+      "latencyMs": 6.1,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:09.405138+00:00",
+      "second": 2.375,
+      "operation": "suggest",
+      "status": 200,
+      "instance": "api-a",
+      "latencyMs": 6.3,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:09.510004+00:00",
+      "second": 2.48,
+      "operation": "validate",
+      "status": 200,
+      "instance": "api-b",
+      "latencyMs": 7.2,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:09.531457+00:00",
+      "second": 2.502,
+      "operation": "validate_negative",
+      "status": 200,
+      "instance": "api-a",
+      "latencyMs": 28.2,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:09.590469+00:00",
+      "second": 2.561,
+      "operation": "id",
+      "status": 200,
+      "instance": "api-b",
+      "latencyMs": 7.5,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:09.591807+00:00",
+      "second": 2.562,
+      "operation": "suggest",
+      "status": 200,
+      "instance": "api-a",
+      "latencyMs": 8.5,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:09.749599+00:00",
+      "second": 2.72,
+      "operation": "validate",
+      "status": 200,
+      "instance": "api-a",
+      "latencyMs": 19.8,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:09.750755+00:00",
+      "second": 2.721,
+      "operation": "match",
+      "status": 200,
+      "instance": "api-b",
+      "latencyMs": 20.9,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:09.771371+00:00",
+      "second": 2.741,
+      "operation": "validate_negative",
+      "status": 200,
+      "instance": "api-b",
+      "latencyMs": 39.9,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:09.860066+00:00",
+      "second": 2.83,
+      "operation": "suggest",
+      "status": 200,
+      "instance": "api-a",
+      "latencyMs": 9.6,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:09.860178+00:00",
+      "second": 2.83,
+      "operation": "id",
+      "status": 200,
+      "instance": "api-b",
+      "latencyMs": 10.6,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:09.894491+00:00",
+      "second": 2.865,
+      "operation": "match",
+      "status": 200,
+      "instance": "api-a",
+      "latencyMs": 5.2,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:10.020535+00:00",
+      "second": 2.991,
+      "operation": "validate",
+      "status": 200,
+      "instance": "api-b",
+      "latencyMs": 8.9,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:10.043661+00:00",
+      "second": 3.014,
+      "operation": "validate_negative",
+      "status": 200,
+      "instance": "api-a",
+      "latencyMs": 31.0,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:10.135095+00:00",
+      "second": 3.105,
+      "operation": "suggest",
+      "status": 200,
+      "instance": "api-a",
+      "latencyMs": 7.5,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:10.134776+00:00",
+      "second": 3.105,
+      "operation": "id",
+      "status": 200,
+      "instance": "api-b",
+      "latencyMs": 7.5,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:10.147190+00:00",
+      "second": 3.117,
+      "operation": "match",
+      "status": 200,
+      "instance": "api-b",
+      "latencyMs": 5.6,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:10.270255+00:00",
+      "second": 3.24,
+      "operation": "validate",
+      "status": 200,
+      "instance": "api-b",
+      "latencyMs": 4.9,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:10.288008+00:00",
+      "second": 3.258,
+      "operation": "validate_negative",
+      "status": 200,
+      "instance": "api-a",
+      "latencyMs": 22.6,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:10.368514+00:00",
+      "second": 3.339,
+      "operation": "id",
+      "status": 200,
+      "instance": "api-b",
+      "latencyMs": 5.9,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:10.369116+00:00",
+      "second": 3.339,
+      "operation": "suggest",
+      "status": 200,
+      "instance": "api-a",
+      "latencyMs": 6.2,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:10.467176+00:00",
+      "second": 3.437,
+      "operation": "match",
+      "status": 200,
+      "instance": "api-b",
+      "latencyMs": 5.1,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:10.467747+00:00",
+      "second": 3.438,
+      "operation": "validate",
+      "status": 200,
+      "instance": "api-a",
+      "latencyMs": 5.3,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:10.601384+00:00",
+      "second": 3.571,
+      "operation": "id",
+      "status": 200,
+      "instance": "api-b",
+      "latencyMs": 22.1,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:10.601461+00:00",
+      "second": 3.572,
+      "operation": "suggest",
+      "status": 200,
+      "instance": "api-a",
+      "latencyMs": 20.2,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:10.621511+00:00",
+      "second": 3.592,
+      "operation": "validate_negative",
+      "status": 200,
+      "instance": "api-a",
+      "latencyMs": 42.5,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:10.737727+00:00",
+      "second": 3.708,
+      "operation": "validate",
+      "status": 200,
+      "instance": "api-b",
+      "latencyMs": 7.6,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:10.738121+00:00",
+      "second": 3.708,
+      "operation": "match",
+      "status": 200,
+      "instance": "api-b",
+      "latencyMs": 8.2,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:10.766695+00:00",
+      "second": 3.737,
+      "operation": "validate_negative",
+      "status": 200,
+      "instance": "api-a",
+      "latencyMs": 36.3,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:10.886029+00:00",
+      "second": 3.856,
+      "operation": "id",
+      "status": 200,
+      "instance": "api-b",
+      "latencyMs": 8.3,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:10.886155+00:00",
+      "second": 3.856,
+      "operation": "suggest",
+      "status": 200,
+      "instance": "api-a",
+      "latencyMs": 8.1,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:10.957325+00:00",
+      "second": 3.927,
+      "operation": "match",
+      "status": 200,
+      "instance": "api-a",
+      "latencyMs": 5.7,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:10.958148+00:00",
+      "second": 3.928,
+      "operation": "validate",
+      "status": 200,
+      "instance": "api-b",
+      "latencyMs": 6.2,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:11.079833+00:00",
+      "second": 4.05,
+      "operation": "id",
+      "status": 200,
+      "instance": "api-b",
+      "latencyMs": 4.5,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:11.097437+00:00",
+      "second": 4.068,
+      "operation": "validate_negative",
+      "status": 200,
+      "instance": "api-a",
+      "latencyMs": 22.3,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:11.182345+00:00",
+      "second": 4.152,
+      "operation": "suggest",
+      "status": 200,
+      "instance": "api-b",
+      "latencyMs": 6.0,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:11.182840+00:00",
+      "second": 4.153,
+      "operation": "match",
+      "status": 200,
+      "instance": "api-a",
+      "latencyMs": 6.2,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:11.188051+00:00",
+      "second": 4.158,
+      "operation": "validate",
+      "status": 200,
+      "instance": "api-a",
+      "latencyMs": 5.1,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:11.292932+00:00",
+      "second": 4.263,
+      "operation": "id",
+      "status": 200,
+      "instance": "api-a",
+      "latencyMs": 5.3,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:11.312563+00:00",
+      "second": 4.283,
+      "operation": "validate_negative",
+      "status": 200,
+      "instance": "api-b",
+      "latencyMs": 25.1,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:11.369575+00:00",
+      "second": 4.34,
+      "operation": "suggest",
+      "status": 200,
+      "instance": "api-b",
+      "latencyMs": 5.4,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:11.488958+00:00",
+      "second": 4.459,
+      "operation": "match",
+      "status": 200,
+      "instance": "api-b",
+      "latencyMs": 13.9,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:11.490266+00:00",
+      "second": 4.46,
+      "operation": "validate",
+      "status": 200,
+      "instance": "api-a",
+      "latencyMs": 14.9,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:11.542635+00:00",
+      "second": 4.513,
+      "operation": "id",
+      "status": 200,
+      "instance": "api-b",
+      "latencyMs": 4.6,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:11.564680+00:00",
+      "second": 4.535,
+      "operation": "validate_negative",
+      "status": 200,
+      "instance": "api-a",
+      "latencyMs": 26.8,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:11.685870+00:00",
+      "second": 4.656,
+      "operation": "match",
+      "status": 200,
+      "instance": "api-b",
+      "latencyMs": 6.4,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:11.687752+00:00",
+      "second": 4.658,
+      "operation": "suggest",
+      "status": 200,
+      "instance": "api-a",
+      "latencyMs": 8.5,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:11.707976+00:00",
+      "second": 4.678,
+      "operation": "validate",
+      "status": 200,
+      "instance": "api-a",
+      "latencyMs": 5.6,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:11.809822+00:00",
+      "second": 4.78,
+      "operation": "id",
+      "status": 200,
+      "instance": "api-b",
+      "latencyMs": 3.7,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:11.831329+00:00",
+      "second": 4.801,
+      "operation": "validate_negative",
+      "status": 200,
+      "instance": "api-a",
+      "latencyMs": 25.6,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:11.934307+00:00",
+      "second": 4.904,
+      "operation": "suggest",
+      "status": 200,
+      "instance": "api-a",
+      "latencyMs": 9.5,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:11.934446+00:00",
+      "second": 4.905,
+      "operation": "match",
+      "status": 200,
+      "instance": "api-b",
+      "latencyMs": 9.3,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:12.023030+00:00",
+      "second": 4.993,
+      "operation": "validate",
+      "status": 200,
+      "instance": "api-a",
+      "latencyMs": 6.0,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:12.053026+00:00",
+      "second": 5.023,
+      "operation": "validate_negative",
+      "status": 200,
+      "instance": "api-b",
+      "latencyMs": 35.7,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:12.137497+00:00",
+      "second": 5.108,
+      "operation": "suggest",
+      "status": 200,
+      "instance": "api-b",
+      "latencyMs": 9.1,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:12.138349+00:00",
+      "second": 5.108,
+      "operation": "id",
+      "status": 200,
+      "instance": "api-a",
+      "latencyMs": 10.2,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:12.194209+00:00",
+      "second": 5.164,
+      "operation": "match",
+      "status": 200,
+      "instance": "api-b",
+      "latencyMs": 6.8,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:12.194438+00:00",
+      "second": 5.165,
+      "operation": "validate",
+      "status": 200,
+      "instance": "api-a",
+      "latencyMs": 6.7,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:12.334835+00:00",
+      "second": 5.305,
+      "operation": "id",
+      "status": 200,
+      "instance": "api-b",
+      "latencyMs": 4.8,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:12.340545+00:00",
+      "second": 5.311,
+      "operation": "suggest",
+      "status": 200,
+      "instance": "api-b",
+      "latencyMs": 5.1,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:12.361120+00:00",
+      "second": 5.331,
+      "operation": "validate_negative",
+      "status": 200,
+      "instance": "api-a",
+      "latencyMs": 31.3,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:12.477731+00:00",
+      "second": 5.448,
+      "operation": "match",
+      "status": 200,
+      "instance": "api-b",
+      "latencyMs": 6.3,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:12.478764+00:00",
+      "second": 5.449,
+      "operation": "validate",
+      "status": 200,
+      "instance": "api-a",
+      "latencyMs": 7.1,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:12.537178+00:00",
+      "second": 5.507,
+      "operation": "id",
+      "status": 200,
+      "instance": "api-b",
+      "latencyMs": 5.6,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:12.556813+00:00",
+      "second": 5.527,
+      "operation": "validate_negative",
+      "status": 200,
+      "instance": "api-a",
+      "latencyMs": 25.5,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:12.644002+00:00",
+      "second": 5.614,
+      "operation": "suggest",
+      "status": 200,
+      "instance": "api-a",
+      "latencyMs": 6.3,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:12.643884+00:00",
+      "second": 5.614,
+      "operation": "match",
+      "status": 200,
+      "instance": "api-b",
+      "latencyMs": 5.8,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:12.737022+00:00",
+      "second": 5.707,
+      "operation": "validate",
+      "status": 200,
+      "instance": "api-a",
+      "latencyMs": 6.8,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:12.755042+00:00",
+      "second": 5.725,
+      "operation": "validate_negative",
+      "status": 200,
+      "instance": "api-b",
+      "latencyMs": 24.6,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:12.890927+00:00",
+      "second": 5.861,
+      "operation": "id",
+      "status": 200,
+      "instance": "api-b",
+      "latencyMs": 11.1,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:12.895378+00:00",
+      "second": 5.866,
+      "operation": "suggest",
+      "status": 200,
+      "instance": "api-a",
+      "latencyMs": 15.4,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:12.900654+00:00",
+      "second": 5.871,
+      "operation": "match",
+      "status": 200,
+      "instance": "api-a",
+      "latencyMs": 16.2,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:13.020543+00:00",
+      "second": 5.991,
+      "operation": "validate",
+      "status": 200,
+      "instance": "api-a",
+      "latencyMs": 5.3,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:13.038477+00:00",
+      "second": 6.009,
+      "operation": "validate_negative",
+      "status": 200,
+      "instance": "api-b",
+      "latencyMs": 22.9,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:13.122872+00:00",
+      "second": 6.093,
+      "operation": "id",
+      "status": 200,
+      "instance": "api-b",
+      "latencyMs": 4.7,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:13.123860+00:00",
+      "second": 6.094,
+      "operation": "suggest",
+      "status": 200,
+      "instance": "api-a",
+      "latencyMs": 5.3,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:13.186283+00:00",
+      "second": 6.156,
+      "operation": "match",
+      "status": 200,
+      "instance": "api-a",
+      "latencyMs": 4.6,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:13.186936+00:00",
+      "second": 6.157,
+      "operation": "validate",
+      "status": 200,
+      "instance": "api-b",
+      "latencyMs": 4.8,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:13.337379+00:00",
+      "second": 6.307,
+      "operation": "id",
+      "status": 200,
+      "instance": "api-b",
+      "latencyMs": 7.1,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:13.337024+00:00",
+      "second": 6.307,
+      "operation": "suggest",
+      "status": 200,
+      "instance": "api-a",
+      "latencyMs": 6.1,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:13.357123+00:00",
+      "second": 6.327,
+      "operation": "validate_negative",
+      "status": 200,
+      "instance": "api-b",
+      "latencyMs": 27.1,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:13.475385+00:00",
+      "second": 6.446,
+      "operation": "match",
+      "status": 200,
+      "instance": "api-a",
+      "latencyMs": 5.8,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:13.476016+00:00",
+      "second": 6.446,
+      "operation": "validate",
+      "status": 200,
+      "instance": "api-b",
+      "latencyMs": 6.0,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:13.570287+00:00",
+      "second": 6.54,
+      "operation": "id",
+      "status": 200,
+      "instance": "api-a",
+      "latencyMs": 5.4,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:13.590765+00:00",
+      "second": 6.561,
+      "operation": "validate_negative",
+      "status": 200,
+      "instance": "api-b",
+      "latencyMs": 26.1,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:13.685678+00:00",
+      "second": 6.656,
+      "operation": "match",
+      "status": 200,
+      "instance": "api-a",
+      "latencyMs": 5.7,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:13.686213+00:00",
+      "second": 6.656,
+      "operation": "suggest",
+      "status": 200,
+      "instance": "api-b",
+      "latencyMs": 6.4,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:13.688221+00:00",
+      "second": 6.658,
+      "operation": "validate",
+      "status": 200,
+      "instance": "api-a",
+      "latencyMs": 3.8,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:13.828275+00:00",
+      "second": 6.798,
+      "operation": "id",
+      "status": 200,
+      "instance": "api-b",
+      "latencyMs": 5.6,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:13.847922+00:00",
+      "second": 6.818,
+      "operation": "validate_negative",
+      "status": 200,
+      "instance": "api-a",
+      "latencyMs": 25.4,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:13.905592+00:00",
+      "second": 6.876,
+      "operation": "match",
+      "status": 200,
+      "instance": "api-b",
+      "latencyMs": 4.2,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:13.907554+00:00",
+      "second": 6.878,
+      "operation": "suggest",
+      "status": 200,
+      "instance": "api-a",
+      "latencyMs": 6.4,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:14.009416+00:00",
+      "second": 6.98,
+      "operation": "validate",
+      "status": 200,
+      "instance": "api-b",
+      "latencyMs": 6.3,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:14.027944+00:00",
+      "second": 6.998,
+      "operation": "validate_negative",
+      "status": 200,
+      "instance": "api-a",
+      "latencyMs": 24.7,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:14.095228+00:00",
+      "second": 7.065,
+      "operation": "id",
+      "status": 200,
+      "instance": "api-b",
+      "latencyMs": 4.6,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:14.095603+00:00",
+      "second": 7.066,
+      "operation": "suggest",
+      "status": 200,
+      "instance": "api-a",
+      "latencyMs": 4.8,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:14.212781+00:00",
+      "second": 7.183,
+      "operation": "match",
+      "status": 200,
+      "instance": "api-b",
+      "latencyMs": 7.2,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:14.212657+00:00",
+      "second": 7.183,
+      "operation": "validate",
+      "status": 200,
+      "instance": "api-a",
+      "latencyMs": 6.9,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:14.331970+00:00",
+      "second": 7.302,
+      "operation": "id",
+      "status": 200,
+      "instance": "api-b",
+      "latencyMs": 5.0,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:14.352092+00:00",
+      "second": 7.322,
+      "operation": "validate_negative",
+      "status": 200,
+      "instance": "api-a",
+      "latencyMs": 25.3,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:14.413176+00:00",
+      "second": 7.383,
+      "operation": "match",
+      "status": 200,
+      "instance": "api-b",
+      "latencyMs": 6.5,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:14.414408+00:00",
+      "second": 7.384,
+      "operation": "suggest",
+      "status": 200,
+      "instance": "api-a",
+      "latencyMs": 8.0,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:14.530310+00:00",
+      "second": 7.5,
+      "operation": "validate",
+      "status": 200,
+      "instance": "api-b",
+      "latencyMs": 6.1,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:14.550658+00:00",
+      "second": 7.521,
+      "operation": "validate_negative",
+      "status": 200,
+      "instance": "api-a",
+      "latencyMs": 26.2,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:14.572465+00:00",
+      "second": 7.543,
+      "operation": "id",
+      "status": 200,
+      "instance": "api-b",
+      "latencyMs": 4.2,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:14.604458+00:00",
+      "second": 7.575,
+      "operation": "suggest",
+      "status": 200,
+      "instance": "api-a",
+      "latencyMs": 5.5,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:14.723006+00:00",
+      "second": 7.693,
+      "operation": "match",
+      "status": 200,
+      "instance": "api-b",
+      "latencyMs": 4.6,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:14.723357+00:00",
+      "second": 7.693,
+      "operation": "validate",
+      "status": 200,
+      "instance": "api-a",
+      "latencyMs": 4.7,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:14.771338+00:00",
+      "second": 7.741,
+      "operation": "validate_negative",
+      "status": 200,
+      "instance": "api-b",
+      "latencyMs": 23.1,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:14.843048+00:00",
+      "second": 7.813,
+      "operation": "suggest",
+      "status": 200,
+      "instance": "api-b",
+      "latencyMs": 5.2,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:14.843629+00:00",
+      "second": 7.814,
+      "operation": "id",
+      "status": 200,
+      "instance": "api-a",
+      "latencyMs": 6.1,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:14.969526+00:00",
+      "second": 7.94,
+      "operation": "validate",
+      "status": 200,
+      "instance": "api-b",
+      "latencyMs": 5.5,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:14.969419+00:00",
+      "second": 7.94,
+      "operation": "match",
+      "status": 200,
+      "instance": "api-a",
+      "latencyMs": 5.6,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:15.065846+00:00",
+      "second": 8.036,
+      "operation": "id",
+      "status": 200,
+      "instance": "api-a",
+      "latencyMs": 5.2,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:15.085845+00:00",
+      "second": 8.056,
+      "operation": "validate_negative",
+      "status": 200,
+      "instance": "api-b",
+      "latencyMs": 25.4,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:15.238884+00:00",
+      "second": 8.209,
+      "operation": "match",
+      "status": 200,
+      "instance": "api-b",
+      "latencyMs": 69.4,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:15.245773+00:00",
+      "second": 8.216,
+      "operation": "suggest",
+      "status": 200,
+      "instance": "api-a",
+      "latencyMs": 76.6,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:15.245886+00:00",
+      "second": 8.216,
+      "operation": "validate",
+      "status": 200,
+      "instance": "api-a",
+      "latencyMs": 19.4,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:15.311567+00:00",
+      "second": 8.282,
+      "operation": "id",
+      "status": 200,
+      "instance": "api-a",
+      "latencyMs": 5.5,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:15.333707+00:00",
+      "second": 8.304,
+      "operation": "validate_negative",
+      "status": 200,
+      "instance": "api-b",
+      "latencyMs": 27.9,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:15.414306+00:00",
+      "second": 8.384,
+      "operation": "match",
+      "status": 200,
+      "instance": "api-a",
+      "latencyMs": 7.1,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:15.416434+00:00",
+      "second": 8.387,
+      "operation": "suggest",
+      "status": 200,
+      "instance": "api-b",
+      "latencyMs": 9.4,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:15.528641+00:00",
+      "second": 8.499,
+      "operation": "validate",
+      "status": 200,
+      "instance": "api-a",
+      "latencyMs": 4.2,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:15.546765+00:00",
+      "second": 8.517,
+      "operation": "validate_negative",
+      "status": 200,
+      "instance": "api-b",
+      "latencyMs": 21.8,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:15.596803+00:00",
+      "second": 8.567,
+      "operation": "id",
+      "status": 200,
+      "instance": "api-a",
+      "latencyMs": 4.0,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:15.597306+00:00",
+      "second": 8.567,
+      "operation": "suggest",
+      "status": 200,
+      "instance": "api-b",
+      "latencyMs": 4.0,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:15.737564+00:00",
+      "second": 8.708,
+      "operation": "validate",
+      "status": 200,
+      "instance": "api-b",
+      "latencyMs": 7.6,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:15.742034+00:00",
+      "second": 8.712,
+      "operation": "match",
+      "status": 200,
+      "instance": "api-a",
+      "latencyMs": 12.2,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:15.763443+00:00",
+      "second": 8.734,
+      "operation": "validate_negative",
+      "status": 200,
+      "instance": "api-b",
+      "latencyMs": 32.9,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:15.876058+00:00",
+      "second": 8.846,
+      "operation": "suggest",
+      "status": 200,
+      "instance": "api-b",
+      "latencyMs": 5.6,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:15.877727+00:00",
+      "second": 8.848,
+      "operation": "id",
+      "status": 200,
+      "instance": "api-a",
+      "latencyMs": 7.4,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:15.948134+00:00",
+      "second": 8.918,
+      "operation": "match",
+      "status": 200,
+      "instance": "api-a",
+      "latencyMs": 6.2,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:15.949224+00:00",
+      "second": 8.919,
+      "operation": "validate",
+      "status": 200,
+      "instance": "api-b",
+      "latencyMs": 7.1,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:16.048923+00:00",
+      "second": 9.019,
+      "operation": "validate_negative",
+      "status": 200,
+      "instance": "api-a",
+      "latencyMs": 23.1,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:16.129223+00:00",
+      "second": 9.099,
+      "operation": "id",
+      "status": 200,
+      "instance": "api-b",
+      "latencyMs": 7.4,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:16.129590+00:00",
+      "second": 9.1,
+      "operation": "suggest",
+      "status": 200,
+      "instance": "api-a",
+      "latencyMs": 7.6,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:16.144222+00:00",
+      "second": 9.114,
+      "operation": "match",
+      "status": 200,
+      "instance": "api-b",
+      "latencyMs": 4.2,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:16.224068+00:00",
+      "second": 9.194,
+      "operation": "validate",
+      "status": 200,
+      "instance": "api-a",
+      "latencyMs": 5.6,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:16.332371+00:00",
+      "second": 9.302,
+      "operation": "id",
+      "status": 200,
+      "instance": "api-b",
+      "latencyMs": 3.6,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:16.350009+00:00",
+      "second": 9.32,
+      "operation": "validate_negative",
+      "status": 200,
+      "instance": "api-a",
+      "latencyMs": 21.6,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:16.356934+00:00",
+      "second": 9.327,
+      "operation": "suggest",
+      "status": 200,
+      "instance": "api-b",
+      "latencyMs": 5.0,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:16.473883+00:00",
+      "second": 9.444,
+      "operation": "match",
+      "status": 200,
+      "instance": "api-b",
+      "latencyMs": 4.5,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:16.473950+00:00",
+      "second": 9.444,
+      "operation": "validate",
+      "status": 200,
+      "instance": "api-a",
+      "latencyMs": 4.3,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:16.546788+00:00",
+      "second": 9.517,
+      "operation": "id",
+      "status": 200,
+      "instance": "api-a",
+      "latencyMs": 4.8,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:16.567229+00:00",
+      "second": 9.537,
+      "operation": "validate_negative",
+      "status": 200,
+      "instance": "api-b",
+      "latencyMs": 25.5,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:16.685916+00:00",
+      "second": 9.656,
+      "operation": "suggest",
+      "status": 200,
+      "instance": "api-b",
+      "latencyMs": 7.0,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:16.686388+00:00",
+      "second": 9.656,
+      "operation": "match",
+      "status": 200,
+      "instance": "api-a",
+      "latencyMs": 7.3,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:16.711977+00:00",
+      "second": 9.682,
+      "operation": "validate",
+      "status": 200,
+      "instance": "api-a",
+      "latencyMs": 3.9,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:16.834118+00:00",
+      "second": 9.804,
+      "operation": "id",
+      "status": 200,
+      "instance": "api-b",
+      "latencyMs": 5.3,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:16.853305+00:00",
+      "second": 9.823,
+      "operation": "validate_negative",
+      "status": 200,
+      "instance": "api-a",
+      "latencyMs": 24.9,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:16.883782+00:00",
+      "second": 9.854,
+      "operation": "suggest",
+      "status": 200,
+      "instance": "api-b",
+      "latencyMs": 5.2,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:16.931380+00:00",
+      "second": 9.901,
+      "operation": "match",
+      "status": 200,
+      "instance": "api-a",
+      "latencyMs": 5.3,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:17.038488+00:00",
+      "second": 10.009,
+      "operation": "id",
+      "status": 200,
+      "instance": "api-b",
+      "latencyMs": 7.2,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:17.038952+00:00",
+      "second": 10.009,
+      "operation": "validate",
+      "status": 200,
+      "instance": "api-a",
+      "latencyMs": 9.8,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:17.061642+00:00",
+      "second": 10.032,
+      "operation": "validate_negative",
+      "status": 200,
+      "instance": "api-b",
+      "latencyMs": 32.0,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:17.164201+00:00",
+      "second": 10.134,
+      "operation": "suggest",
+      "status": 200,
+      "instance": "api-b",
+      "latencyMs": 7.0,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:17.164064+00:00",
+      "second": 10.134,
+      "operation": "match",
+      "status": 200,
+      "instance": "api-a",
+      "latencyMs": 6.6,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:17.285397+00:00",
+      "second": 10.255,
+      "operation": "id",
+      "status": 200,
+      "instance": "api-a",
+      "latencyMs": 4.7,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:17.285470+00:00",
+      "second": 10.256,
+      "operation": "validate",
+      "status": 200,
+      "instance": "api-a",
+      "latencyMs": 6.2,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:17.307754+00:00",
+      "second": 10.278,
+      "operation": "validate_negative",
+      "status": 200,
+      "instance": "api-b",
+      "latencyMs": 28.3,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:17.422939+00:00",
+      "second": 10.393,
+      "operation": "match",
+      "status": 200,
+      "instance": "api-a",
+      "latencyMs": 6.3,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:17.422761+00:00",
+      "second": 10.393,
+      "operation": "suggest",
+      "status": 200,
+      "instance": "api-b",
+      "latencyMs": 6.5,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:17.534763+00:00",
+      "second": 10.505,
+      "operation": "validate",
+      "status": 200,
+      "instance": "api-a",
+      "latencyMs": 6.6,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:17.552897+00:00",
+      "second": 10.523,
+      "operation": "validate_negative",
+      "status": 200,
+      "instance": "api-b",
+      "latencyMs": 24.4,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:17.558325+00:00",
+      "second": 10.528,
+      "operation": "id",
+      "status": 200,
+      "instance": "api-b",
+      "latencyMs": 3.7,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:17.684784+00:00",
+      "second": 10.655,
+      "operation": "validate",
+      "status": 200,
+      "instance": "api-b",
+      "latencyMs": 4.0,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:17.684902+00:00",
+      "second": 10.655,
+      "operation": "match",
+      "status": 200,
+      "instance": "api-a",
+      "latencyMs": 4.9,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:17.685547+00:00",
+      "second": 10.656,
+      "operation": "suggest",
+      "status": 200,
+      "instance": "api-a",
+      "latencyMs": 5.7,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:17.835765+00:00",
+      "second": 10.806,
+      "operation": "id",
+      "status": 200,
+      "instance": "api-b",
+      "latencyMs": 6.0,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:17.840954+00:00",
+      "second": 10.811,
+      "operation": "suggest",
+      "status": 200,
+      "instance": "api-b",
+      "latencyMs": 5.5,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:17.855596+00:00",
+      "second": 10.826,
+      "operation": "validate_negative",
+      "status": 200,
+      "instance": "api-a",
+      "latencyMs": 26.1,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:17.933890+00:00",
+      "second": 10.904,
+      "operation": "match",
+      "status": 200,
+      "instance": "api-a",
+      "latencyMs": 5.6,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:17.936779+00:00",
+      "second": 10.907,
+      "operation": "validate",
+      "status": 200,
+      "instance": "api-b",
+      "latencyMs": 5.3,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:18.061813+00:00",
+      "second": 11.032,
+      "operation": "id",
+      "status": 200,
+      "instance": "api-b",
+      "latencyMs": 5.2,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:18.081041+00:00",
+      "second": 11.051,
+      "operation": "validate_negative",
+      "status": 200,
+      "instance": "api-a",
+      "latencyMs": 24.8,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:18.122894+00:00",
+      "second": 11.093,
+      "operation": "suggest",
+      "status": 200,
+      "instance": "api-a",
+      "latencyMs": 4.6,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:18.186847+00:00",
+      "second": 11.157,
+      "operation": "validate",
+      "status": 200,
+      "instance": "api-a",
+      "latencyMs": 5.0,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:18.186501+00:00",
+      "second": 11.157,
+      "operation": "match",
+      "status": 200,
+      "instance": "api-b",
+      "latencyMs": 4.9,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:18.297119+00:00",
+      "second": 11.267,
+      "operation": "validate_negative",
+      "status": 200,
+      "instance": "api-b",
+      "latencyMs": 23.5,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:18.383003+00:00",
+      "second": 11.353,
+      "operation": "id",
+      "status": 200,
+      "instance": "api-b",
+      "latencyMs": 4.3,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:18.383864+00:00",
+      "second": 11.354,
+      "operation": "suggest",
+      "status": 200,
+      "instance": "api-a",
+      "latencyMs": 5.0,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:18.424600+00:00",
+      "second": 11.395,
+      "operation": "match",
+      "status": 200,
+      "instance": "api-a",
+      "latencyMs": 4.4,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:18.531462+00:00",
+      "second": 11.502,
+      "operation": "validate",
+      "status": 200,
+      "instance": "api-a",
+      "latencyMs": 5.7,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:18.550317+00:00",
+      "second": 11.52,
+      "operation": "validate_negative",
+      "status": 200,
+      "instance": "api-b",
+      "latencyMs": 24.4,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:18.630365+00:00",
+      "second": 11.6,
+      "operation": "id",
+      "status": 200,
+      "instance": "api-a",
+      "latencyMs": 5.9,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:18.631248+00:00",
+      "second": 11.601,
+      "operation": "suggest",
+      "status": 200,
+      "instance": "api-b",
+      "latencyMs": 6.5,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:18.707792+00:00",
+      "second": 11.678,
+      "operation": "match",
+      "status": 200,
+      "instance": "api-b",
+      "latencyMs": 5.5,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:18.708668+00:00",
+      "second": 11.679,
+      "operation": "validate",
+      "status": 200,
+      "instance": "api-a",
+      "latencyMs": 6.1,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:18.833312+00:00",
+      "second": 11.803,
+      "operation": "id",
+      "status": 200,
+      "instance": "api-b",
+      "latencyMs": 4.0,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:18.851120+00:00",
+      "second": 11.821,
+      "operation": "suggest",
+      "status": 200,
+      "instance": "api-b",
+      "latencyMs": 7.2,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:18.855281+00:00",
+      "second": 11.825,
+      "operation": "validate_negative",
+      "status": 200,
+      "instance": "api-a",
+      "latencyMs": 26.2,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:18.946489+00:00",
+      "second": 11.917,
+      "operation": "match",
+      "status": 200,
+      "instance": "api-a",
+      "latencyMs": 5.7,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:18.947662+00:00",
+      "second": 11.918,
+      "operation": "validate",
+      "status": 200,
+      "instance": "api-b",
+      "latencyMs": 6.6,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:19.015252+00:00",
+      "second": 11.985,
+      "operation": "validate_negative",
+      "status": 200,
+      "instance": "api-a",
+      "latencyMs": 26.8,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:19.196424+00:00",
+      "second": 12.167,
+      "operation": "match",
+      "status": 200,
+      "instance": "api-a",
+      "latencyMs": 37.6,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:19.197741+00:00",
+      "second": 12.168,
+      "operation": "suggest",
+      "status": 200,
+      "instance": "api-b",
+      "latencyMs": 39.3,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:19.198041+00:00",
+      "second": 12.168,
+      "operation": "id",
+      "status": 200,
+      "instance": "api-b",
+      "latencyMs": 41.9,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:19.341011+00:00",
+      "second": 12.311,
+      "operation": "validate",
+      "status": 200,
+      "instance": "api-a",
+      "latencyMs": 57.8,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:19.342022+00:00",
+      "second": 12.312,
+      "operation": "id",
+      "status": 200,
+      "instance": "api-a",
+      "latencyMs": 55.7,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:19.384689+00:00",
+      "second": 12.355,
+      "operation": "suggest",
+      "status": 200,
+      "instance": "api-b",
+      "latencyMs": 6.3,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:19.390384+00:00",
+      "second": 12.36,
+      "operation": "validate_negative",
+      "status": 200,
+      "instance": "api-b",
+      "latencyMs": 105.5,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:19.416155+00:00",
+      "second": 12.386,
+      "operation": "match",
+      "status": 200,
+      "instance": "api-a",
+      "latencyMs": 6.6,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:19.536392+00:00",
+      "second": 12.506,
+      "operation": "validate",
+      "status": 200,
+      "instance": "api-a",
+      "latencyMs": 7.4,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:19.541627+00:00",
+      "second": 12.512,
+      "operation": "id",
+      "status": 200,
+      "instance": "api-b",
+      "latencyMs": 5.0,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:19.558378+00:00",
+      "second": 12.528,
+      "operation": "validate_negative",
+      "status": 200,
+      "instance": "api-b",
+      "latencyMs": 29.1,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:19.650772+00:00",
+      "second": 12.621,
+      "operation": "match",
+      "status": 200,
+      "instance": "api-b",
+      "latencyMs": 6.1,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:19.651153+00:00",
+      "second": 12.621,
+      "operation": "suggest",
+      "status": 200,
+      "instance": "api-a",
+      "latencyMs": 6.6,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:19.792482+00:00",
+      "second": 12.763,
+      "operation": "validate",
+      "status": 200,
+      "instance": "api-a",
+      "latencyMs": 13.0,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:19.794499+00:00",
+      "second": 12.765,
+      "operation": "id",
+      "status": 200,
+      "instance": "api-a",
+      "latencyMs": 10.0,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:19.813452+00:00",
+      "second": 12.784,
+      "operation": "validate_negative",
+      "status": 200,
+      "instance": "api-b",
+      "latencyMs": 33.8,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:19.933317+00:00",
+      "second": 12.903,
+      "operation": "match",
+      "status": 200,
+      "instance": "api-b",
+      "latencyMs": 4.0,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:19.933930+00:00",
+      "second": 12.904,
+      "operation": "suggest",
+      "status": 200,
+      "instance": "api-a",
+      "latencyMs": 4.9,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:19.951094+00:00",
+      "second": 12.921,
+      "operation": "validate",
+      "status": 200,
+      "instance": "api-b",
+      "latencyMs": 6.3,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:20.074251+00:00",
+      "second": 13.044,
+      "operation": "id",
+      "status": 200,
+      "instance": "api-a",
+      "latencyMs": 4.4,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:20.094261+00:00",
+      "second": 13.064,
+      "operation": "validate_negative",
+      "status": 200,
+      "instance": "api-b",
+      "latencyMs": 24.6,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:20.130682+00:00",
+      "second": 13.101,
+      "operation": "suggest",
+      "status": 200,
+      "instance": "api-a",
+      "latencyMs": 4.9,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:20.205365+00:00",
+      "second": 13.175,
+      "operation": "validate",
+      "status": 200,
+      "instance": "api-b",
+      "latencyMs": 4.5,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:20.205461+00:00",
+      "second": 13.176,
+      "operation": "match",
+      "status": 200,
+      "instance": "api-a",
+      "latencyMs": 4.7,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:20.254944+00:00",
+      "second": 13.225,
+      "operation": "validate_negative",
+      "status": 200,
+      "instance": "api-b",
+      "latencyMs": 21.4,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:20.368161+00:00",
+      "second": 13.338,
+      "operation": "id",
+      "status": 200,
+      "instance": "api-b",
+      "latencyMs": 3.8,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:20.368093+00:00",
+      "second": 13.338,
+      "operation": "suggest",
+      "status": 200,
+      "instance": "api-a",
+      "latencyMs": 3.6,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:20.483980+00:00",
+      "second": 13.454,
+      "operation": "match",
+      "status": 200,
+      "instance": "api-b",
+      "latencyMs": 6.2,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:20.484061+00:00",
+      "second": 13.454,
+      "operation": "validate",
+      "status": 200,
+      "instance": "api-a",
+      "latencyMs": 5.9,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:20.543711+00:00",
+      "second": 13.514,
+      "operation": "id",
+      "status": 200,
+      "instance": "api-a",
+      "latencyMs": 5.8,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:20.563020+00:00",
+      "second": 13.533,
+      "operation": "validate_negative",
+      "status": 200,
+      "instance": "api-b",
+      "latencyMs": 25.4,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:20.654106+00:00",
+      "second": 13.624,
+      "operation": "match",
+      "status": 200,
+      "instance": "api-a",
+      "latencyMs": 5.6,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:20.653963+00:00",
+      "second": 13.624,
+      "operation": "suggest",
+      "status": 200,
+      "instance": "api-b",
+      "latencyMs": 5.7,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:20.755871+00:00",
+      "second": 13.726,
+      "operation": "validate",
+      "status": 200,
+      "instance": "api-b",
+      "latencyMs": 5.9,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:20.773547+00:00",
+      "second": 13.744,
+      "operation": "validate_negative",
+      "status": 200,
+      "instance": "api-a",
+      "latencyMs": 23.3,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:20.839657+00:00",
+      "second": 13.81,
+      "operation": "suggest",
+      "status": 200,
+      "instance": "api-a",
+      "latencyMs": 8.2,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:20.841162+00:00",
+      "second": 13.811,
+      "operation": "id",
+      "status": 200,
+      "instance": "api-b",
+      "latencyMs": 10.0,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:20.960730+00:00",
+      "second": 13.931,
+      "operation": "match",
+      "status": 200,
+      "instance": "api-a",
+      "latencyMs": 6.9,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:20.963342+00:00",
+      "second": 13.933,
+      "operation": "validate",
+      "status": 200,
+      "instance": "api-b",
+      "latencyMs": 9.2,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:21.062041+00:00",
+      "second": 14.032,
+      "operation": "id",
+      "status": 200,
+      "instance": "api-a",
+      "latencyMs": 4.4,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:21.081760+00:00",
+      "second": 14.052,
+      "operation": "validate_negative",
+      "status": 200,
+      "instance": "api-b",
+      "latencyMs": 24.4,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:21.184568+00:00",
+      "second": 14.155,
+      "operation": "match",
+      "status": 200,
+      "instance": "api-b",
+      "latencyMs": 6.1,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:21.185114+00:00",
+      "second": 14.155,
+      "operation": "suggest",
+      "status": 200,
+      "instance": "api-a",
+      "latencyMs": 6.9,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:21.223365+00:00",
+      "second": 14.193,
+      "operation": "validate",
+      "status": 200,
+      "instance": "api-a",
+      "latencyMs": 5.2,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:21.312853+00:00",
+      "second": 14.283,
+      "operation": "id",
+      "status": 200,
+      "instance": "api-b",
+      "latencyMs": 5.3,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:21.335940+00:00",
+      "second": 14.306,
+      "operation": "validate_negative",
+      "status": 200,
+      "instance": "api-a",
+      "latencyMs": 28.5,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:21.436350+00:00",
+      "second": 14.406,
+      "operation": "suggest",
+      "status": 200,
+      "instance": "api-b",
+      "latencyMs": 7.4,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:21.436461+00:00",
+      "second": 14.407,
+      "operation": "match",
+      "status": 200,
+      "instance": "api-a",
+      "latencyMs": 7.2,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:21.474931+00:00",
+      "second": 14.445,
+      "operation": "validate",
+      "status": 200,
+      "instance": "api-b",
+      "latencyMs": 11.8,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:21.582975+00:00",
+      "second": 14.553,
+      "operation": "id",
+      "status": 200,
+      "instance": "api-b",
+      "latencyMs": 6.1,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:21.604150+00:00",
+      "second": 14.574,
+      "operation": "validate_negative",
+      "status": 200,
+      "instance": "api-a",
+      "latencyMs": 27.5,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:21.669406+00:00",
+      "second": 14.64,
+      "operation": "suggest",
+      "status": 200,
+      "instance": "api-b",
+      "latencyMs": 5.8,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:21.669500+00:00",
+      "second": 14.64,
+      "operation": "match",
+      "status": 200,
+      "instance": "api-a",
+      "latencyMs": 5.7,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:21.690932+00:00",
+      "second": 14.661,
+      "operation": "validate",
+      "status": 200,
+      "instance": "api-a",
+      "latencyMs": 5.3,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:21.787015+00:00",
+      "second": 14.757,
+      "operation": "id",
+      "status": 200,
+      "instance": "api-b",
+      "latencyMs": 5.0,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:21.807616+00:00",
+      "second": 14.778,
+      "operation": "validate_negative",
+      "status": 200,
+      "instance": "api-a",
+      "latencyMs": 25.8,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:21.933299+00:00",
+      "second": 14.903,
+      "operation": "suggest",
+      "status": 200,
+      "instance": "api-a",
+      "latencyMs": 5.5,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:21.933792+00:00",
+      "second": 14.904,
+      "operation": "match",
+      "status": 200,
+      "instance": "api-b",
+      "latencyMs": 5.6,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:22.003150+00:00",
+      "second": 14.973,
+      "operation": "validate",
+      "status": 200,
+      "instance": "api-a",
+      "latencyMs": 6.3,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:22.022324+00:00",
+      "second": 14.992,
+      "operation": "validate_negative",
+      "status": 200,
+      "instance": "api-b",
+      "latencyMs": 25.2,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:22.061956+00:00",
+      "second": 15.032,
+      "operation": "id",
+      "status": 200,
+      "instance": "api-b",
+      "latencyMs": 4.7,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:22.170770+00:00",
+      "second": 15.141,
+      "operation": "suggest",
+      "status": 200,
+      "instance": "api-a",
+      "latencyMs": 5.7,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:22.170645+00:00",
+      "second": 15.141,
+      "operation": "match",
+      "status": 200,
+      "instance": "api-b",
+      "latencyMs": 5.3,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:22.187116+00:00",
+      "second": 15.157,
+      "operation": "validate",
+      "status": 200,
+      "instance": "api-a",
+      "latencyMs": 4.6,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:22.253646+00:00",
+      "second": 15.224,
+      "operation": "validate_negative",
+      "status": 200,
+      "instance": "api-b",
+      "latencyMs": 23.3,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:22.287809+00:00",
+      "second": 15.258,
+      "operation": "id",
+      "status": 200,
+      "instance": "api-a",
+      "latencyMs": 3.8,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:22.435514+00:00",
+      "second": 15.406,
+      "operation": "suggest",
+      "status": 200,
+      "instance": "api-b",
+      "latencyMs": 5.9,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:22.437280+00:00",
+      "second": 15.407,
+      "operation": "match",
+      "status": 200,
+      "instance": "api-a",
+      "latencyMs": 7.4,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:22.440962+00:00",
+      "second": 15.411,
+      "operation": "validate",
+      "status": 200,
+      "instance": "api-b",
+      "latencyMs": 6.2,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:22.563329+00:00",
+      "second": 15.533,
+      "operation": "id",
+      "status": 200,
+      "instance": "api-a",
+      "latencyMs": 5.3,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:22.585617+00:00",
+      "second": 15.556,
+      "operation": "validate_negative",
+      "status": 200,
+      "instance": "api-b",
+      "latencyMs": 27.8,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:22.683409+00:00",
+      "second": 15.654,
+      "operation": "suggest",
+      "status": 200,
+      "instance": "api-b",
+      "latencyMs": 4.5,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:22.683678+00:00",
+      "second": 15.654,
+      "operation": "match",
+      "status": 200,
+      "instance": "api-a",
+      "latencyMs": 4.5,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:22.712422+00:00",
+      "second": 15.683,
+      "operation": "validate",
+      "status": 200,
+      "instance": "api-a",
+      "latencyMs": 4.9,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:22.763273+00:00",
+      "second": 15.733,
+      "operation": "validate_negative",
+      "status": 200,
+      "instance": "api-b",
+      "latencyMs": 22.8,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:22.884354+00:00",
+      "second": 15.854,
+      "operation": "id",
+      "status": 200,
+      "instance": "api-b",
+      "latencyMs": 4.5,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:22.884593+00:00",
+      "second": 15.855,
+      "operation": "suggest",
+      "status": 200,
+      "instance": "api-a",
+      "latencyMs": 4.6,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:22.886896+00:00",
+      "second": 15.857,
+      "operation": "match",
+      "status": 200,
+      "instance": "api-a",
+      "latencyMs": 5.6,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:23.013745+00:00",
+      "second": 15.984,
+      "operation": "validate",
+      "status": 200,
+      "instance": "api-b",
+      "latencyMs": 5.5,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:23.031446+00:00",
+      "second": 16.002,
+      "operation": "validate_negative",
+      "status": 200,
+      "instance": "api-a",
+      "latencyMs": 23.0,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:23.111398+00:00",
+      "second": 16.081,
+      "operation": "suggest",
+      "status": 200,
+      "instance": "api-b",
+      "latencyMs": 5.4,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:23.111809+00:00",
+      "second": 16.082,
+      "operation": "id",
+      "status": 200,
+      "instance": "api-a",
+      "latencyMs": 6.1,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:23.179751+00:00",
+      "second": 16.15,
+      "operation": "match",
+      "status": 200,
+      "instance": "api-b",
+      "latencyMs": 5.6,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:23.287963+00:00",
+      "second": 16.258,
+      "operation": "validate",
+      "status": 200,
+      "instance": "api-a",
+      "latencyMs": 8.1,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:23.289887+00:00",
+      "second": 16.26,
+      "operation": "id",
+      "status": 200,
+      "instance": "api-a",
+      "latencyMs": 5.7,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:23.305222+00:00",
+      "second": 16.275,
+      "operation": "validate_negative",
+      "status": 200,
+      "instance": "api-b",
+      "latencyMs": 25.2,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:23.369025+00:00",
+      "second": 16.339,
+      "operation": "suggest",
+      "status": 200,
+      "instance": "api-b",
+      "latencyMs": 4.6,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:23.449394+00:00",
+      "second": 16.419,
+      "operation": "match",
+      "status": 200,
+      "instance": "api-b",
+      "latencyMs": 6.4,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:23.451154+00:00",
+      "second": 16.421,
+      "operation": "validate",
+      "status": 200,
+      "instance": "api-a",
+      "latencyMs": 7.7,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:23.580840+00:00",
+      "second": 16.551,
+      "operation": "id",
+      "status": 200,
+      "instance": "api-a",
+      "latencyMs": 5.6,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:23.610272+00:00",
+      "second": 16.58,
+      "operation": "validate_negative",
+      "status": 200,
+      "instance": "api-b",
+      "latencyMs": 35.3,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:23.680726+00:00",
+      "second": 16.651,
+      "operation": "match",
+      "status": 200,
+      "instance": "api-a",
+      "latencyMs": 4.6,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:23.681819+00:00",
+      "second": 16.652,
+      "operation": "suggest",
+      "status": 200,
+      "instance": "api-b",
+      "latencyMs": 5.9,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:23.781321+00:00",
+      "second": 16.751,
+      "operation": "validate",
+      "status": 200,
+      "instance": "api-a",
+      "latencyMs": 6.0,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:23.801302+00:00",
+      "second": 16.771,
+      "operation": "validate_negative",
+      "status": 200,
+      "instance": "api-b",
+      "latencyMs": 25.6,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:23.880173+00:00",
+      "second": 16.85,
+      "operation": "id",
+      "status": 200,
+      "instance": "api-b",
+      "latencyMs": 5.6,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:23.879896+00:00",
+      "second": 16.85,
+      "operation": "suggest",
+      "status": 200,
+      "instance": "api-a",
+      "latencyMs": 5.0,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:23.937318+00:00",
+      "second": 16.907,
+      "operation": "match",
+      "status": 200,
+      "instance": "api-b",
+      "latencyMs": 5.4,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:23.937418+00:00",
+      "second": 16.908,
+      "operation": "validate",
+      "status": 200,
+      "instance": "api-a",
+      "latencyMs": 5.3,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:24.076011+00:00",
+      "second": 17.046,
+      "operation": "id",
+      "status": 200,
+      "instance": "api-a",
+      "latencyMs": 4.9,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:24.095940+00:00",
+      "second": 17.066,
+      "operation": "validate_negative",
+      "status": 200,
+      "instance": "api-b",
+      "latencyMs": 25.1,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:24.186345+00:00",
+      "second": 17.156,
+      "operation": "match",
+      "status": 200,
+      "instance": "api-b",
+      "latencyMs": 7.1,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:24.186274+00:00",
+      "second": 17.156,
+      "operation": "suggest",
+      "status": 200,
+      "instance": "api-a",
+      "latencyMs": 7.2,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:24.187654+00:00",
+      "second": 17.158,
+      "operation": "validate",
+      "status": 200,
+      "instance": "api-a",
+      "latencyMs": 6.1,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:24.336023+00:00",
+      "second": 17.306,
+      "operation": "id",
+      "status": 200,
+      "instance": "api-b",
+      "latencyMs": 6.0,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:24.336155+00:00",
+      "second": 17.306,
+      "operation": "suggest",
+      "status": 200,
+      "instance": "api-b",
+      "latencyMs": 5.4,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:24.354207+00:00",
+      "second": 17.324,
+      "operation": "validate_negative",
+      "status": 200,
+      "instance": "api-a",
+      "latencyMs": 24.4,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:24.464999+00:00",
+      "second": 17.435,
+      "operation": "validate",
+      "status": 200,
+      "instance": "api-b",
+      "latencyMs": 6.0,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:24.464448+00:00",
+      "second": 17.435,
+      "operation": "match",
+      "status": 200,
+      "instance": "api-a",
+      "latencyMs": 5.7,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:24.508405+00:00",
+      "second": 17.479,
+      "operation": "validate_negative",
+      "status": 200,
+      "instance": "api-a",
+      "latencyMs": 27.5,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:24.600891+00:00",
+      "second": 17.571,
+      "operation": "id",
+      "status": 200,
+      "instance": "api-a",
+      "latencyMs": 6.2,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:24.601992+00:00",
+      "second": 17.572,
+      "operation": "suggest",
+      "status": 200,
+      "instance": "api-b",
+      "latencyMs": 7.1,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:24.700551+00:00",
+      "second": 17.671,
+      "operation": "match",
+      "status": 200,
+      "instance": "api-a",
+      "latencyMs": 5.9,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:24.700859+00:00",
+      "second": 17.671,
+      "operation": "validate",
+      "status": 200,
+      "instance": "api-b",
+      "latencyMs": 5.9,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:24.795123+00:00",
+      "second": 17.765,
+      "operation": "validate_negative",
+      "status": 200,
+      "instance": "api-b",
+      "latencyMs": 22.9,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:24.929346+00:00",
+      "second": 17.899,
+      "operation": "id",
+      "status": 200,
+      "instance": "api-a",
+      "latencyMs": 96.4,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:24.933947+00:00",
+      "second": 17.904,
+      "operation": "suggest",
+      "status": 200,
+      "instance": "api-a",
+      "latencyMs": 31.9,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:24.935805+00:00",
+      "second": 17.906,
+      "operation": "match",
+      "status": 200,
+      "instance": "api-b",
+      "latencyMs": 24.0,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:25.035437+00:00",
+      "second": 18.006,
+      "operation": "id",
+      "status": 200,
+      "instance": "api-a",
+      "latencyMs": 4.9,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:25.037239+00:00",
+      "second": 18.007,
+      "operation": "validate",
+      "status": 200,
+      "instance": "api-b",
+      "latencyMs": 7.4,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:25.052792+00:00",
+      "second": 18.023,
+      "operation": "validate_negative",
+      "status": 200,
+      "instance": "api-b",
+      "latencyMs": 22.7,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:25.168155+00:00",
+      "second": 18.138,
+      "operation": "match",
+      "status": 200,
+      "instance": "api-a",
+      "latencyMs": 4.3,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:25.168430+00:00",
+      "second": 18.139,
+      "operation": "suggest",
+      "status": 200,
+      "instance": "api-b",
+      "latencyMs": 4.8,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:25.189670+00:00",
+      "second": 18.16,
+      "operation": "validate",
+      "status": 200,
+      "instance": "api-a",
+      "latencyMs": 4.7,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:25.287819+00:00",
+      "second": 18.258,
+      "operation": "id",
+      "status": 200,
+      "instance": "api-b",
+      "latencyMs": 6.2,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:25.304324+00:00",
+      "second": 18.274,
+      "operation": "validate_negative",
+      "status": 200,
+      "instance": "api-a",
+      "latencyMs": 22.9,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:25.444085+00:00",
+      "second": 18.414,
+      "operation": "suggest",
+      "status": 200,
+      "instance": "api-a",
+      "latencyMs": 19.3,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:25.444235+00:00",
+      "second": 18.414,
+      "operation": "match",
+      "status": 200,
+      "instance": "api-b",
+      "latencyMs": 19.1,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:25.538098+00:00",
+      "second": 18.508,
+      "operation": "validate",
+      "status": 200,
+      "instance": "api-b",
+      "latencyMs": 8.1,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:25.537455+00:00",
+      "second": 18.508,
+      "operation": "id",
+      "status": 200,
+      "instance": "api-b",
+      "latencyMs": 5.7,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:25.555927+00:00",
+      "second": 18.526,
+      "operation": "validate_negative",
+      "status": 200,
+      "instance": "api-a",
+      "latencyMs": 25.7,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:25.681926+00:00",
+      "second": 18.652,
+      "operation": "match",
+      "status": 200,
+      "instance": "api-b",
+      "latencyMs": 8.4,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:25.683178+00:00",
+      "second": 18.653,
+      "operation": "suggest",
+      "status": 200,
+      "instance": "api-a",
+      "latencyMs": 10.5,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:25.750355+00:00",
+      "second": 18.72,
+      "operation": "validate",
+      "status": 200,
+      "instance": "api-a",
+      "latencyMs": 5.5,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:25.769082+00:00",
+      "second": 18.739,
+      "operation": "validate_negative",
+      "status": 200,
+      "instance": "api-b",
+      "latencyMs": 23.9,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:25.805036+00:00",
+      "second": 18.775,
+      "operation": "id",
+      "status": 200,
+      "instance": "api-a",
+      "latencyMs": 4.8,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:25.848808+00:00",
+      "second": 18.819,
+      "operation": "suggest",
+      "status": 200,
+      "instance": "api-b",
+      "latencyMs": 5.6,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:25.988431+00:00",
+      "second": 18.959,
+      "operation": "match",
+      "status": 200,
+      "instance": "api-b",
+      "latencyMs": 8.6,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:25.991409+00:00",
+      "second": 18.962,
+      "operation": "validate",
+      "status": 200,
+      "instance": "api-a",
+      "latencyMs": 11.4,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:26.015899+00:00",
+      "second": 18.986,
+      "operation": "validate_negative",
+      "status": 200,
+      "instance": "api-a",
+      "latencyMs": 32.8,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:26.135866+00:00",
+      "second": 19.106,
+      "operation": "id",
+      "status": 200,
+      "instance": "api-b",
+      "latencyMs": 6.0,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:26.138235+00:00",
+      "second": 19.108,
+      "operation": "match",
+      "status": 200,
+      "instance": "api-a",
+      "latencyMs": 7.7,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:26.153831+00:00",
+      "second": 19.124,
+      "operation": "suggest",
+      "status": 200,
+      "instance": "api-b",
+      "latencyMs": 23.8,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:26.282519+00:00",
+      "second": 19.253,
+      "operation": "validate",
+      "status": 200,
+      "instance": "api-b",
+      "latencyMs": 7.4,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:26.298498+00:00",
+      "second": 19.269,
+      "operation": "validate_negative",
+      "status": 200,
+      "instance": "api-a",
+      "latencyMs": 23.0,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:26.385391+00:00",
+      "second": 19.355,
+      "operation": "suggest",
+      "status": 200,
+      "instance": "api-b",
+      "latencyMs": 5.3,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:26.385573+00:00",
+      "second": 19.356,
+      "operation": "id",
+      "status": 200,
+      "instance": "api-a",
+      "latencyMs": 5.7,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:26.388954+00:00",
+      "second": 19.359,
+      "operation": "match",
+      "status": 200,
+      "instance": "api-a",
+      "latencyMs": 4.8,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:26.537452+00:00",
+      "second": 19.508,
+      "operation": "validate",
+      "status": 200,
+      "instance": "api-a",
+      "latencyMs": 11.7,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:26.546698+00:00",
+      "second": 19.517,
+      "operation": "id",
+      "status": 200,
+      "instance": "api-b",
+      "latencyMs": 4.5,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:26.556459+00:00",
+      "second": 19.527,
+      "operation": "validate_negative",
+      "status": 200,
+      "instance": "api-b",
+      "latencyMs": 30.4,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:26.677195+00:00",
+      "second": 19.647,
+      "operation": "match",
+      "status": 200,
+      "instance": "api-a",
+      "latencyMs": 5.2,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:26.677112+00:00",
+      "second": 19.647,
+      "operation": "suggest",
+      "status": 200,
+      "instance": "api-b",
+      "latencyMs": 5.4,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:26.763423+00:00",
+      "second": 19.734,
+      "operation": "validate",
+      "status": 200,
+      "instance": "api-a",
+      "latencyMs": 4.7,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:26.784150+00:00",
+      "second": 19.754,
+      "operation": "validate_negative",
+      "status": 200,
+      "instance": "api-b",
+      "latencyMs": 25.3,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:26.791230+00:00",
+      "second": 19.761,
+      "operation": "id",
+      "status": 200,
+      "instance": "api-a",
+      "latencyMs": 4.3,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:26.910146+00:00",
+      "second": 19.88,
+      "operation": "match",
+      "status": 200,
+      "instance": "api-a",
+      "latencyMs": 6.3,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:26.910030+00:00",
+      "second": 19.88,
+      "operation": "suggest",
+      "status": 200,
+      "instance": "api-b",
+      "latencyMs": 6.4,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:27.000638+00:00",
+      "second": 19.971,
+      "operation": "validate",
+      "status": 200,
+      "instance": "api-b",
+      "latencyMs": 5.6,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:27.020003+00:00",
+      "second": 19.99,
+      "operation": "validate_negative",
+      "status": 200,
+      "instance": "api-a",
+      "latencyMs": 24.9,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:27.122812+00:00",
+      "second": 20.093,
+      "operation": "suggest",
+      "status": 200,
+      "instance": "api-a",
+      "latencyMs": 5.0,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:27.123025+00:00",
+      "second": 20.093,
+      "operation": "id",
+      "status": 200,
+      "instance": "api-b",
+      "latencyMs": 5.6,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:27.235323+00:00",
+      "second": 20.205,
+      "operation": "validate",
+      "status": 200,
+      "instance": "api-a",
+      "latencyMs": 5.0,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:27.235448+00:00",
+      "second": 20.206,
+      "operation": "match",
+      "status": 200,
+      "instance": "api-b",
+      "latencyMs": 5.3,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:27.257594+00:00",
+      "second": 20.228,
+      "operation": "validate_negative",
+      "status": 200,
+      "instance": "api-b",
+      "latencyMs": 24.3,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:27.387056+00:00",
+      "second": 20.357,
+      "operation": "id",
+      "status": 200,
+      "instance": "api-b",
+      "latencyMs": 7.2,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:27.386573+00:00",
+      "second": 20.357,
+      "operation": "match",
+      "status": 200,
+      "instance": "api-a",
+      "latencyMs": 5.4,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:27.386941+00:00",
+      "second": 20.357,
+      "operation": "suggest",
+      "status": 200,
+      "instance": "api-a",
+      "latencyMs": 6.9,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:27.515748+00:00",
+      "second": 20.486,
+      "operation": "validate",
+      "status": 200,
+      "instance": "api-a",
+      "latencyMs": 8.6,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:27.534017+00:00",
+      "second": 20.504,
+      "operation": "validate_negative",
+      "status": 200,
+      "instance": "api-b",
+      "latencyMs": 26.6,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:27.576551+00:00",
+      "second": 20.547,
+      "operation": "id",
+      "status": 200,
+      "instance": "api-b",
+      "latencyMs": 3.5,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:27.665709+00:00",
+      "second": 20.636,
+      "operation": "suggest",
+      "status": 200,
+      "instance": "api-b",
+      "latencyMs": 4.2,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:27.665780+00:00",
+      "second": 20.636,
+      "operation": "match",
+      "status": 200,
+      "instance": "api-a",
+      "latencyMs": 4.0,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:27.768760+00:00",
+      "second": 20.739,
+      "operation": "validate",
+      "status": 200,
+      "instance": "api-b",
+      "latencyMs": 5.8,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:27.791700+00:00",
+      "second": 20.762,
+      "operation": "validate_negative",
+      "status": 200,
+      "instance": "api-a",
+      "latencyMs": 28.6,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:27.866022+00:00",
+      "second": 20.836,
+      "operation": "id",
+      "status": 200,
+      "instance": "api-a",
+      "latencyMs": 5.0,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:27.867101+00:00",
+      "second": 20.837,
+      "operation": "suggest",
+      "status": 200,
+      "instance": "api-b",
+      "latencyMs": 5.9,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:27.960841+00:00",
+      "second": 20.931,
+      "operation": "match",
+      "status": 200,
+      "instance": "api-a",
+      "latencyMs": 5.8,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:27.961900+00:00",
+      "second": 20.932,
+      "operation": "validate",
+      "status": 200,
+      "instance": "api-b",
+      "latencyMs": 6.6,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:28.083593+00:00",
+      "second": 21.054,
+      "operation": "id",
+      "status": 200,
+      "instance": "api-a",
+      "latencyMs": 5.2,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:28.102569+00:00",
+      "second": 21.073,
+      "operation": "validate_negative",
+      "status": 200,
+      "instance": "api-b",
+      "latencyMs": 24.5,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:28.109454+00:00",
+      "second": 21.08,
+      "operation": "suggest",
+      "status": 200,
+      "instance": "api-a",
+      "latencyMs": 5.2,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:28.167754+00:00",
+      "second": 21.138,
+      "operation": "match",
+      "status": 200,
+      "instance": "api-b",
+      "latencyMs": 4.9,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:28.259374+00:00",
+      "second": 21.23,
+      "operation": "validate",
+      "status": 200,
+      "instance": "api-b",
+      "latencyMs": 7.0,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:28.276215+00:00",
+      "second": 21.246,
+      "operation": "validate_negative",
+      "status": 200,
+      "instance": "api-a",
+      "latencyMs": 23.5,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:28.377591+00:00",
+      "second": 21.348,
+      "operation": "id",
+      "status": 200,
+      "instance": "api-a",
+      "latencyMs": 4.7,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:28.378223+00:00",
+      "second": 21.348,
+      "operation": "suggest",
+      "status": 200,
+      "instance": "api-b",
+      "latencyMs": 5.0,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:28.468013+00:00",
+      "second": 21.438,
+      "operation": "match",
+      "status": 200,
+      "instance": "api-a",
+      "latencyMs": 3.8,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:28.468330+00:00",
+      "second": 21.438,
+      "operation": "validate",
+      "status": 200,
+      "instance": "api-b",
+      "latencyMs": 3.9,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:28.567256+00:00",
+      "second": 21.537,
+      "operation": "id",
+      "status": 200,
+      "instance": "api-a",
+      "latencyMs": 4.0,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:28.586405+00:00",
+      "second": 21.557,
+      "operation": "validate_negative",
+      "status": 200,
+      "instance": "api-b",
+      "latencyMs": 23.4,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:28.682811+00:00",
+      "second": 21.653,
+      "operation": "suggest",
+      "status": 200,
+      "instance": "api-b",
+      "latencyMs": 7.0,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:28.682736+00:00",
+      "second": 21.653,
+      "operation": "match",
+      "status": 200,
+      "instance": "api-a",
+      "latencyMs": 6.8,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:28.782362+00:00",
+      "second": 21.752,
+      "operation": "validate",
+      "status": 200,
+      "instance": "api-a",
+      "latencyMs": 6.0,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:28.805218+00:00",
+      "second": 21.775,
+      "operation": "validate_negative",
+      "status": 200,
+      "instance": "api-b",
+      "latencyMs": 28.7,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:28.880599+00:00",
+      "second": 21.851,
+      "operation": "id",
+      "status": 200,
+      "instance": "api-b",
+      "latencyMs": 4.9,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:28.880682+00:00",
+      "second": 21.851,
+      "operation": "suggest",
+      "status": 200,
+      "instance": "api-a",
+      "latencyMs": 4.8,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:28.992511+00:00",
+      "second": 21.963,
+      "operation": "match",
+      "status": 200,
+      "instance": "api-b",
+      "latencyMs": 13.0,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:28.993357+00:00",
+      "second": 21.963,
+      "operation": "validate",
+      "status": 200,
+      "instance": "api-a",
+      "latencyMs": 13.3,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:29.010988+00:00",
+      "second": 21.981,
+      "operation": "validate_negative",
+      "status": 200,
+      "instance": "api-a",
+      "latencyMs": 30.1,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:29.128027+00:00",
+      "second": 22.098,
+      "operation": "id",
+      "status": 200,
+      "instance": "api-b",
+      "latencyMs": 12.9,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:29.128177+00:00",
+      "second": 22.098,
+      "operation": "suggest",
+      "status": 200,
+      "instance": "api-a",
+      "latencyMs": 10.5,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:29.199347+00:00",
+      "second": 22.169,
+      "operation": "validate",
+      "status": 200,
+      "instance": "api-a",
+      "latencyMs": 5.6,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:29.198850+00:00",
+      "second": 22.169,
+      "operation": "match",
+      "status": 200,
+      "instance": "api-b",
+      "latencyMs": 5.6,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:29.333471+00:00",
+      "second": 22.304,
+      "operation": "id",
+      "status": 200,
+      "instance": "api-a",
+      "latencyMs": 24.8,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:29.341494+00:00",
+      "second": 22.312,
+      "operation": "suggest",
+      "status": 200,
+      "instance": "api-b",
+      "latencyMs": 7.2,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:29.354894+00:00",
+      "second": 22.325,
+      "operation": "validate_negative",
+      "status": 200,
+      "instance": "api-b",
+      "latencyMs": 46.1,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:29.427730+00:00",
+      "second": 22.398,
+      "operation": "match",
+      "status": 200,
+      "instance": "api-a",
+      "latencyMs": 6.7,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:29.453201+00:00",
+      "second": 22.423,
+      "operation": "validate",
+      "status": 200,
+      "instance": "api-b",
+      "latencyMs": 5.9,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:29.581350+00:00",
+      "second": 22.551,
+      "operation": "id",
+      "status": 200,
+      "instance": "api-b",
+      "latencyMs": 4.8,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:29.600477+00:00",
+      "second": 22.571,
+      "operation": "validate_negative",
+      "status": 200,
+      "instance": "api-a",
+      "latencyMs": 24.3,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:29.613520+00:00",
+      "second": 22.584,
+      "operation": "suggest",
+      "status": 200,
+      "instance": "api-a",
+      "latencyMs": 5.2,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:29.723129+00:00",
+      "second": 22.693,
+      "operation": "match",
+      "status": 200,
+      "instance": "api-b",
+      "latencyMs": 5.7,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:29.723482+00:00",
+      "second": 22.694,
+      "operation": "validate",
+      "status": 200,
+      "instance": "api-a",
+      "latencyMs": 5.9,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:29.767771+00:00",
+      "second": 22.738,
+      "operation": "validate_negative",
+      "status": 200,
+      "instance": "api-b",
+      "latencyMs": 22.2,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:29.881671+00:00",
+      "second": 22.852,
+      "operation": "id",
+      "status": 200,
+      "instance": "api-b",
+      "latencyMs": 8.8,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:29.882218+00:00",
+      "second": 22.852,
+      "operation": "suggest",
+      "status": 200,
+      "instance": "api-a",
+      "latencyMs": 9.1,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:29.972629+00:00",
+      "second": 22.943,
+      "operation": "match",
+      "status": 200,
+      "instance": "api-b",
+      "latencyMs": 5.2,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:29.972974+00:00",
+      "second": 22.943,
+      "operation": "validate",
+      "status": 200,
+      "instance": "api-a",
+      "latencyMs": 5.3,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:30.070205+00:00",
+      "second": 23.04,
+      "operation": "id",
+      "status": 200,
+      "instance": "api-a",
+      "latencyMs": 4.8,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:30.089453+00:00",
+      "second": 23.06,
+      "operation": "validate_negative",
+      "status": 200,
+      "instance": "api-b",
+      "latencyMs": 24.3,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:30.179042+00:00",
+      "second": 23.149,
+      "operation": "match",
+      "status": 200,
+      "instance": "api-a",
+      "latencyMs": 4.9,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:30.178972+00:00",
+      "second": 23.149,
+      "operation": "suggest",
+      "status": 200,
+      "instance": "api-b",
+      "latencyMs": 5.2,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:30.278904+00:00",
+      "second": 23.249,
+      "operation": "validate",
+      "status": 200,
+      "instance": "api-b",
+      "latencyMs": 4.6,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:30.296798+00:00",
+      "second": 23.267,
+      "operation": "validate_negative",
+      "status": 200,
+      "instance": "api-a",
+      "latencyMs": 22.3,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:30.381124+00:00",
+      "second": 23.351,
+      "operation": "id",
+      "status": 200,
+      "instance": "api-b",
+      "latencyMs": 4.5,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:30.381014+00:00",
+      "second": 23.351,
+      "operation": "suggest",
+      "status": 200,
+      "instance": "api-a",
+      "latencyMs": 4.3,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:30.480754+00:00",
+      "second": 23.451,
+      "operation": "match",
+      "status": 200,
+      "instance": "api-a",
+      "latencyMs": 5.1,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:30.480815+00:00",
+      "second": 23.451,
+      "operation": "validate",
+      "status": 200,
+      "instance": "api-b",
+      "latencyMs": 4.9,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:30.551165+00:00",
+      "second": 23.521,
+      "operation": "id",
+      "status": 200,
+      "instance": "api-b",
+      "latencyMs": 4.0,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:30.574756+00:00",
+      "second": 23.545,
+      "operation": "validate_negative",
+      "status": 200,
+      "instance": "api-a",
+      "latencyMs": 27.7,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:30.587665+00:00",
+      "second": 23.558,
+      "operation": "suggest",
+      "status": 200,
+      "instance": "api-a",
+      "latencyMs": 4.1,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:30.734912+00:00",
+      "second": 23.705,
+      "operation": "validate",
+      "status": 200,
+      "instance": "api-a",
+      "latencyMs": 6.2,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:30.734486+00:00",
+      "second": 23.705,
+      "operation": "match",
+      "status": 200,
+      "instance": "api-b",
+      "latencyMs": 6.0,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:30.833218+00:00",
+      "second": 23.803,
+      "operation": "validate_negative",
+      "status": 200,
+      "instance": "api-b",
+      "latencyMs": 57.5,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:30.872818+00:00",
+      "second": 23.843,
+      "operation": "suggest",
+      "status": 200,
+      "instance": "api-b",
+      "latencyMs": 5.5,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:30.872901+00:00",
+      "second": 23.843,
+      "operation": "id",
+      "status": 200,
+      "instance": "api-a",
+      "latencyMs": 5.8,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:30.946882+00:00",
+      "second": 23.917,
+      "operation": "match",
+      "status": 200,
+      "instance": "api-b",
+      "latencyMs": 9.5,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:30.947593+00:00",
+      "second": 23.918,
+      "operation": "validate",
+      "status": 200,
+      "instance": "api-a",
+      "latencyMs": 9.9,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:31.030765+00:00",
+      "second": 24.001,
+      "operation": "validate_negative",
+      "status": 200,
+      "instance": "api-a",
+      "latencyMs": 24.7,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:31.111495+00:00",
+      "second": 24.082,
+      "operation": "id",
+      "status": 200,
+      "instance": "api-a",
+      "latencyMs": 4.9,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:31.113460+00:00",
+      "second": 24.084,
+      "operation": "suggest",
+      "status": 200,
+      "instance": "api-b",
+      "latencyMs": 6.7,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:31.202656+00:00",
+      "second": 24.173,
+      "operation": "match",
+      "status": 200,
+      "instance": "api-b",
+      "latencyMs": 6.4,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:31.203178+00:00",
+      "second": 24.173,
+      "operation": "validate",
+      "status": 200,
+      "instance": "api-a",
+      "latencyMs": 6.6,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:31.300849+00:00",
+      "second": 24.271,
+      "operation": "validate_negative",
+      "status": 200,
+      "instance": "api-b",
+      "latencyMs": 22.9,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:31.355324+00:00",
+      "second": 24.325,
+      "operation": "suggest",
+      "status": 200,
+      "instance": "api-b",
+      "latencyMs": 7.7,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:31.354804+00:00",
+      "second": 24.325,
+      "operation": "id",
+      "status": 200,
+      "instance": "api-a",
+      "latencyMs": 7.4,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:31.480639+00:00",
+      "second": 24.451,
+      "operation": "match",
+      "status": 200,
+      "instance": "api-b",
+      "latencyMs": 5.5,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:31.480786+00:00",
+      "second": 24.451,
+      "operation": "validate",
+      "status": 200,
+      "instance": "api-a",
+      "latencyMs": 5.4,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:31.558984+00:00",
+      "second": 24.529,
+      "operation": "id",
+      "status": 200,
+      "instance": "api-b",
+      "latencyMs": 5.1,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:31.576627+00:00",
+      "second": 24.547,
+      "operation": "validate_negative",
+      "status": 200,
+      "instance": "api-a",
+      "latencyMs": 23.0,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:31.618678+00:00",
+      "second": 24.589,
+      "operation": "suggest",
+      "status": 200,
+      "instance": "api-a",
+      "latencyMs": 7.2,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:31.651493+00:00",
+      "second": 24.622,
+      "operation": "match",
+      "status": 200,
+      "instance": "api-b",
+      "latencyMs": 6.4,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:31.770516+00:00",
+      "second": 24.741,
+      "operation": "validate",
+      "status": 200,
+      "instance": "api-a",
+      "latencyMs": 7.7,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:31.790770+00:00",
+      "second": 24.761,
+      "operation": "validate_negative",
+      "status": 200,
+      "instance": "api-b",
+      "latencyMs": 27.7,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:31.825720+00:00",
+      "second": 24.796,
+      "operation": "id",
+      "status": 200,
+      "instance": "api-a",
+      "latencyMs": 6.2,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:31.930381+00:00",
+      "second": 24.9,
+      "operation": "suggest",
+      "status": 200,
+      "instance": "api-b",
+      "latencyMs": 6.4,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:31.930456+00:00",
+      "second": 24.901,
+      "operation": "match",
+      "status": 200,
+      "instance": "api-a",
+      "latencyMs": 6.1,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:31.988878+00:00",
+      "second": 24.959,
+      "operation": "validate",
+      "status": 200,
+      "instance": "api-b",
+      "latencyMs": 9.8,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:32.035896+00:00",
+      "second": 25.006,
+      "operation": "validate_negative",
+      "status": 200,
+      "instance": "api-a",
+      "latencyMs": 38.1,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:32.130329+00:00",
+      "second": 25.1,
+      "operation": "suggest",
+      "status": 200,
+      "instance": "api-a",
+      "latencyMs": 5.8,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:32.130622+00:00",
+      "second": 25.101,
+      "operation": "id",
+      "status": 200,
+      "instance": "api-b",
+      "latencyMs": 6.3,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:32.224965+00:00",
+      "second": 25.195,
+      "operation": "match",
+      "status": 200,
+      "instance": "api-b",
+      "latencyMs": 6.7,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:32.225094+00:00",
+      "second": 25.195,
+      "operation": "validate",
+      "status": 200,
+      "instance": "api-a",
+      "latencyMs": 6.4,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:32.298773+00:00",
+      "second": 25.269,
+      "operation": "id",
+      "status": 200,
+      "instance": "api-b",
+      "latencyMs": 5.2,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:32.316418+00:00",
+      "second": 25.287,
+      "operation": "validate_negative",
+      "status": 200,
+      "instance": "api-a",
+      "latencyMs": 23.0,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:32.372806+00:00",
+      "second": 25.343,
+      "operation": "suggest",
+      "status": 200,
+      "instance": "api-b",
+      "latencyMs": 5.3,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:32.461628+00:00",
+      "second": 25.432,
+      "operation": "validate",
+      "status": 200,
+      "instance": "api-a",
+      "latencyMs": 6.8,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:32.461718+00:00",
+      "second": 25.432,
+      "operation": "match",
+      "status": 200,
+      "instance": "api-b",
+      "latencyMs": 7.2,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:32.576918+00:00",
+      "second": 25.547,
+      "operation": "id",
+      "status": 200,
+      "instance": "api-b",
+      "latencyMs": 4.4,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:32.596443+00:00",
+      "second": 25.567,
+      "operation": "validate_negative",
+      "status": 200,
+      "instance": "api-a",
+      "latencyMs": 24.1,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:32.682553+00:00",
+      "second": 25.653,
+      "operation": "match",
+      "status": 200,
+      "instance": "api-a",
+      "latencyMs": 5.0,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:32.682663+00:00",
+      "second": 25.653,
+      "operation": "suggest",
+      "status": 200,
+      "instance": "api-b",
+      "latencyMs": 5.3,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:32.756086+00:00",
+      "second": 25.726,
+      "operation": "validate",
+      "status": 200,
+      "instance": "api-b",
+      "latencyMs": 7.5,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:32.775349+00:00",
+      "second": 25.745,
+      "operation": "validate_negative",
+      "status": 200,
+      "instance": "api-a",
+      "latencyMs": 26.7,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:32.807169+00:00",
+      "second": 25.777,
+      "operation": "id",
+      "status": 200,
+      "instance": "api-a",
+      "latencyMs": 5.2,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:32.845393+00:00",
+      "second": 25.815,
+      "operation": "suggest",
+      "status": 200,
+      "instance": "api-b",
+      "latencyMs": 4.8,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:32.963633+00:00",
+      "second": 25.934,
+      "operation": "match",
+      "status": 200,
+      "instance": "api-a",
+      "latencyMs": 5.9,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:32.963546+00:00",
+      "second": 25.934,
+      "operation": "validate",
+      "status": 200,
+      "instance": "api-b",
+      "latencyMs": 5.5,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:33.048409+00:00",
+      "second": 26.019,
+      "operation": "id",
+      "status": 200,
+      "instance": "api-b",
+      "latencyMs": 4.9,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:33.065630+00:00",
+      "second": 26.036,
+      "operation": "validate_negative",
+      "status": 200,
+      "instance": "api-a",
+      "latencyMs": 22.5,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:33.181955+00:00",
+      "second": 26.152,
+      "operation": "suggest",
+      "status": 200,
+      "instance": "api-a",
+      "latencyMs": 5.7,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:33.182909+00:00",
+      "second": 26.153,
+      "operation": "match",
+      "status": 200,
+      "instance": "api-b",
+      "latencyMs": 6.4,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:33.284753+00:00",
+      "second": 26.255,
+      "operation": "validate",
+      "status": 200,
+      "instance": "api-b",
+      "latencyMs": 7.0,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:33.302995+00:00",
+      "second": 26.273,
+      "operation": "validate_negative",
+      "status": 200,
+      "instance": "api-a",
+      "latencyMs": 24.8,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:33.328797+00:00",
+      "second": 26.299,
+      "operation": "id",
+      "status": 200,
+      "instance": "api-a",
+      "latencyMs": 3.7,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:33.432322+00:00",
+      "second": 26.402,
+      "operation": "match",
+      "status": 200,
+      "instance": "api-a",
+      "latencyMs": 5.0,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:33.431522+00:00",
+      "second": 26.402,
+      "operation": "suggest",
+      "status": 200,
+      "instance": "api-b",
+      "latencyMs": 4.4,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:33.524541+00:00",
+      "second": 26.495,
+      "operation": "validate",
+      "status": 200,
+      "instance": "api-b",
+      "latencyMs": 7.2,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:33.541918+00:00",
+      "second": 26.512,
+      "operation": "validate_negative",
+      "status": 200,
+      "instance": "api-a",
+      "latencyMs": 24.4,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:33.632785+00:00",
+      "second": 26.603,
+      "operation": "suggest",
+      "status": 200,
+      "instance": "api-a",
+      "latencyMs": 8.3,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:33.656244+00:00",
+      "second": 26.626,
+      "operation": "id",
+      "status": 200,
+      "instance": "api-b",
+      "latencyMs": 32.0,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:33.734520+00:00",
+      "second": 26.705,
+      "operation": "match",
+      "status": 200,
+      "instance": "api-a",
+      "latencyMs": 4.6,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:33.735759+00:00",
+      "second": 26.706,
+      "operation": "validate",
+      "status": 200,
+      "instance": "api-b",
+      "latencyMs": 5.6,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:33.759969+00:00",
+      "second": 26.73,
+      "operation": "validate_negative",
+      "status": 200,
+      "instance": "api-b",
+      "latencyMs": 27.3,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:33.830915+00:00",
+      "second": 26.801,
+      "operation": "id",
+      "status": 200,
+      "instance": "api-a",
+      "latencyMs": 3.5,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:33.913836+00:00",
+      "second": 26.884,
+      "operation": "suggest",
+      "status": 200,
+      "instance": "api-a",
+      "latencyMs": 5.9,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:33.913732+00:00",
+      "second": 26.884,
+      "operation": "match",
+      "status": 200,
+      "instance": "api-b",
+      "latencyMs": 5.4,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:34.032889+00:00",
+      "second": 27.003,
+      "operation": "validate",
+      "status": 200,
+      "instance": "api-b",
+      "latencyMs": 4.1,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:34.054781+00:00",
+      "second": 27.025,
+      "operation": "validate_negative",
+      "status": 200,
+      "instance": "api-a",
+      "latencyMs": 25.8,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:34.073592+00:00",
+      "second": 27.044,
+      "operation": "id",
+      "status": 200,
+      "instance": "api-b",
+      "latencyMs": 6.6,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:34.177569+00:00",
+      "second": 27.148,
+      "operation": "match",
+      "status": 200,
+      "instance": "api-b",
+      "latencyMs": 5.2,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:34.178139+00:00",
+      "second": 27.148,
+      "operation": "suggest",
+      "status": 200,
+      "instance": "api-a",
+      "latencyMs": 5.9,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:34.279992+00:00",
+      "second": 27.25,
+      "operation": "validate",
+      "status": 200,
+      "instance": "api-b",
+      "latencyMs": 8.3,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:34.299994+00:00",
+      "second": 27.27,
+      "operation": "validate_negative",
+      "status": 200,
+      "instance": "api-a",
+      "latencyMs": 28.1,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:34.353956+00:00",
+      "second": 27.324,
+      "operation": "suggest",
+      "status": 200,
+      "instance": "api-a",
+      "latencyMs": 4.9,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:34.354058+00:00",
+      "second": 27.324,
+      "operation": "id",
+      "status": 200,
+      "instance": "api-b",
+      "latencyMs": 5.3,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:34.457307+00:00",
+      "second": 27.427,
+      "operation": "match",
+      "status": 200,
+      "instance": "api-b",
+      "latencyMs": 5.2,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:34.457420+00:00",
+      "second": 27.428,
+      "operation": "validate",
+      "status": 200,
+      "instance": "api-a",
+      "latencyMs": 5.1,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:34.540567+00:00",
+      "second": 27.511,
+      "operation": "validate_negative",
+      "status": 200,
+      "instance": "api-a",
+      "latencyMs": 23.1,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:34.626582+00:00",
+      "second": 27.597,
+      "operation": "id",
+      "status": 200,
+      "instance": "api-a",
+      "latencyMs": 4.9,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:34.626986+00:00",
+      "second": 27.597,
+      "operation": "suggest",
+      "status": 200,
+      "instance": "api-b",
+      "latencyMs": 5.1,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:34.673145+00:00",
+      "second": 27.643,
+      "operation": "match",
+      "status": 200,
+      "instance": "api-b",
+      "latencyMs": 9.1,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:34.779233+00:00",
+      "second": 27.749,
+      "operation": "validate",
+      "status": 200,
+      "instance": "api-b",
+      "latencyMs": 6.6,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:34.802684+00:00",
+      "second": 27.773,
+      "operation": "validate_negative",
+      "status": 200,
+      "instance": "api-a",
+      "latencyMs": 29.6,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:34.855972+00:00",
+      "second": 27.826,
+      "operation": "suggest",
+      "status": 200,
+      "instance": "api-a",
+      "latencyMs": 6.5,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:34.855822+00:00",
+      "second": 27.826,
+      "operation": "id",
+      "status": 200,
+      "instance": "api-b",
+      "latencyMs": 6.5,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:34.985066+00:00",
+      "second": 27.955,
+      "operation": "validate",
+      "status": 200,
+      "instance": "api-a",
+      "latencyMs": 4.9,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:34.984825+00:00",
+      "second": 27.955,
+      "operation": "match",
+      "status": 200,
+      "instance": "api-a",
+      "latencyMs": 4.8,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:35.008403+00:00",
+      "second": 27.979,
+      "operation": "validate_negative",
+      "status": 200,
+      "instance": "api-b",
+      "latencyMs": 27.8,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:35.136306+00:00",
+      "second": 28.106,
+      "operation": "suggest",
+      "status": 200,
+      "instance": "api-a",
+      "latencyMs": 6.3,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:35.138283+00:00",
+      "second": 28.108,
+      "operation": "id",
+      "status": 200,
+      "instance": "api-b",
+      "latencyMs": 8.5,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:35.141337+00:00",
+      "second": 28.111,
+      "operation": "match",
+      "status": 200,
+      "instance": "api-b",
+      "latencyMs": 7.1,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:35.243114+00:00",
+      "second": 28.213,
+      "operation": "validate",
+      "status": 200,
+      "instance": "api-a",
+      "latencyMs": 33.3,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:35.292879+00:00",
+      "second": 28.263,
+      "operation": "id",
+      "status": 200,
+      "instance": "api-a",
+      "latencyMs": 9.7,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:35.294081+00:00",
+      "second": 28.264,
+      "operation": "validate_negative",
+      "status": 200,
+      "instance": "api-b",
+      "latencyMs": 27.8,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:35.426390+00:00",
+      "second": 28.397,
+      "operation": "suggest",
+      "status": 200,
+      "instance": "api-b",
+      "latencyMs": 5.7,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:35.426539+00:00",
+      "second": 28.397,
+      "operation": "match",
+      "status": 200,
+      "instance": "api-a",
+      "latencyMs": 5.6,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:35.533906+00:00",
+      "second": 28.504,
+      "operation": "validate",
+      "status": 200,
+      "instance": "api-a",
+      "latencyMs": 7.8,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:35.554624+00:00",
+      "second": 28.525,
+      "operation": "validate_negative",
+      "status": 200,
+      "instance": "api-b",
+      "latencyMs": 28.2,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:35.636738+00:00",
+      "second": 28.607,
+      "operation": "id",
+      "status": 200,
+      "instance": "api-a",
+      "latencyMs": 6.9,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:35.639177+00:00",
+      "second": 28.609,
+      "operation": "suggest",
+      "status": 200,
+      "instance": "api-b",
+      "latencyMs": 9.2,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:35.639063+00:00",
+      "second": 28.609,
+      "operation": "match",
+      "status": 200,
+      "instance": "api-b",
+      "latencyMs": 4.7,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:35.769496+00:00",
+      "second": 28.74,
+      "operation": "validate",
+      "status": 200,
+      "instance": "api-a",
+      "latencyMs": 5.3,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:35.788285+00:00",
+      "second": 28.758,
+      "operation": "validate_negative",
+      "status": 200,
+      "instance": "api-b",
+      "latencyMs": 23.9,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:35.878548+00:00",
+      "second": 28.849,
+      "operation": "suggest",
+      "status": 200,
+      "instance": "api-a",
+      "latencyMs": 6.9,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:35.879749+00:00",
+      "second": 28.85,
+      "operation": "id",
+      "status": 200,
+      "instance": "api-b",
+      "latencyMs": 8.3,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:35.950082+00:00",
+      "second": 28.92,
+      "operation": "match",
+      "status": 200,
+      "instance": "api-a",
+      "latencyMs": 5.0,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:35.951028+00:00",
+      "second": 28.921,
+      "operation": "validate",
+      "status": 200,
+      "instance": "api-b",
+      "latencyMs": 5.6,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:36.066251+00:00",
+      "second": 29.036,
+      "operation": "id",
+      "status": 200,
+      "instance": "api-b",
+      "latencyMs": 6.2,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:36.081510+00:00",
+      "second": 29.052,
+      "operation": "validate_negative",
+      "status": 200,
+      "instance": "api-a",
+      "latencyMs": 21.6,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:36.166307+00:00",
+      "second": 29.136,
+      "operation": "suggest",
+      "status": 200,
+      "instance": "api-a",
+      "latencyMs": 8.5,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:36.166619+00:00",
+      "second": 29.137,
+      "operation": "match",
+      "status": 200,
+      "instance": "api-b",
+      "latencyMs": 8.5,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:36.287482+00:00",
+      "second": 29.258,
+      "operation": "validate",
+      "status": 200,
+      "instance": "api-b",
+      "latencyMs": 11.7,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:36.306091+00:00",
+      "second": 29.276,
+      "operation": "validate_negative",
+      "status": 200,
+      "instance": "api-a",
+      "latencyMs": 29.1,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:36.352969+00:00",
+      "second": 29.323,
+      "operation": "id",
+      "status": 200,
+      "instance": "api-a",
+      "latencyMs": 5.6,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:36.354551+00:00",
+      "second": 29.325,
+      "operation": "suggest",
+      "status": 200,
+      "instance": "api-b",
+      "latencyMs": 7.0,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:36.472704+00:00",
+      "second": 29.443,
+      "operation": "match",
+      "status": 200,
+      "instance": "api-a",
+      "latencyMs": 5.2,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:36.473744+00:00",
+      "second": 29.444,
+      "operation": "validate",
+      "status": 200,
+      "instance": "api-b",
+      "latencyMs": 5.8,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:36.536569+00:00",
+      "second": 29.507,
+      "operation": "validate_negative",
+      "status": 200,
+      "instance": "api-a",
+      "latencyMs": 25.3,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:36.633681+00:00",
+      "second": 29.604,
+      "operation": "suggest",
+      "status": 200,
+      "instance": "api-b",
+      "latencyMs": 6.2,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:36.633967+00:00",
+      "second": 29.604,
+      "operation": "id",
+      "status": 200,
+      "instance": "api-a",
+      "latencyMs": 6.8,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:36.726285+00:00",
+      "second": 29.696,
+      "operation": "match",
+      "status": 200,
+      "instance": "api-a",
+      "latencyMs": 5.8,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:36.726636+00:00",
+      "second": 29.697,
+      "operation": "validate",
+      "status": 200,
+      "instance": "api-b",
+      "latencyMs": 5.8,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:36.813743+00:00",
+      "second": 29.784,
+      "operation": "id",
+      "status": 200,
+      "instance": "api-a",
+      "latencyMs": 5.0,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:36.835250+00:00",
+      "second": 29.805,
+      "operation": "validate_negative",
+      "status": 200,
+      "instance": "api-b",
+      "latencyMs": 26.8,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:36.929939+00:00",
+      "second": 29.9,
+      "operation": "suggest",
+      "status": 200,
+      "instance": "api-a",
+      "latencyMs": 6.9,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:36.929841+00:00",
+      "second": 29.9,
+      "operation": "match",
+      "status": 200,
+      "instance": "api-b",
+      "latencyMs": 6.6,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:37.029534+00:00",
+      "second": 30.0,
+      "operation": "validate",
+      "status": 200,
+      "instance": "api-b",
+      "latencyMs": 6.1,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:37.047837+00:00",
+      "second": 30.018,
+      "operation": "validate_negative",
+      "status": 200,
+      "instance": "api-a",
+      "latencyMs": 24.1,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:37.134614+00:00",
+      "second": 30.105,
+      "operation": "suggest",
+      "status": 200,
+      "instance": "api-b",
+      "latencyMs": 4.5,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:37.134678+00:00",
+      "second": 30.105,
+      "operation": "id",
+      "status": 200,
+      "instance": "api-a",
+      "latencyMs": 4.8,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:37.137396+00:00",
+      "second": 30.107,
+      "operation": "match",
+      "status": 200,
+      "instance": "api-b",
+      "latencyMs": 4.1,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:37.282799+00:00",
+      "second": 30.253,
+      "operation": "validate",
+      "status": 200,
+      "instance": "api-a",
+      "latencyMs": 5.0,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:37.302500+00:00",
+      "second": 30.273,
+      "operation": "validate_negative",
+      "status": 200,
+      "instance": "api-b",
+      "latencyMs": 24.4,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:37.336148+00:00",
+      "second": 30.306,
+      "operation": "suggest",
+      "status": 200,
+      "instance": "api-b",
+      "latencyMs": 4.9,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:37.336280+00:00",
+      "second": 30.306,
+      "operation": "id",
+      "status": 200,
+      "instance": "api-a",
+      "latencyMs": 5.1,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:37.466756+00:00",
+      "second": 30.437,
+      "operation": "validate",
+      "status": 200,
+      "instance": "api-b",
+      "latencyMs": 5.8,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:37.471043+00:00",
+      "second": 30.441,
+      "operation": "match",
+      "status": 200,
+      "instance": "api-a",
+      "latencyMs": 10.4,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:37.584955+00:00",
+      "second": 30.555,
+      "operation": "id",
+      "status": 200,
+      "instance": "api-a",
+      "latencyMs": 5.0,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:37.586212+00:00",
+      "second": 30.556,
+      "operation": "suggest",
+      "status": 200,
+      "instance": "api-b",
+      "latencyMs": 5.7,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:37.607493+00:00",
+      "second": 30.578,
+      "operation": "validate_negative",
+      "status": 200,
+      "instance": "api-a",
+      "latencyMs": 27.7,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:37.735391+00:00",
+      "second": 30.705,
+      "operation": "match",
+      "status": 200,
+      "instance": "api-a",
+      "latencyMs": 5.7,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:37.735507+00:00",
+      "second": 30.706,
+      "operation": "validate",
+      "status": 200,
+      "instance": "api-b",
+      "latencyMs": 5.6,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:37.759368+00:00",
+      "second": 30.729,
+      "operation": "validate_negative",
+      "status": 200,
+      "instance": "api-b",
+      "latencyMs": 23.0,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:37.872467+00:00",
+      "second": 30.843,
+      "operation": "id",
+      "status": 200,
+      "instance": "api-a",
+      "latencyMs": 7.8,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:37.872742+00:00",
+      "second": 30.843,
+      "operation": "suggest",
+      "status": 200,
+      "instance": "api-b",
+      "latencyMs": 7.8,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:37.911057+00:00",
+      "second": 30.881,
+      "operation": "match",
+      "status": 200,
+      "instance": "api-a",
+      "latencyMs": 6.6,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:38.022052+00:00",
+      "second": 30.992,
+      "operation": "validate",
+      "status": 200,
+      "instance": "api-a",
+      "latencyMs": 4.7,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:38.040914+00:00",
+      "second": 31.011,
+      "operation": "validate_negative",
+      "status": 200,
+      "instance": "api-b",
+      "latencyMs": 23.3,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:38.093986+00:00",
+      "second": 31.064,
+      "operation": "id",
+      "status": 200,
+      "instance": "api-a",
+      "latencyMs": 5.8,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:38.094067+00:00",
+      "second": 31.064,
+      "operation": "suggest",
+      "status": 200,
+      "instance": "api-b",
+      "latencyMs": 5.7,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:38.166593+00:00",
+      "second": 31.137,
+      "operation": "match",
+      "status": 200,
+      "instance": "api-b",
+      "latencyMs": 5.1,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:38.253780+00:00",
+      "second": 31.224,
+      "operation": "validate",
+      "status": 200,
+      "instance": "api-a",
+      "latencyMs": 6.4,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:38.272821+00:00",
+      "second": 31.243,
+      "operation": "validate_negative",
+      "status": 200,
+      "instance": "api-b",
+      "latencyMs": 25.2,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:38.314040+00:00",
+      "second": 31.284,
+      "operation": "id",
+      "status": 200,
+      "instance": "api-a",
+      "latencyMs": 4.9,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:38.431455+00:00",
+      "second": 31.402,
+      "operation": "suggest",
+      "status": 200,
+      "instance": "api-a",
+      "latencyMs": 6.0,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:38.432159+00:00",
+      "second": 31.402,
+      "operation": "match",
+      "status": 200,
+      "instance": "api-b",
+      "latencyMs": 6.5,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:38.465109+00:00",
+      "second": 31.435,
+      "operation": "validate",
+      "status": 200,
+      "instance": "api-b",
+      "latencyMs": 4.4,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:38.576757+00:00",
+      "second": 31.547,
+      "operation": "id",
+      "status": 200,
+      "instance": "api-a",
+      "latencyMs": 4.8,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:38.594407+00:00",
+      "second": 31.565,
+      "operation": "validate_negative",
+      "status": 200,
+      "instance": "api-b",
+      "latencyMs": 22.6,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:38.653221+00:00",
+      "second": 31.623,
+      "operation": "match",
+      "status": 200,
+      "instance": "api-b",
+      "latencyMs": 5.2,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:38.653102+00:00",
+      "second": 31.623,
+      "operation": "suggest",
+      "status": 200,
+      "instance": "api-a",
+      "latencyMs": 5.4,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:38.705049+00:00",
+      "second": 31.675,
+      "operation": "validate",
+      "status": 200,
+      "instance": "api-a",
+      "latencyMs": 4.2,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:38.819000+00:00",
+      "second": 31.789,
+      "operation": "id",
+      "status": 200,
+      "instance": "api-b",
+      "latencyMs": 4.9,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:38.836090+00:00",
+      "second": 31.806,
+      "operation": "validate_negative",
+      "status": 200,
+      "instance": "api-a",
+      "latencyMs": 22.3,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:38.869043+00:00",
+      "second": 31.839,
+      "operation": "suggest",
+      "status": 200,
+      "instance": "api-b",
+      "latencyMs": 4.6,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:38.980471+00:00",
+      "second": 31.951,
+      "operation": "match",
+      "status": 200,
+      "instance": "api-a",
+      "latencyMs": 5.0,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:38.981076+00:00",
+      "second": 31.951,
+      "operation": "validate",
+      "status": 200,
+      "instance": "api-b",
+      "latencyMs": 5.4,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:39.068811+00:00",
+      "second": 32.039,
+      "operation": "id",
+      "status": 200,
+      "instance": "api-b",
+      "latencyMs": 4.0,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:39.088133+00:00",
+      "second": 32.058,
+      "operation": "validate_negative",
+      "status": 200,
+      "instance": "api-a",
+      "latencyMs": 23.4,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:39.142671+00:00",
+      "second": 32.113,
+      "operation": "suggest",
+      "status": 200,
+      "instance": "api-b",
+      "latencyMs": 4.9,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:39.142583+00:00",
+      "second": 32.113,
+      "operation": "match",
+      "status": 200,
+      "instance": "api-a",
+      "latencyMs": 4.6,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:39.202342+00:00",
+      "second": 32.172,
+      "operation": "validate",
+      "status": 200,
+      "instance": "api-a",
+      "latencyMs": 3.9,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:39.329878+00:00",
+      "second": 32.3,
+      "operation": "id",
+      "status": 200,
+      "instance": "api-a",
+      "latencyMs": 3.9,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:39.349140+00:00",
+      "second": 32.319,
+      "operation": "validate_negative",
+      "status": 200,
+      "instance": "api-b",
+      "latencyMs": 23.4,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:39.436100+00:00",
+      "second": 32.406,
+      "operation": "match",
+      "status": 200,
+      "instance": "api-a",
+      "latencyMs": 6.1,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:39.436693+00:00",
+      "second": 32.407,
+      "operation": "suggest",
+      "status": 200,
+      "instance": "api-b",
+      "latencyMs": 6.8,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:39.439893+00:00",
+      "second": 32.41,
+      "operation": "validate",
+      "status": 200,
+      "instance": "api-b",
+      "latencyMs": 6.1,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:39.562929+00:00",
+      "second": 32.533,
+      "operation": "id",
+      "status": 200,
+      "instance": "api-a",
+      "latencyMs": 5.5,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:39.582384+00:00",
+      "second": 32.553,
+      "operation": "validate_negative",
+      "status": 200,
+      "instance": "api-b",
+      "latencyMs": 25.1,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:39.596381+00:00",
+      "second": 32.567,
+      "operation": "suggest",
+      "status": 200,
+      "instance": "api-a",
+      "latencyMs": 4.6,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:39.637807+00:00",
+      "second": 32.608,
+      "operation": "match",
+      "status": 200,
+      "instance": "api-b",
+      "latencyMs": 4.9,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:39.788133+00:00",
+      "second": 32.758,
+      "operation": "validate",
+      "status": 200,
+      "instance": "api-a",
+      "latencyMs": 8.3,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:39.788215+00:00",
+      "second": 32.758,
+      "operation": "id",
+      "status": 200,
+      "instance": "api-a",
+      "latencyMs": 6.1,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:39.806174+00:00",
+      "second": 32.776,
+      "operation": "validate_negative",
+      "status": 200,
+      "instance": "api-b",
+      "latencyMs": 26.1,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:39.910326+00:00",
+      "second": 32.88,
+      "operation": "suggest",
+      "status": 200,
+      "instance": "api-b",
+      "latencyMs": 6.1,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:39.909931+00:00",
+      "second": 32.88,
+      "operation": "match",
+      "status": 200,
+      "instance": "api-a",
+      "latencyMs": 5.5,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:40.034223+00:00",
+      "second": 33.004,
+      "operation": "validate",
+      "status": 200,
+      "instance": "api-a",
+      "latencyMs": 5.1,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:40.056813+00:00",
+      "second": 33.027,
+      "operation": "validate_negative",
+      "status": 200,
+      "instance": "api-b",
+      "latencyMs": 27.5,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:40.056900+00:00",
+      "second": 33.027,
+      "operation": "id",
+      "status": 200,
+      "instance": "api-b",
+      "latencyMs": 5.1,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:40.162279+00:00",
+      "second": 33.132,
+      "operation": "suggest",
+      "status": 200,
+      "instance": "api-a",
+      "latencyMs": 4.5,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:40.162076+00:00",
+      "second": 33.132,
+      "operation": "match",
+      "status": 200,
+      "instance": "api-b",
+      "latencyMs": 4.0,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:40.241653+00:00",
+      "second": 33.212,
+      "operation": "validate",
+      "status": 200,
+      "instance": "api-b",
+      "latencyMs": 5.4,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:40.262419+00:00",
+      "second": 33.233,
+      "operation": "validate_negative",
+      "status": 200,
+      "instance": "api-a",
+      "latencyMs": 25.8,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:40.393571+00:00",
+      "second": 33.364,
+      "operation": "suggest",
+      "status": 200,
+      "instance": "api-a",
+      "latencyMs": 14.3,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:40.393918+00:00",
+      "second": 33.364,
+      "operation": "id",
+      "status": 200,
+      "instance": "api-b",
+      "latencyMs": 14.9,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:40.398708+00:00",
+      "second": 33.369,
+      "operation": "match",
+      "status": 200,
+      "instance": "api-a",
+      "latencyMs": 4.7,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:40.457747+00:00",
+      "second": 33.428,
+      "operation": "validate",
+      "status": 200,
+      "instance": "api-b",
+      "latencyMs": 5.1,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:40.578949+00:00",
+      "second": 33.549,
+      "operation": "id",
+      "status": 200,
+      "instance": "api-b",
+      "latencyMs": 5.7,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:40.598884+00:00",
+      "second": 33.569,
+      "operation": "validate_negative",
+      "status": 200,
+      "instance": "api-a",
+      "latencyMs": 25.9,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:40.663425+00:00",
+      "second": 33.634,
+      "operation": "suggest",
+      "status": 200,
+      "instance": "api-b",
+      "latencyMs": 4.4,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:40.663531+00:00",
+      "second": 33.634,
+      "operation": "match",
+      "status": 200,
+      "instance": "api-a",
+      "latencyMs": 4.3,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:40.783223+00:00",
+      "second": 33.753,
+      "operation": "validate",
+      "status": 200,
+      "instance": "api-b",
+      "latencyMs": 6.4,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:40.801930+00:00",
+      "second": 33.772,
+      "operation": "validate_negative",
+      "status": 200,
+      "instance": "api-a",
+      "latencyMs": 24.9,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:40.886433+00:00",
+      "second": 33.857,
+      "operation": "id",
+      "status": 200,
+      "instance": "api-a",
+      "latencyMs": 6.6,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:40.887619+00:00",
+      "second": 33.858,
+      "operation": "suggest",
+      "status": 200,
+      "instance": "api-b",
+      "latencyMs": 7.6,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:40.889994+00:00",
+      "second": 33.86,
+      "operation": "match",
+      "status": 200,
+      "instance": "api-a",
+      "latencyMs": 6.0,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:41.010605+00:00",
+      "second": 33.981,
+      "operation": "validate",
+      "status": 200,
+      "instance": "api-b",
+      "latencyMs": 5.6,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:41.030072+00:00",
+      "second": 34.0,
+      "operation": "validate_negative",
+      "status": 200,
+      "instance": "api-a",
+      "latencyMs": 24.8,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:41.119574+00:00",
+      "second": 34.09,
+      "operation": "suggest",
+      "status": 200,
+      "instance": "api-b",
+      "latencyMs": 5.5,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:41.119455+00:00",
+      "second": 34.09,
+      "operation": "id",
+      "status": 200,
+      "instance": "api-a",
+      "latencyMs": 5.6,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:41.225665+00:00",
+      "second": 34.196,
+      "operation": "validate",
+      "status": 200,
+      "instance": "api-b",
+      "latencyMs": 6.1,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:41.225560+00:00",
+      "second": 34.196,
+      "operation": "match",
+      "status": 200,
+      "instance": "api-a",
+      "latencyMs": 6.4,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:41.284766+00:00",
+      "second": 34.255,
+      "operation": "id",
+      "status": 200,
+      "instance": "api-a",
+      "latencyMs": 4.7,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:41.305600+00:00",
+      "second": 34.276,
+      "operation": "validate_negative",
+      "status": 200,
+      "instance": "api-b",
+      "latencyMs": 27.6,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:41.434201+00:00",
+      "second": 34.404,
+      "operation": "suggest",
+      "status": 200,
+      "instance": "api-b",
+      "latencyMs": 4.4,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:41.434605+00:00",
+      "second": 34.405,
+      "operation": "match",
+      "status": 200,
+      "instance": "api-a",
+      "latencyMs": 4.5,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:41.439013+00:00",
+      "second": 34.409,
+      "operation": "validate",
+      "status": 200,
+      "instance": "api-b",
+      "latencyMs": 4.7,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:41.554619+00:00",
+      "second": 34.525,
+      "operation": "id",
+      "status": 200,
+      "instance": "api-b",
+      "latencyMs": 5.3,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:41.574006+00:00",
+      "second": 34.544,
+      "operation": "validate_negative",
+      "status": 200,
+      "instance": "api-a",
+      "latencyMs": 25.0,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:41.683522+00:00",
+      "second": 34.654,
+      "operation": "suggest",
+      "status": 200,
+      "instance": "api-b",
+      "latencyMs": 6.5,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:41.683407+00:00",
+      "second": 34.654,
+      "operation": "match",
+      "status": 200,
+      "instance": "api-a",
+      "latencyMs": 6.0,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:41.776394+00:00",
+      "second": 34.747,
+      "operation": "validate",
+      "status": 200,
+      "instance": "api-a",
+      "latencyMs": 5.6,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:41.797517+00:00",
+      "second": 34.768,
+      "operation": "validate_negative",
+      "status": 200,
+      "instance": "api-b",
+      "latencyMs": 26.4,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:41.880977+00:00",
+      "second": 34.851,
+      "operation": "id",
+      "status": 200,
+      "instance": "api-b",
+      "latencyMs": 5.8,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:41.882411+00:00",
+      "second": 34.853,
+      "operation": "suggest",
+      "status": 200,
+      "instance": "api-a",
+      "latencyMs": 6.9,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:41.891290+00:00",
+      "second": 34.861,
+      "operation": "match",
+      "status": 200,
+      "instance": "api-a",
+      "latencyMs": 5.9,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:42.029922+00:00",
+      "second": 35.0,
+      "operation": "validate",
+      "status": 200,
+      "instance": "api-a",
+      "latencyMs": 5.4,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:42.048770+00:00",
+      "second": 35.019,
+      "operation": "validate_negative",
+      "status": 200,
+      "instance": "api-b",
+      "latencyMs": 24.0,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:42.135378+00:00",
+      "second": 35.105,
+      "operation": "match",
+      "status": 200,
+      "instance": "api-b",
+      "latencyMs": 4.4,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:42.135743+00:00",
+      "second": 35.106,
+      "operation": "suggest",
+      "status": 200,
+      "instance": "api-a",
+      "latencyMs": 5.7,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:42.135691+00:00",
+      "second": 35.106,
+      "operation": "id",
+      "status": 200,
+      "instance": "api-b",
+      "latencyMs": 5.8,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:42.255299+00:00",
+      "second": 35.225,
+      "operation": "validate",
+      "status": 200,
+      "instance": "api-b",
+      "latencyMs": 6.8,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:42.273730+00:00",
+      "second": 35.244,
+      "operation": "validate_negative",
+      "status": 200,
+      "instance": "api-a",
+      "latencyMs": 24.8,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:42.385022+00:00",
+      "second": 35.355,
+      "operation": "id",
+      "status": 200,
+      "instance": "api-a",
+      "latencyMs": 5.2,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:42.385705+00:00",
+      "second": 35.356,
+      "operation": "suggest",
+      "status": 200,
+      "instance": "api-b",
+      "latencyMs": 5.7,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:42.388050+00:00",
+      "second": 35.358,
+      "operation": "match",
+      "status": 200,
+      "instance": "api-a",
+      "latencyMs": 5.3,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:42.446570+00:00",
+      "second": 35.417,
+      "operation": "validate",
+      "status": 200,
+      "instance": "api-b",
+      "latencyMs": 6.5,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:42.577208+00:00",
+      "second": 35.547,
+      "operation": "id",
+      "status": 200,
+      "instance": "api-a",
+      "latencyMs": 4.8,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:42.599256+00:00",
+      "second": 35.569,
+      "operation": "validate_negative",
+      "status": 200,
+      "instance": "api-b",
+      "latencyMs": 27.1,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:42.644205+00:00",
+      "second": 35.614,
+      "operation": "match",
+      "status": 200,
+      "instance": "api-b",
+      "latencyMs": 6.0,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:42.644841+00:00",
+      "second": 35.615,
+      "operation": "suggest",
+      "status": 200,
+      "instance": "api-a",
+      "latencyMs": 6.8,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:42.782343+00:00",
+      "second": 35.752,
+      "operation": "validate",
+      "status": 200,
+      "instance": "api-b",
+      "latencyMs": 6.5,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:42.802948+00:00",
+      "second": 35.773,
+      "operation": "validate_negative",
+      "status": 200,
+      "instance": "api-a",
+      "latencyMs": 27.0,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:42.869058+00:00",
+      "second": 35.839,
+      "operation": "suggest",
+      "status": 200,
+      "instance": "api-a",
+      "latencyMs": 5.4,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:42.869122+00:00",
+      "second": 35.839,
+      "operation": "id",
+      "status": 200,
+      "instance": "api-b",
+      "latencyMs": 5.7,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:42.985322+00:00",
+      "second": 35.955,
+      "operation": "match",
+      "status": 200,
+      "instance": "api-a",
+      "latencyMs": 7.7,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:43.011374+00:00",
+      "second": 35.982,
+      "operation": "validate",
+      "status": 200,
+      "instance": "api-b",
+      "latencyMs": 33.5,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:43.088542+00:00",
+      "second": 36.06,
+      "operation": "id",
+      "status": 200,
+      "instance": "api-a",
+      "latencyMs": 51.9,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:43.154578+00:00",
+      "second": 36.125,
+      "operation": "validate_negative",
+      "status": 200,
+      "instance": "api-b",
+      "latencyMs": 116.2,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:43.160798+00:00",
+      "second": 36.131,
+      "operation": "suggest",
+      "status": 200,
+      "instance": "api-a",
+      "latencyMs": 11.9,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:43.160682+00:00",
+      "second": 36.131,
+      "operation": "match",
+      "status": 200,
+      "instance": "api-b",
+      "latencyMs": 10.3,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:43.276851+00:00",
+      "second": 36.247,
+      "operation": "validate",
+      "status": 200,
+      "instance": "api-a",
+      "latencyMs": 5.6,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:43.294721+00:00",
+      "second": 36.265,
+      "operation": "validate_negative",
+      "status": 200,
+      "instance": "api-b",
+      "latencyMs": 23.2,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:43.383420+00:00",
+      "second": 36.354,
+      "operation": "id",
+      "status": 200,
+      "instance": "api-a",
+      "latencyMs": 4.4,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:43.384483+00:00",
+      "second": 36.355,
+      "operation": "suggest",
+      "status": 200,
+      "instance": "api-b",
+      "latencyMs": 5.3,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:43.413427+00:00",
+      "second": 36.384,
+      "operation": "match",
+      "status": 200,
+      "instance": "api-a",
+      "latencyMs": 4.5,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:43.482081+00:00",
+      "second": 36.452,
+      "operation": "validate",
+      "status": 200,
+      "instance": "api-b",
+      "latencyMs": 6.8,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:43.583035+00:00",
+      "second": 36.553,
+      "operation": "id",
+      "status": 200,
+      "instance": "api-b",
+      "latencyMs": 4.8,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:43.598492+00:00",
+      "second": 36.569,
+      "operation": "suggest",
+      "status": 200,
+      "instance": "api-a",
+      "latencyMs": 6.0,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:43.605038+00:00",
+      "second": 36.575,
+      "operation": "validate_negative",
+      "status": 200,
+      "instance": "api-a",
+      "latencyMs": 27.0,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:43.719504+00:00",
+      "second": 36.69,
+      "operation": "match",
+      "status": 200,
+      "instance": "api-a",
+      "latencyMs": 5.3,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:43.719432+00:00",
+      "second": 36.69,
+      "operation": "validate",
+      "status": 200,
+      "instance": "api-b",
+      "latencyMs": 5.1,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:43.828535+00:00",
+      "second": 36.799,
+      "operation": "id",
+      "status": 200,
+      "instance": "api-a",
+      "latencyMs": 6.3,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:43.847593+00:00",
+      "second": 36.818,
+      "operation": "validate_negative",
+      "status": 200,
+      "instance": "api-b",
+      "latencyMs": 25.6,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:43.901519+00:00",
+      "second": 36.872,
+      "operation": "match",
+      "status": 200,
+      "instance": "api-b",
+      "latencyMs": 5.3,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:43.902598+00:00",
+      "second": 36.873,
+      "operation": "suggest",
+      "status": 200,
+      "instance": "api-a",
+      "latencyMs": 6.6,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:43.953256+00:00",
+      "second": 36.923,
+      "operation": "validate",
+      "status": 200,
+      "instance": "api-b",
+      "latencyMs": 5.5,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:44.079382+00:00",
+      "second": 37.049,
+      "operation": "id",
+      "status": 200,
+      "instance": "api-b",
+      "latencyMs": 5.5,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:44.096486+00:00",
+      "second": 37.067,
+      "operation": "validate_negative",
+      "status": 200,
+      "instance": "api-a",
+      "latencyMs": 22.9,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:44.157827+00:00",
+      "second": 37.128,
+      "operation": "suggest",
+      "status": 200,
+      "instance": "api-a",
+      "latencyMs": 4.8,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:44.159138+00:00",
+      "second": 37.129,
+      "operation": "match",
+      "status": 200,
+      "instance": "api-b",
+      "latencyMs": 6.0,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:44.260597+00:00",
+      "second": 37.231,
+      "operation": "validate",
+      "status": 200,
+      "instance": "api-b",
+      "latencyMs": 6.8,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:44.279969+00:00",
+      "second": 37.25,
+      "operation": "validate_negative",
+      "status": 200,
+      "instance": "api-a",
+      "latencyMs": 26.0,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:44.333902+00:00",
+      "second": 37.304,
+      "operation": "id",
+      "status": 200,
+      "instance": "api-a",
+      "latencyMs": 4.0,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:44.337007+00:00",
+      "second": 37.307,
+      "operation": "suggest",
+      "status": 200,
+      "instance": "api-b",
+      "latencyMs": 4.4,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:44.467407+00:00",
+      "second": 37.438,
+      "operation": "match",
+      "status": 200,
+      "instance": "api-b",
+      "latencyMs": 4.8,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:44.468069+00:00",
+      "second": 37.438,
+      "operation": "validate",
+      "status": 200,
+      "instance": "api-a",
+      "latencyMs": 5.1,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:44.566301+00:00",
+      "second": 37.536,
+      "operation": "id",
+      "status": 200,
+      "instance": "api-a",
+      "latencyMs": 6.2,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:44.586218+00:00",
+      "second": 37.556,
+      "operation": "validate_negative",
+      "status": 200,
+      "instance": "api-b",
+      "latencyMs": 26.2,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:44.622086+00:00",
+      "second": 37.592,
+      "operation": "suggest",
+      "status": 200,
+      "instance": "api-a",
+      "latencyMs": 5.9,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:44.731534+00:00",
+      "second": 37.702,
+      "operation": "match",
+      "status": 200,
+      "instance": "api-a",
+      "latencyMs": 6.1,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:44.732251+00:00",
+      "second": 37.702,
+      "operation": "validate",
+      "status": 200,
+      "instance": "api-b",
+      "latencyMs": 6.6,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:44.851647+00:00",
+      "second": 37.822,
+      "operation": "suggest",
+      "status": 200,
+      "instance": "api-a",
+      "latencyMs": 13.2,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:44.853083+00:00",
+      "second": 37.823,
+      "operation": "id",
+      "status": 200,
+      "instance": "api-b",
+      "latencyMs": 22.8,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:44.873748+00:00",
+      "second": 37.844,
+      "operation": "validate_negative",
+      "status": 200,
+      "instance": "api-b",
+      "latencyMs": 43.8,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:44.985263+00:00",
+      "second": 37.955,
+      "operation": "match",
+      "status": 200,
+      "instance": "api-b",
+      "latencyMs": 5.3,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:44.985965+00:00",
+      "second": 37.956,
+      "operation": "validate",
+      "status": 200,
+      "instance": "api-a",
+      "latencyMs": 5.8,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:45.009938+00:00",
+      "second": 37.98,
+      "operation": "validate_negative",
+      "status": 200,
+      "instance": "api-a",
+      "latencyMs": 25.9,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:45.122784+00:00",
+      "second": 38.093,
+      "operation": "id",
+      "status": 200,
+      "instance": "api-b",
+      "latencyMs": 4.4,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:45.123465+00:00",
+      "second": 38.094,
+      "operation": "suggest",
+      "status": 200,
+      "instance": "api-a",
+      "latencyMs": 4.8,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:45.228028+00:00",
+      "second": 38.198,
+      "operation": "match",
+      "status": 200,
+      "instance": "api-a",
+      "latencyMs": 5.6,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:45.229163+00:00",
+      "second": 38.199,
+      "operation": "validate",
+      "status": 200,
+      "instance": "api-b",
+      "latencyMs": 6.5,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:45.315144+00:00",
+      "second": 38.285,
+      "operation": "id",
+      "status": 200,
+      "instance": "api-b",
+      "latencyMs": 5.0,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:45.333976+00:00",
+      "second": 38.304,
+      "operation": "validate_negative",
+      "status": 200,
+      "instance": "api-a",
+      "latencyMs": 24.1,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:45.434294+00:00",
+      "second": 38.404,
+      "operation": "suggest",
+      "status": 200,
+      "instance": "api-b",
+      "latencyMs": 6.0,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:45.434016+00:00",
+      "second": 38.404,
+      "operation": "match",
+      "status": 200,
+      "instance": "api-a",
+      "latencyMs": 5.3,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:45.480427+00:00",
+      "second": 38.451,
+      "operation": "validate",
+      "status": 200,
+      "instance": "api-b",
+      "latencyMs": 5.0,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:45.537025+00:00",
+      "second": 38.507,
+      "operation": "id",
+      "status": 200,
+      "instance": "api-b",
+      "latencyMs": 5.1,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:45.557020+00:00",
+      "second": 38.527,
+      "operation": "validate_negative",
+      "status": 200,
+      "instance": "api-a",
+      "latencyMs": 25.3,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:45.671980+00:00",
+      "second": 38.642,
+      "operation": "match",
+      "status": 200,
+      "instance": "api-a",
+      "latencyMs": 5.4,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:45.672478+00:00",
+      "second": 38.643,
+      "operation": "suggest",
+      "status": 200,
+      "instance": "api-b",
+      "latencyMs": 6.2,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:45.774674+00:00",
+      "second": 38.745,
+      "operation": "validate",
+      "status": 200,
+      "instance": "api-a",
+      "latencyMs": 13.1,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:45.797536+00:00",
+      "second": 38.768,
+      "operation": "validate_negative",
+      "status": 200,
+      "instance": "api-b",
+      "latencyMs": 35.7,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:45.859267+00:00",
+      "second": 38.829,
+      "operation": "id",
+      "status": 200,
+      "instance": "api-b",
+      "latencyMs": 5.2,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:45.860294+00:00",
+      "second": 38.83,
+      "operation": "suggest",
+      "status": 200,
+      "instance": "api-a",
+      "latencyMs": 6.0,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:45.984851+00:00",
+      "second": 38.955,
+      "operation": "match",
+      "status": 200,
+      "instance": "api-b",
+      "latencyMs": 5.0,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:45.984914+00:00",
+      "second": 38.955,
+      "operation": "validate",
+      "status": 200,
+      "instance": "api-a",
+      "latencyMs": 4.9,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:46.008557+00:00",
+      "second": 38.979,
+      "operation": "validate_negative",
+      "status": 200,
+      "instance": "api-a",
+      "latencyMs": 26.9,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:46.115204+00:00",
+      "second": 39.085,
+      "operation": "id",
+      "status": 200,
+      "instance": "api-a",
+      "latencyMs": 5.5,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:46.116130+00:00",
+      "second": 39.086,
+      "operation": "suggest",
+      "status": 200,
+      "instance": "api-b",
+      "latencyMs": 6.2,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:46.218917+00:00",
+      "second": 39.189,
+      "operation": "match",
+      "status": 200,
+      "instance": "api-b",
+      "latencyMs": 4.7,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:46.219224+00:00",
+      "second": 39.189,
+      "operation": "validate",
+      "status": 200,
+      "instance": "api-a",
+      "latencyMs": 4.8,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:46.287545+00:00",
+      "second": 39.258,
+      "operation": "id",
+      "status": 200,
+      "instance": "api-a",
+      "latencyMs": 4.0,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:46.310328+00:00",
+      "second": 39.28,
+      "operation": "validate_negative",
+      "status": 200,
+      "instance": "api-b",
+      "latencyMs": 26.9,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:46.408207+00:00",
+      "second": 39.378,
+      "operation": "suggest",
+      "status": 200,
+      "instance": "api-b",
+      "latencyMs": 6.3,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:46.410271+00:00",
+      "second": 39.38,
+      "operation": "match",
+      "status": 200,
+      "instance": "api-a",
+      "latencyMs": 8.1,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:46.543445+00:00",
+      "second": 39.514,
+      "operation": "id",
+      "status": 200,
+      "instance": "api-b",
+      "latencyMs": 10.3,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:46.543586+00:00",
+      "second": 39.514,
+      "operation": "validate",
+      "status": 200,
+      "instance": "api-a",
+      "latencyMs": 13.7,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:46.564334+00:00",
+      "second": 39.534,
+      "operation": "validate_negative",
+      "status": 200,
+      "instance": "api-b",
+      "latencyMs": 34.2,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:46.662535+00:00",
+      "second": 39.633,
+      "operation": "suggest",
+      "status": 200,
+      "instance": "api-a",
+      "latencyMs": 16.1,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:46.663435+00:00",
+      "second": 39.634,
+      "operation": "match",
+      "status": 200,
+      "instance": "api-b",
+      "latencyMs": 15.8,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:46.774173+00:00",
+      "second": 39.744,
+      "operation": "validate",
+      "status": 200,
+      "instance": "api-a",
+      "latencyMs": 70.0,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:46.875705+00:00",
+      "second": 39.846,
+      "operation": "id",
+      "status": 200,
+      "instance": "api-b",
+      "latencyMs": 45.1,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:46.950170+00:00",
+      "second": 39.92,
+      "operation": "suggest",
+      "status": 200,
+      "instance": "api-b",
+      "latencyMs": 76.3,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:46.996335+00:00",
+      "second": 39.966,
+      "operation": "validate",
+      "status": 200,
+      "instance": "api-a",
+      "latencyMs": 14.8,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:47.010696+00:00",
+      "second": 39.981,
+      "operation": "match",
+      "status": 200,
+      "instance": "api-b",
+      "latencyMs": 32.9,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:47.037893+00:00",
+      "second": 40.008,
+      "operation": "validate_negative",
+      "status": 200,
+      "instance": "api-a",
+      "latencyMs": 208.1,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:47.080431+00:00",
+      "second": 40.051,
+      "operation": "id",
+      "status": 200,
+      "instance": "api-a",
+      "latencyMs": 33.6,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:47.122408+00:00",
+      "second": 40.093,
+      "operation": "validate_negative",
+      "status": 200,
+      "instance": "api-b",
+      "latencyMs": 77.3,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:47.172867+00:00",
+      "second": 40.143,
+      "operation": "suggest",
+      "status": 200,
+      "instance": "api-a",
+      "latencyMs": 10.7,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:47.172992+00:00",
+      "second": 40.143,
+      "operation": "match",
+      "status": 200,
+      "instance": "api-b",
+      "latencyMs": 10.5,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:47.297027+00:00",
+      "second": 40.267,
+      "operation": "validate",
+      "status": 200,
+      "instance": "api-a",
+      "latencyMs": 23.9,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:47.319473+00:00",
+      "second": 40.29,
+      "operation": "validate_negative",
+      "status": 200,
+      "instance": "api-b",
+      "latencyMs": 44.8,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:47.342904+00:00",
+      "second": 40.313,
+      "operation": "id",
+      "status": 200,
+      "instance": "api-a",
+      "latencyMs": 6.4,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:47.343936+00:00",
+      "second": 40.314,
+      "operation": "suggest",
+      "status": 200,
+      "instance": "api-b",
+      "latencyMs": 7.2,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:47.398514+00:00",
+      "second": 40.369,
+      "operation": "match",
+      "status": 200,
+      "instance": "api-a",
+      "latencyMs": 5.3,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:47.527426+00:00",
+      "second": 40.498,
+      "operation": "validate",
+      "status": 200,
+      "instance": "api-a",
+      "latencyMs": 5.3,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:47.549363+00:00",
+      "second": 40.519,
+      "operation": "id",
+      "status": 200,
+      "instance": "api-b",
+      "latencyMs": 6.2,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:47.549448+00:00",
+      "second": 40.52,
+      "operation": "validate_negative",
+      "status": 200,
+      "instance": "api-b",
+      "latencyMs": 27.1,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:47.597734+00:00",
+      "second": 40.568,
+      "operation": "suggest",
+      "status": 200,
+      "instance": "api-a",
+      "latencyMs": 5.2,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:47.735957+00:00",
+      "second": 40.706,
+      "operation": "match",
+      "status": 200,
+      "instance": "api-b",
+      "latencyMs": 8.5,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:47.736039+00:00",
+      "second": 40.706,
+      "operation": "validate",
+      "status": 200,
+      "instance": "api-a",
+      "latencyMs": 8.4,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:47.791061+00:00",
+      "second": 40.761,
+      "operation": "id",
+      "status": 200,
+      "instance": "api-b",
+      "latencyMs": 4.5,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:47.840110+00:00",
+      "second": 40.81,
+      "operation": "validate_negative",
+      "status": 200,
+      "instance": "api-a",
+      "latencyMs": 53.6,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:47.927128+00:00",
+      "second": 40.897,
+      "operation": "match",
+      "status": 200,
+      "instance": "api-b",
+      "latencyMs": 6.1,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:47.927485+00:00",
+      "second": 40.898,
+      "operation": "suggest",
+      "status": 200,
+      "instance": "api-a",
+      "latencyMs": 6.7,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:48.027620+00:00",
+      "second": 40.998,
+      "operation": "validate",
+      "status": 200,
+      "instance": "api-b",
+      "latencyMs": 5.9,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:48.048243+00:00",
+      "second": 41.018,
+      "operation": "validate_negative",
+      "status": 200,
+      "instance": "api-a",
+      "latencyMs": 26.0,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:48.126101+00:00",
+      "second": 41.096,
+      "operation": "id",
+      "status": 200,
+      "instance": "api-a",
+      "latencyMs": 4.6,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:48.126815+00:00",
+      "second": 41.097,
+      "operation": "suggest",
+      "status": 200,
+      "instance": "api-b",
+      "latencyMs": 5.2,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:48.247739+00:00",
+      "second": 41.218,
+      "operation": "match",
+      "status": 200,
+      "instance": "api-a",
+      "latencyMs": 17.8,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:48.248518+00:00",
+      "second": 41.219,
+      "operation": "validate",
+      "status": 200,
+      "instance": "api-b",
+      "latencyMs": 18.4,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:48.273500+00:00",
+      "second": 41.244,
+      "operation": "validate_negative",
+      "status": 200,
+      "instance": "api-b",
+      "latencyMs": 41.9,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:48.339447+00:00",
+      "second": 41.31,
+      "operation": "suggest",
+      "status": 200,
+      "instance": "api-b",
+      "latencyMs": 5.5,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:48.341387+00:00",
+      "second": 41.312,
+      "operation": "id",
+      "status": 200,
+      "instance": "api-a",
+      "latencyMs": 7.6,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:48.391125+00:00",
+      "second": 41.361,
+      "operation": "match",
+      "status": 200,
+      "instance": "api-a",
+      "latencyMs": 3.8,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:48.526282+00:00",
+      "second": 41.496,
+      "operation": "validate",
+      "status": 200,
+      "instance": "api-a",
+      "latencyMs": 5.1,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:48.558479+00:00",
+      "second": 41.529,
+      "operation": "validate_negative",
+      "status": 200,
+      "instance": "api-b",
+      "latencyMs": 37.1,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:48.630757+00:00",
+      "second": 41.601,
+      "operation": "suggest",
+      "status": 200,
+      "instance": "api-a",
+      "latencyMs": 4.0,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:48.631020+00:00",
+      "second": 41.601,
+      "operation": "id",
+      "status": 200,
+      "instance": "api-b",
+      "latencyMs": 4.4,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:48.635833+00:00",
+      "second": 41.606,
+      "operation": "match",
+      "status": 200,
+      "instance": "api-b",
+      "latencyMs": 4.6,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:48.732421+00:00",
+      "second": 41.703,
+      "operation": "validate",
+      "status": 200,
+      "instance": "api-a",
+      "latencyMs": 4.0,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:48.766127+00:00",
+      "second": 41.736,
+      "operation": "validate_negative",
+      "status": 200,
+      "instance": "api-b",
+      "latencyMs": 23.7,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:48.874271+00:00",
+      "second": 41.844,
+      "operation": "id",
+      "status": 200,
+      "instance": "api-b",
+      "latencyMs": 5.8,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:48.875057+00:00",
+      "second": 41.845,
+      "operation": "suggest",
+      "status": 200,
+      "instance": "api-a",
+      "latencyMs": 6.5,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:48.977731+00:00",
+      "second": 41.948,
+      "operation": "validate",
+      "status": 200,
+      "instance": "api-a",
+      "latencyMs": 6.1,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:48.978157+00:00",
+      "second": 41.948,
+      "operation": "match",
+      "status": 200,
+      "instance": "api-b",
+      "latencyMs": 6.8,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:49.056507+00:00",
+      "second": 42.027,
+      "operation": "validate_negative",
+      "status": 200,
+      "instance": "api-a",
+      "latencyMs": 30.8,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:49.137098+00:00",
+      "second": 42.107,
+      "operation": "id",
+      "status": 200,
+      "instance": "api-a",
+      "latencyMs": 7.3,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:49.137927+00:00",
+      "second": 42.108,
+      "operation": "suggest",
+      "status": 200,
+      "instance": "api-b",
+      "latencyMs": 7.9,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:49.138733+00:00",
+      "second": 42.109,
+      "operation": "match",
+      "status": 200,
+      "instance": "api-b",
+      "latencyMs": 6.8,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:49.260972+00:00",
+      "second": 42.231,
+      "operation": "validate",
+      "status": 200,
+      "instance": "api-a",
+      "latencyMs": 5.4,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:49.283355+00:00",
+      "second": 42.253,
+      "operation": "validate_negative",
+      "status": 200,
+      "instance": "api-b",
+      "latencyMs": 27.6,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:49.371248+00:00",
+      "second": 42.341,
+      "operation": "id",
+      "status": 200,
+      "instance": "api-a",
+      "latencyMs": 5.6,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:49.372562+00:00",
+      "second": 42.343,
+      "operation": "suggest",
+      "status": 200,
+      "instance": "api-b",
+      "latencyMs": 6.6,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:49.463703+00:00",
+      "second": 42.434,
+      "operation": "validate",
+      "status": 200,
+      "instance": "api-a",
+      "latencyMs": 4.2,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:49.463576+00:00",
+      "second": 42.434,
+      "operation": "match",
+      "status": 200,
+      "instance": "api-b",
+      "latencyMs": 4.4,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:49.562672+00:00",
+      "second": 42.533,
+      "operation": "id",
+      "status": 200,
+      "instance": "api-b",
+      "latencyMs": 3.9,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:49.586235+00:00",
+      "second": 42.556,
+      "operation": "validate_negative",
+      "status": 200,
+      "instance": "api-a",
+      "latencyMs": 27.8,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:49.669939+00:00",
+      "second": 42.64,
+      "operation": "suggest",
+      "status": 200,
+      "instance": "api-b",
+      "latencyMs": 6.5,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:49.669844+00:00",
+      "second": 42.64,
+      "operation": "match",
+      "status": 200,
+      "instance": "api-a",
+      "latencyMs": 6.2,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:49.775560+00:00",
+      "second": 42.746,
+      "operation": "validate",
+      "status": 200,
+      "instance": "api-a",
+      "latencyMs": 6.2,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:49.796342+00:00",
+      "second": 42.766,
+      "operation": "validate_negative",
+      "status": 200,
+      "instance": "api-b",
+      "latencyMs": 26.6,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:49.865089+00:00",
+      "second": 42.835,
+      "operation": "id",
+      "status": 200,
+      "instance": "api-b",
+      "latencyMs": 4.7,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:49.865020+00:00",
+      "second": 42.835,
+      "operation": "suggest",
+      "status": 200,
+      "instance": "api-a",
+      "latencyMs": 4.3,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:49.984015+00:00",
+      "second": 42.954,
+      "operation": "match",
+      "status": 200,
+      "instance": "api-b",
+      "latencyMs": 5.8,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:49.984710+00:00",
+      "second": 42.955,
+      "operation": "validate",
+      "status": 200,
+      "instance": "api-a",
+      "latencyMs": 6.2,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:50.044152+00:00",
+      "second": 43.014,
+      "operation": "validate_negative",
+      "status": 200,
+      "instance": "api-a",
+      "latencyMs": 25.2,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:50.125755+00:00",
+      "second": 43.096,
+      "operation": "suggest",
+      "status": 200,
+      "instance": "api-a",
+      "latencyMs": 3.9,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:50.125819+00:00",
+      "second": 43.096,
+      "operation": "id",
+      "status": 200,
+      "instance": "api-b",
+      "latencyMs": 4.2,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:50.191386+00:00",
+      "second": 43.161,
+      "operation": "validate",
+      "status": 200,
+      "instance": "api-b",
+      "latencyMs": 6.6,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:50.190385+00:00",
+      "second": 43.161,
+      "operation": "match",
+      "status": 200,
+      "instance": "api-a",
+      "latencyMs": 5.9,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:50.287659+00:00",
+      "second": 43.258,
+      "operation": "id",
+      "status": 200,
+      "instance": "api-b",
+      "latencyMs": 5.0,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:50.306390+00:00",
+      "second": 43.277,
+      "operation": "validate_negative",
+      "status": 200,
+      "instance": "api-a",
+      "latencyMs": 24.0,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:50.371581+00:00",
+      "second": 43.342,
+      "operation": "suggest",
+      "status": 200,
+      "instance": "api-b",
+      "latencyMs": 5.8,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:50.466364+00:00",
+      "second": 43.436,
+      "operation": "match",
+      "status": 200,
+      "instance": "api-a",
+      "latencyMs": 4.8,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:50.466611+00:00",
+      "second": 43.437,
+      "operation": "validate",
+      "status": 200,
+      "instance": "api-b",
+      "latencyMs": 4.9,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:50.545358+00:00",
+      "second": 43.515,
+      "operation": "id",
+      "status": 200,
+      "instance": "api-a",
+      "latencyMs": 6.0,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:50.566505+00:00",
+      "second": 43.537,
+      "operation": "validate_negative",
+      "status": 200,
+      "instance": "api-b",
+      "latencyMs": 27.4,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:50.670371+00:00",
+      "second": 43.64,
+      "operation": "match",
+      "status": 200,
+      "instance": "api-a",
+      "latencyMs": 5.5,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:50.670436+00:00",
+      "second": 43.641,
+      "operation": "suggest",
+      "status": 200,
+      "instance": "api-b",
+      "latencyMs": 5.9,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:50.780997+00:00",
+      "second": 43.751,
+      "operation": "validate",
+      "status": 200,
+      "instance": "api-b",
+      "latencyMs": 5.4,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:50.801639+00:00",
+      "second": 43.772,
+      "operation": "validate_negative",
+      "status": 200,
+      "instance": "api-a",
+      "latencyMs": 25.8,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:50.883700+00:00",
+      "second": 43.854,
+      "operation": "id",
+      "status": 200,
+      "instance": "api-a",
+      "latencyMs": 5.9,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:50.884009+00:00",
+      "second": 43.854,
+      "operation": "suggest",
+      "status": 200,
+      "instance": "api-b",
+      "latencyMs": 6.0,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:50.946945+00:00",
+      "second": 43.917,
+      "operation": "match",
+      "status": 200,
+      "instance": "api-a",
+      "latencyMs": 4.7,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:50.947610+00:00",
+      "second": 43.918,
+      "operation": "validate",
+      "status": 200,
+      "instance": "api-b",
+      "latencyMs": 5.1,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:51.066613+00:00",
+      "second": 44.037,
+      "operation": "id",
+      "status": 200,
+      "instance": "api-a",
+      "latencyMs": 3.7,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:51.085742+00:00",
+      "second": 44.056,
+      "operation": "validate_negative",
+      "status": 200,
+      "instance": "api-b",
+      "latencyMs": 23.1,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:51.092843+00:00",
+      "second": 44.063,
+      "operation": "suggest",
+      "status": 200,
+      "instance": "api-a",
+      "latencyMs": 6.2,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:51.235325+00:00",
+      "second": 44.205,
+      "operation": "match",
+      "status": 200,
+      "instance": "api-b",
+      "latencyMs": 6.1,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:51.235262+00:00",
+      "second": 44.205,
+      "operation": "validate",
+      "status": 200,
+      "instance": "api-a",
+      "latencyMs": 5.7,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:51.256854+00:00",
+      "second": 44.227,
+      "operation": "validate_negative",
+      "status": 200,
+      "instance": "api-b",
+      "latencyMs": 24.4,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:51.340981+00:00",
+      "second": 44.311,
+      "operation": "id",
+      "status": 200,
+      "instance": "api-a",
+      "latencyMs": 4.3,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:51.340868+00:00",
+      "second": 44.311,
+      "operation": "suggest",
+      "status": 200,
+      "instance": "api-b",
+      "latencyMs": 4.0,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:51.480177+00:00",
+      "second": 44.45,
+      "operation": "match",
+      "status": 200,
+      "instance": "api-b",
+      "latencyMs": 6.5,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:51.482382+00:00",
+      "second": 44.452,
+      "operation": "validate",
+      "status": 200,
+      "instance": "api-a",
+      "latencyMs": 8.5,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:51.538372+00:00",
+      "second": 44.508,
+      "operation": "id",
+      "status": 200,
+      "instance": "api-b",
+      "latencyMs": 4.6,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:51.559059+00:00",
+      "second": 44.529,
+      "operation": "validate_negative",
+      "status": 200,
+      "instance": "api-a",
+      "latencyMs": 30.3,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:51.682124+00:00",
+      "second": 44.652,
+      "operation": "match",
+      "status": 200,
+      "instance": "api-a",
+      "latencyMs": 6.8,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:51.682562+00:00",
+      "second": 44.653,
+      "operation": "suggest",
+      "status": 200,
+      "instance": "api-b",
+      "latencyMs": 7.7,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:51.786798+00:00",
+      "second": 44.757,
+      "operation": "validate",
+      "status": 200,
+      "instance": "api-a",
+      "latencyMs": 7.0,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:51.790396+00:00",
+      "second": 44.761,
+      "operation": "id",
+      "status": 200,
+      "instance": "api-a",
+      "latencyMs": 5.9,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:51.806312+00:00",
+      "second": 44.776,
+      "operation": "validate_negative",
+      "status": 200,
+      "instance": "api-b",
+      "latencyMs": 26.2,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:51.928526+00:00",
+      "second": 44.899,
+      "operation": "suggest",
+      "status": 200,
+      "instance": "api-b",
+      "latencyMs": 6.3,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:51.928991+00:00",
+      "second": 44.899,
+      "operation": "match",
+      "status": 200,
+      "instance": "api-a",
+      "latencyMs": 6.4,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:52.035120+00:00",
+      "second": 45.005,
+      "operation": "validate",
+      "status": 200,
+      "instance": "api-a",
+      "latencyMs": 4.9,
+      "error": null
+    },
+    {
+      "at": "2026-10-04T03:49:52.054299+00:00",
+      "second": 45.024,
+      "operation": "validate_negative",
+      "status": 200,
+      "instance": "api-b",
+      "latencyMs": 23.9,
+      "error": null
+    }
+  ]
+}

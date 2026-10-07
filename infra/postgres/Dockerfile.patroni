@@ -1,0 +1,10 @@
+FROM postgres:17@sha256:d74eeac9a635390a49bc21bd49fccd973de707e2a53a76ac49b552b8712ec46f
+RUN apt-get update && apt-get install -y --no-install-recommends python3 python3-venv \
+    && python3 -m venv /opt/patroni \
+    && /opt/patroni/bin/pip install --no-cache-dir 'patroni[psycopg3,etcd3]==4.1.5' \
+    && rm -rf /var/lib/apt/lists/*
+COPY infra/postgres/patroni.yml /etc/patroni.yml
+COPY infra/postgres/patroni-entrypoint.sh /opt/patroni-entrypoint.sh
+COPY infra/postgres/patroni-post-bootstrap.sh /opt/patroni-post-bootstrap.sh
+RUN chmod 755 /opt/patroni-post-bootstrap.sh
+ENTRYPOINT ["bash", "/opt/patroni-entrypoint.sh"]

@@ -1,0 +1,100 @@
+<!doctype html>
+<!-- Public local client. The API owns matching decisions; this page presents its results. -->
+<html lang="en-AU">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AddressDesk · Australian address validation</title>
+  <link rel="stylesheet" href="/app.css?v=6">
+  <script src="/app.js?v=6" defer></script>
+</head>
+<body>
+  <div class="shell">
+    <header class="topbar">
+      <div class="topbar-inner">
+        <a class="brand" href="/" aria-label="AddressDesk home">Address<span>Desk</span></a>
+        <nav class="topnav" aria-label="Primary navigation">
+          <a href="#bulk-panel" id="nav-bulk">Bulk jobs <span aria-hidden="true">↗</span></a>
+          <a href="/swagger">API docs <span aria-hidden="true">↗</span></a>
+        </nav>
+        <div class="service-state"><span class="status-dot" aria-hidden="true"></span><span id="dataset-label">Connecting to G-NAF…</span></div>
+      </div>
+    </header>
+
+    <main>
+      <nav class="tabs" aria-label="Work modes">
+        <button id="tab-single" class="tab active" type="button" aria-selected="true">Single address</button>
+        <button id="tab-bulk" class="tab" type="button" aria-selected="false">Bulk jobs</button>
+      </nav>
+
+      <section id="single-panel" class="single-panel" aria-labelledby="tab-single">
+        <div class="hero-grid">
+          <div class="hero-copy">
+            <span class="eyebrow-pill">Built for Australian address data</span>
+            <h1>Validate Australian<br>addresses <span>instantly.</span></h1>
+            <p class="hero-lead">Search, match and standardise addresses against the national G-NAF dataset.</p>
+
+            <div class="search-card">
+              <h2>Enter an address</h2>
+              <p>Type an address, suburb or postcode.</p>
+              <form id="search-form" autocomplete="off">
+                <label class="sr-only" for="address-input">Australian street address</label>
+                <div class="input-wrap"><span class="search-icon" aria-hidden="true">⌖</span><input id="address-input" name="address" type="search" maxlength="500" placeholder="e.g. 100 George St Sydney NSW 2000" aria-describedby="search-hint"><div id="suggestions" class="suggestions" role="listbox" hidden></div></div>
+                <button class="primary-button validate-button" type="submit"><span aria-hidden="true">⌕</span> Validate address</button>
+              </form>
+              <p id="search-hint" class="hint">G-NAF confirms dataset matches. Postal delivery is not verified.</p>
+            </div>
+            <div id="single-message" class="message" role="status" aria-live="polite"></div>
+          </div>
+
+          <div class="result-frame" aria-live="polite">
+            <div class="result-frame-label">ADDRESS INTELLIGENCE</div>
+            <div id="result-empty" class="result-empty">
+              <div class="empty-icon" aria-hidden="true">⌖</div>
+              <h2>Your result appears here</h2>
+              <p>Validate an address to see its G-NAF match, canonical address, location and individual components.</p>
+              <div class="empty-lines" aria-hidden="true"><span></span><span></span><span></span></div>
+            </div>
+            <div id="result-card" class="result-card" hidden>
+              <div class="match-banner"><span class="match-icon" aria-hidden="true">✓</span><div><strong id="result-badge">Matched to G-NAF</strong><span id="result-confidence"></span></div></div>
+              <div class="result-body">
+                <div class="result-title-row"><h2>Standardised address</h2><button id="result-copy" class="copy-button" type="button">Copy</button></div>
+                <div id="result-address" class="canonical-address"></div>
+                <div class="result-meta">
+                  <span>G-NAF ID</span><strong id="result-id"></strong>
+                  <span>Dataset</span><strong id="result-version"></strong>
+                  <span>Coordinates</span><strong id="result-location"></strong>
+                </div>
+                <div class="components-heading">Address components</div>
+                <div id="result-components" class="component-grid"></div>
+                <p class="postal-note">G-NAF match · Postal delivery not verified</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="bulk-panel" class="bulk-panel" aria-labelledby="tab-bulk" hidden>
+        <div class="bulk-heading"><div><span class="eyebrow-pill">Background processing</span><h1>Bulk address jobs</h1><p>Upload a file or paste an address list. Download the result before leaving this page.</p></div><span class="bulk-heading-icon" aria-hidden="true">▤</span></div>
+        <div class="bulk-card">
+          <form id="bulk-form">
+            <div class="bulk-controls"><div><label for="bulk-operation">Operation</label><select id="bulk-operation"><option value="VALIDATE">Validate addresses</option><option value="MATCH">Find best matches</option><option value="SUGGEST">Suggestion Candidates</option><option value="FORMAT">Format text</option><option value="ID">Look up G-NAF IDs</option></select></div><div class="bulk-count" id="bulk-count">0 lines</div></div>
+            <div id="bulk-suggest-options" class="bulk-suggest-options" hidden><div><label for="bulk-min-score">Minimum score (optional)</label><input id="bulk-min-score" type="number" min="0" max="1" step="0.01" placeholder="0 — show all candidates"></div><div><label for="bulk-limit">Candidates per address</label><input id="bulk-limit" type="number" min="1" max="20" step="1" value="5"></div></div>
+            <label for="bulk-file">NDJSON file for migration (optional)</label>
+            <input id="bulk-file" type="file" accept=".ndjson,.jsonl,application/x-ndjson">
+            <p class="hint bulk-file-hint">For suggestions, each row needs an address and may include a source reference: {"reference":"customer-123","address":"100 George St Sydney NSW 2000"}.</p>
+            <label for="bulk-input">Or paste addresses or IDs, one per line</label>
+            <textarea id="bulk-input" spellcheck="false" placeholder="6 Packham Pl Charnwood ACT 2615&#10;100 George St Sydney NSW 2000"></textarea>
+            <div class="bulk-actions"><span class="hint">One entry per line · Up to 100 MB</span><button class="primary-button" type="submit">Process list <span aria-hidden="true">→</span></button></div>
+          </form>
+          <div id="bulk-message" class="message" role="status" aria-live="polite"></div>
+          <div id="bulk-result" class="bulk-result" hidden><div class="result-top"><span id="bulk-status" class="badge"></span><span id="bulk-progress"></span></div><a id="bulk-download" class="download-link" href="#" hidden>Download results ↓</a><div id="bulk-preview" class="bulk-preview"></div></div>
+        </div>
+      </section>
+
+      <section class="facts" aria-label="Service facts"><div><span class="fact-number" id="release-fact">—</span><span>Active G-NAF release</span></div><div><span class="fact-number">National</span><span>Australian coverage</span></div><div><span class="fact-number">API + bulk</span><span>One matching service</span></div></section>
+    </main>
+    <footer><span>AddressDesk · Local development</span><span>Incorporates or developed using G-NAF © Geoscape Australia, licensed by the Commonwealth of Australia under the Open Geo-coded National Address File (G-NAF) End User Licence Agreement.</span></footer>
+  </div>
+</body>
+</html>

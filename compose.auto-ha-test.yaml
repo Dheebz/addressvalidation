@@ -1,0 +1,117 @@
+name: addressvalidation-auto-ha-test
+
+services:
+  etcd-1:
+    image: quay.io/coreos/etcd:v3.5.20
+    entrypoint: ["etcd"]
+    command: >-
+      --name=etcd-1 --advertise-client-urls=http://etcd-1:2379
+      --initial-advertise-peer-urls=http://etcd-1:2380
+      --listen-client-urls=http://0.0.0.0:2379 --listen-peer-urls=http://0.0.0.0:2380
+      --initial-cluster=etcd-1=http://etcd-1:2380,etcd-2=http://etcd-2:2380,etcd-3=http://etcd-3:2380
+      --initial-cluster-state=new --data-dir=/etcd-data
+    volumes: ["etcd-1:/etcd-data"]
+    healthcheck:
+      test: ["CMD", "etcdctl", "endpoint", "health"]
+      interval: 2s
+      retries: 30
+  etcd-2:
+    image: quay.io/coreos/etcd:v3.5.20
+    entrypoint: ["etcd"]
+    command: >-
+      --name=etcd-2 --advertise-client-urls=http://etcd-2:2379
+      --initial-advertise-peer-urls=http://etcd-2:2380
+      --listen-client-urls=http://0.0.0.0:2379 --listen-peer-urls=http://0.0.0.0:2380
+      --initial-cluster=etcd-1=http://etcd-1:2380,etcd-2=http://etcd-2:2380,etcd-3=http://etcd-3:2380
+      --initial-cluster-state=new --data-dir=/etcd-data
+    volumes: ["etcd-2:/etcd-data"]
+    healthcheck:
+      test: ["CMD", "etcdctl", "endpoint", "health"]
+      interval: 2s
+      retries: 30
+  etcd-3:
+    image: quay.io/coreos/etcd:v3.5.20
+    entrypoint: ["etcd"]
+    command: >-
+      --name=etcd-3 --advertise-client-urls=http://etcd-3:2379
+      --initial-advertise-peer-urls=http://etcd-3:2380
+      --listen-client-urls=http://0.0.0.0:2379 --listen-peer-urls=http://0.0.0.0:2380
+      --initial-cluster=etcd-1=http://etcd-1:2380,etcd-2=http://etcd-2:2380,etcd-3=http://etcd-3:2380
+      --initial-cluster-state=new --data-dir=/etcd-data
+    volumes: ["etcd-3:/etcd-data"]
+    healthcheck:
+      test: ["CMD", "etcdctl", "endpoint", "health"]
+      interval: 2s
+      retries: 30
+  pg-a:
+    build:
+      context: .
+      dockerfile: infra/postgres/Dockerfile.patroni
+    environment:
+      PGDATA: /var/lib/postgresql/data
+      PATRONI_NAME: pg-a
+      PATRONI_RESTAPI_CONNECT_ADDRESS: pg-a:8008
+      PATRONI_POSTGRESQL_CONNECT_ADDRESS: pg-a:5432
+    volumes: ["pg-a:/var/lib/postgresql/data"]
+    depends_on:
+      etcd-1: { condition: service_healthy }
+      etcd-2: { condition: service_healthy }
+      etcd-3: { condition: service_healthy }
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres -d postgres"]
+      interval: 2s
+      retries: 30
+  pg-b:
+    build:
+      context: .
+      dockerfile: infra/postgres/Dockerfile.patroni
+    environment:
+      PGDATA: /var/lib/postgresql/data
+      PATRONI_NAME: pg-b
+      PATRONI_RESTAPI_CONNECT_ADDRESS: pg-b:8008
+      PATRONI_POSTGRESQL_CONNECT_ADDRESS: pg-b:5432
+    volumes: ["pg-b:/var/lib/postgresql/data"]
+    depends_on:
+      pg-a: { condition: service_healthy }
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres -d postgres"]
+      interval: 2s
+      retries: 30
+  api-ha:
+    image: addressvalidation-address-api
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+      ASPNETCORE_URLS: http://+:8080
+      ConnectionStrings__Postgres: Host=pg-a,pg-b;Database=postgres;Username=postgres;Password=address;Host Recheck Seconds=1;Timeout=2;Maximum Pool Size=32;Application Name=api-ha
+      Storage__ConnectionString: "DefaultEndpointsProtocol=http;AccountName=devstoreaccount1;AccountKey=Eby8vdM02xNOcqFlqUwJPLlmEtlCDXJ1OUzFT50uSRZ6IFsuFq2UVErCz4I6tq/K1SZFPTOtr/KBHBeksoGMGw==;BlobEndpoint=http://azurite:10000/devstoreaccount1;"
+    ports: ["127.0.0.1:18080:8080"]
+    depends_on:
+      pg-a: { condition: service_healthy }
+      pg-b: { condition: service_healthy }
+  admin-ha:
+    image: addressvalidation-gnaf-admin
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+      ASPNETCORE_URLS: http://+:8081
+      ConnectionStrings__Postgres: Host=pg-a,pg-b;Database=postgres;Username=postgres;Password=address;Host Recheck Seconds=1;Timeout=2;Maximum Pool Size=8;Application Name=admin-ha
+      Api__BaseUrl: http://api-ha:8080
+    ports: ["127.0.0.1:18081:8081"]
+    depends_on:
+      pg-a: { condition: service_healthy }
+      pg-b: { condition: service_healthy }
+      api-ha: { condition: service_started }
+  loader-ha:
+    profiles: ["tools"]
+    image: addressvalidation-gnaf-loader
+    environment:
+      ConnectionStrings__Postgres: Host=pg-a,pg-b;Database=postgres;Username=postgres;Password=address;Host Recheck Seconds=1;Timeout=2;Maximum Pool Size=4;Application Name=loader-ha
+      Seed__AllowSynthetic: "true"
+    depends_on:
+      pg-a: { condition: service_healthy }
+
+volumes:
+  etcd-1:
+  etcd-2:
+  etcd-3:
+  pg-a:
+  pg-b:

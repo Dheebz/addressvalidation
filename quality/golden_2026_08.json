@@ -1,0 +1,37 @@
+{
+  "datasetVersion": "2026_08",
+  "source": "Unique formatted addresses sampled from the locally installed August 2026 national G-NAF release. Expected IDs checked against the serving table.",
+  "positive": [
+    {"name": "ACT exact", "input": "12 TRAILL PL CHARNWOOD ACT 2615", "pid": "GAACT714846320", "canonical": "12 TRAILL PL CHARNWOOD ACT 2615"},
+    {"name": "ACT street expansion", "input": "12 Traill Place Charnwood ACT 2615", "pid": "GAACT714846320", "canonical": "12 TRAILL PL CHARNWOOD ACT 2615"},
+    {"name": "ACT official street alias", "input": "9 ABBOTT CL PALMERSTON ACT 2913", "pid": "GAACT714904529", "canonical": "9 ABBOT CL PALMERSTON ACT 2913", "matchType": "ALIAS"},
+    {"name": "NSW unit", "input": "UNIT 1 26 MILITARY RD NORTH BONDI NSW 2026", "pid": "GANSW719589377", "canonical": "UNIT 1 26 MILITARY RD NORTH BONDI NSW 2026", "components": {"flatType": "UNIT", "flatNumber": "1", "levelType": null, "numberFirst": "26", "numberLast": null, "streetName": "MILITARY", "streetType": "RD", "locality": "NORTH BONDI", "state": "NSW", "postcode": "2026"}},
+    {"name": "NSW unit slash", "input": "1/26 Military Road North Bondi NSW 2026", "pid": "GANSW719589377", "canonical": "UNIT 1 26 MILITARY RD NORTH BONDI NSW 2026"},
+    {"name": "NSW apartment alias", "input": "Apartment 1 26 Military Rd North Bondi NSW 2026", "pid": "GANSW719589377", "canonical": "UNIT 1 26 MILITARY RD NORTH BONDI NSW 2026"},
+    {"name": "NT exact", "input": "1 GUNGUNNU CL NHULUNBUY NT 0880", "pid": "GANT_702958328", "canonical": "1 GUNGUNNU CL NHULUNBUY NT 0880"},
+    {"name": "QLD exact", "input": "426 BRADMAN ST ACACIA RIDGE QLD 4110", "pid": "GAQLD154919102", "canonical": "426 BRADMAN ST ACACIA RIDGE QLD 4110"},
+    {"name": "SA exact", "input": "23 BUSHTAIL AV ALDINGA BEACH SA 5173", "pid": "GASA_424569859", "canonical": "23 BUSHTAIL AV ALDINGA BEACH SA 5173"},
+    {"name": "TAS exact", "input": "449 ABELS BAY RD ABELS BAY TAS 7112", "pid": "GATAS702180908", "canonical": "449 ABELS BAY RD ABELS BAY TAS 7112"},
+    {"name": "VIC exact", "input": "7 MAYFIELD ST ABBOTSFORD VIC 3067", "pid": "GAVIC410723440", "canonical": "7 MAYFIELD ST ABBOTSFORD VIC 3067"},
+    {"name": "VIC unit on level", "input": "UNIT 1215 LEVEL 12 480 COLLINS ST MELBOURNE VIC 3000", "pid": "GAVIC423747854", "canonical": "UNIT 1215 LEVEL 12 480 COLLINS ST MELBOURNE VIC 3000", "components": {"flatType": "UNIT", "flatNumber": "1215", "levelType": "L", "levelNumber": "12", "numberFirst": "480", "streetName": "COLLINS", "state": "VIC"}},
+    {"name": "VIC floor abbreviation", "input": "Unit 1215 Lvl 12 480 Collins Street Melbourne VIC 3000", "pid": "GAVIC423747854", "canonical": "UNIT 1215 LEVEL 12 480 COLLINS ST MELBOURNE VIC 3000"},
+    {"name": "VIC suite on level", "input": "SUITE 1 LEVEL 8 179 QUEEN ST MELBOURNE VIC 3000", "pid": "GAVIC424794890", "canonical": "SUITE 1 LEVEL 8 179 QUEEN ST MELBOURNE VIC 3000"},
+    {"name": "NSW shop", "input": "SHOP 11 296-298 WINDSOR ST RICHMOND NSW 2753", "pid": "GANSW718477406", "canonical": "SHOP 11 296-298 WINDSOR ST RICHMOND NSW 2753", "components": {"flatType": "SHOP", "flatNumber": "11", "numberFirst": "296", "numberLast": "298", "streetName": "WINDSOR", "streetSuffix": null, "locality": "RICHMOND"}},
+    {"name": "NSW shop street expansion", "input": "Shop 11 296-298 Windsor Street Richmond NSW 2753", "pid": "GANSW718477406", "canonical": "SHOP 11 296-298 WINDSOR ST RICHMOND NSW 2753"},
+    {"name": "WA exact", "input": "17 LAKEHILL GDNS EDGEWATER WA 6027", "pid": "GAWA_146535888", "canonical": "17 LAKEHILL GDNS EDGEWATER WA 6027"},
+    {"name": "ACT named building", "input": "NATIONAL LAND 4 PARNELL RD CAMPBELL ACT 2612", "pid": "GAACT714874496", "canonical": "NATIONAL LAND 4 PARNELL RD CAMPBELL ACT 2612"}
+  ],
+  "negative": [
+    {"name": "Wrong unit number", "input": "Unit 99999 26 Military Rd North Bondi NSW 2026"},
+    {"name": "Wrong unit with apartment wording", "input": "Apartment 99999 26 Military Road North Bondi NSW 2026"},
+    {"name": "Wrong level for unit", "input": "Unit 1215 Level 999 480 Collins St Melbourne VIC 3000"},
+    {"name": "Wrong suite level", "input": "Suite 1 Level 999 179 Queen St Melbourne VIC 3000"},
+    {"name": "Wrong shop number", "input": "Shop 99999 296-298 Windsor St Richmond NSW 2753"},
+    {"name": "Wrong house number", "input": "999999 Traill Pl Charnwood ACT 2615"},
+    {"name": "Wrong house with official alias", "input": "999999 ABBOTT CL PALMERSTON ACT 2913"},
+    {"name": "Wrong locality", "input": "12 Traill Pl Belconnen ACT 2615"},
+    {"name": "Wrong state", "input": "12 Traill Pl Charnwood NSW 2615"},
+    {"name": "Wrong postcode", "input": "12 Traill Pl Charnwood ACT 9999"},
+    {"name": "Nonsense address", "input": "Not A Real Street 999999 ACT 0000"}
+  ]
+}

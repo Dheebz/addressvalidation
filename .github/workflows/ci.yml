@@ -1,0 +1,115 @@
+name: CI
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ci-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  style:
+    name: Format and lint
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.0
+      - uses: actions/setup-dotnet@a98b56852c35b8e3190ac28c8c2271da59106c68 # v6.0.0
+        with:
+          dotnet-version: 10.0.x
+      - uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97 # v7.0.0
+        with:
+          python-version: '3.13'
+      - name: Restore .NET dependencies
+        run: dotnet restore AddressValidation.slnx
+      - name: Verify C# formatting and analyzers
+        run: dotnet format AddressValidation.slnx --verify-no-changes --no-restore --verbosity quiet
+      - name: Install Python lint tool
+        run: python -m pip install ruff==0.16.10
+      - name: Lint Python
+        run: ruff check --select E4,E7,E9,F,I --output-format=github quality scripts
+      - name: Verify Python formatting
+        run: ruff format --check quality scripts
+      - name: Lint shell scripts
+        run: shellcheck scripts/*.sh infra/postgres/*.sh
+
+  tests:
+    name: Build, tests and coverage
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    services:
+      postgres:
+        image: postgres:17
+        env:
+          POSTGRES_DB: postgres
+          POSTGRES_USER: address
+          POSTGRES_PASSWORD: address
+        ports:
+          - 5432:5432
+        options: >-
+          --health-cmd "pg_isready -U address -d postgres"
+          --health-interval 5s
+          --health-timeout 5s
+          --health-retries 20
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.0
+      - uses: actions/setup-dotnet@a98b56852c35b8e3190ac28c8c2271da59106c68 # v6.0.0
+        with:
+          dotnet-version: 10.0.x
+      - uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97 # v7.0.0
+        with:
+          python-version: '3.13'
+      - name: Restore .NET dependencies
+        run: dotnet restore AddressValidation.slnx
+      - name: Build Release solution
+        run: dotnet build AddressValidation.slnx --no-restore -c Release
+      - name: Run unit and PostgreSQL integration tests with coverage
+        run: >-
+          dotnet test AddressValidation.slnx --no-build --no-restore -c Release
+          --collect:'XPlat Code Coverage' --settings quality/coverage.runsettings
+          --results-directory quality/coverage/ci --nologo
+        env:
+          ADDRESS_TEST_CONNECTION: Host=localhost;Database=postgres;Username=address;Password=address
+      - name: Enforce business-code coverage floors
+        run: python quality/check_coverage.py quality/coverage/ci
+      - name: Save coverage reports
+        if: always()
+        uses: actions/upload-artifact@bbbca2ddaa5d8feaa63e36b76fdaad77386f024f # v7.0.0
+        with:
+          name: coverage-reports
+          path: quality/coverage/ci/**/coverage.cobertura.xml
+          if-no-files-found: ignore
+          retention-days: 14
+
+  containers:
+    name: Build and smoke test containers
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    needs: [style, tests]
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.0
+      - uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97 # v7.0.0
+        with:
+          python-version: '3.13'
+      - name: Validate Compose configuration
+        run: docker compose config --quiet && docker compose -f compose.auto-ha-test.yaml config --quiet
+      - name: Build service images
+        run: docker compose --profile tools build
+      - name: Start isolated API, admin, and database cluster
+        run: docker compose -f compose.auto-ha-test.yaml up -d --wait pg-a pg-b api-ha admin-ha
+      - name: Seed and promote synthetic release
+        run: |
+          docker compose -f compose.auto-ha-test.yaml run --rm loader-ha seed demo_1
+          docker compose -f compose.auto-ha-test.yaml run --rm loader-ha promote demo_1
+      - name: Smoke test API contract
+        run: python quality/run_seed_smoke.py --version demo_1
+      - name: Smoke test admin portal
+        run: python quality/run_admin_smoke.py
+      - name: Remove isolated cluster
+        if: always()
+        run: docker compose -f compose.auto-ha-test.yaml down -v

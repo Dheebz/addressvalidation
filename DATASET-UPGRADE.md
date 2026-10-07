@@ -1,0 +1,28 @@
+# Dataset upgrades
+
+For an official release, the loader reads the configurable data.gov.au CKAN catalogue and selects the latest GDA2020 ZIP:
+
+```sh
+docker compose run --rm gnaf-loader check
+docker compose run --rm gnaf-loader upgrade
+docker compose run --rm gnaf-loader status
+docker compose run --rm gnaf-loader promote 2026_08 # use the version printed by check
+```
+
+`upgrade` downloads and prepares the full national release. The downloaded archive is cached in a Docker volume and incomplete downloads resume on the next run. An existing local ZIP can be used with `upgrade --archive /data/g-naf_aug26_allstates_gda2020_psv_110.zip --version 2026_08`; mount the ZIP into the loader container with its **original versioned filename**. The importer checks that this filename agrees with `--version` before creating candidate tables.
+
+For a historical rehearsal, `check --version 2025_11` confirms the exact official archive and `upgrade --version 2025_11` prepares it. The loader searches the official current and previous-version catalogues. Promote each prepared release separately before importing the next one to exercise count comparisons, schema manifests, cleanup, and rollback retention.
+
+Before ingestion, preparation checks that every required state PSV is present, required columns exist, and headers for the same table agree across state files. It compares the complete header sets with the active release's recorded manifest when one is available. A mismatch stops preparation before candidate tables are created, leaving the live API untouched. The clean N−3 replay imported all four releases through the manifest-aware path, so the installed August 2026 release has a stored header baseline for its next upgrade. A schema change requires review and an importer update before retrying; changing a file or release label merely to bypass the check is unsafe.
+
+For an already downloaded archive, `gnaf-loader preflight --archive /data/VERSIONED_OFFICIAL_FILENAME.zip --version VERSION` runs the same check without creating a candidate. Mount the file into the loader container as shown above. The ordinary portal and CLI upgrade paths run this check automatically.
+
+Candidate schemas retain the selected raw PSV tables until activation. The loader checks raw-to-serving address counts, street/locality/state/postcode counts, geocode coverage, and address/street/locality alias counts. For a forward release, a configurable maximum count drop is applied to each metric relative to the active release. A deliberately older release skips only that relative count-drop check; its raw count, required data, geocode coverage, schema, and source identity checks still apply. The quality report records `HistoricalReplay=true`. Defaults are `GNAF_MAX_COUNT_DROP_FRACTION=0.10` and `GNAF_MIN_GEOCODE_COVERAGE=0.90`. Set `Source__CatalogueUrl` and `Source__PreviousCatalogueUrl` to change the current and archived official catalogue endpoints. A failed import remains `FAILED`; the active API view is untouched. A portal retry of an already-built historical candidate that failed only the forward count-drop check revalidates its existing tables when the archive checksum matches. Promotion remains explicit. After activation, raw tables for completed national releases are removed from PostgreSQL. Only the live and most recent previous national serving schemas remain. Completed-release ZIPs and raw archives are deleted from the G-NAF cache; source files can be downloaded again if a rebuild is needed.
+
+The previous national release is optional after the new one has been accepted. In the admin portal, **Storage → Delete previous release data** removes its serving schema and alias maps after an operator types its exact version. The live release is unchanged, but the immediate rollback option disappears. The server refuses to delete an active, incomplete, or non-national release, and waits for any running preparation to finish. See [OPERATIONS.md](OPERATIONS.md) for the operator steps.
+
+The serving table excludes addresses with G-NAF confidence `-1` (unsupported/retired). A candidate retains those source rows for quality checks until it is activated. If an unpromoted `READY` candidate was built with an older transformation, `docker compose run --rm gnaf-loader rebuild VERSION` regenerates and validates its serving table from the retained raw tables. Confirm its reported address count against the release report before promotion.
+
+For the August 2026 national release, the official total is 15,949,543 current addresses. The source PSV has 16,970,406 address rows including 1,020,863 confidence `-1` records. The clean N−3 replay prepared and validated that total, then promoted `2026_08`. May 2026 was retained initially, then deleted through the portal on 6 October 2026; August remains live. The older February and November schemas, completed raw tables, and cached ZIPs were removed during promotion. The `prune-completed-raw` and `prune-cache` loader commands are safe to rerun. See [N3-REHEARSAL.md](N3-REHEARSAL.md) for counts, storage, and availability measurements.
+
+The importer uses the address detail, default geocode, street locality, locality, state, street type authority, and alias PSV files. It builds compact street and locality alias maps for the candidate release; search expands aliases only when they resolve to a unique canonical target. Older installed releases can be enriched using the procedure in [DATABASE-SEEDING.md](DATABASE-SEEDING.md). The admin portal persists a preparation job and allows a failed candidate to be rebuilt on retry. READY means automated quality checks passed; an operator still reviews the release before activation.

@@ -1,0 +1,177 @@
+services:
+  etcd-1:
+    image: quay.io/coreos/etcd:v3.5.20
+    restart: unless-stopped
+    entrypoint: ["etcd"]
+    command: >-
+      --name=etcd-1 --advertise-client-urls=http://etcd-1:2379
+      --initial-advertise-peer-urls=http://etcd-1:2380
+      --listen-client-urls=http://0.0.0.0:2379 --listen-peer-urls=http://0.0.0.0:2380
+      --initial-cluster=etcd-1=http://etcd-1:2380,etcd-2=http://etcd-2:2380,etcd-3=http://etcd-3:2380
+      --initial-cluster-state=new --data-dir=/etcd-data
+    volumes: ["etcd-1:/etcd-data"]
+    healthcheck:
+      test: ["CMD", "etcdctl", "endpoint", "health"]
+      interval: 2s
+      retries: 30
+  etcd-2:
+    image: quay.io/coreos/etcd:v3.5.20
+    restart: unless-stopped
+    entrypoint: ["etcd"]
+    command: >-
+      --name=etcd-2 --advertise-client-urls=http://etcd-2:2379
+      --initial-advertise-peer-urls=http://etcd-2:2380
+      --listen-client-urls=http://0.0.0.0:2379 --listen-peer-urls=http://0.0.0.0:2380
+      --initial-cluster=etcd-1=http://etcd-1:2380,etcd-2=http://etcd-2:2380,etcd-3=http://etcd-3:2380
+      --initial-cluster-state=new --data-dir=/etcd-data
+    volumes: ["etcd-2:/etcd-data"]
+    healthcheck:
+      test: ["CMD", "etcdctl", "endpoint", "health"]
+      interval: 2s
+      retries: 30
+  etcd-3:
+    image: quay.io/coreos/etcd:v3.5.20
+    restart: unless-stopped
+    entrypoint: ["etcd"]
+    command: >-
+      --name=etcd-3 --advertise-client-urls=http://etcd-3:2379
+      --initial-advertise-peer-urls=http://etcd-3:2380
+      --listen-client-urls=http://0.0.0.0:2379 --listen-peer-urls=http://0.0.0.0:2380
+      --initial-cluster=etcd-1=http://etcd-1:2380,etcd-2=http://etcd-2:2380,etcd-3=http://etcd-3:2380
+      --initial-cluster-state=new --data-dir=/etcd-data
+    volumes: ["etcd-3:/etcd-data"]
+    healthcheck:
+      test: ["CMD", "etcdctl", "endpoint", "health"]
+      interval: 2s
+      retries: 30
+  postgres:
+    image: addressvalidation-patroni:local
+    restart: unless-stopped
+    build:
+      context: .
+      dockerfile: infra/postgres/Dockerfile.patroni
+    environment:
+      POSTGRES_DB: address
+      POSTGRES_USER: address
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-address}
+      PATRONI_NAME: postgres
+      PATRONI_RESTAPI_CONNECT_ADDRESS: postgres:8008
+      PATRONI_POSTGRESQL_CONNECT_ADDRESS: postgres:5432
+      PATRONI_SUPERUSER_PASSWORD: ${POSTGRES_PASSWORD:-address}
+      PATRONI_REPLICATION_PASSWORD: ${POSTGRES_PASSWORD:-address}
+      PATRONI_REWIND_PASSWORD: ${POSTGRES_PASSWORD:-address}
+    ports: ["127.0.0.1:5432:5432"]
+    volumes:
+      - postgres-data:/var/lib/postgresql/data
+      - ./infra/postgres/patroni-main.yml:/etc/patroni.yml:ro
+    depends_on:
+      etcd-1: { condition: service_healthy }
+      etcd-2: { condition: service_healthy }
+      etcd-3: { condition: service_healthy }
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U address -d address"]
+      interval: 5s
+      retries: 20
+  postgres-b:
+    image: addressvalidation-patroni:local
+    restart: unless-stopped
+    build:
+      context: .
+      dockerfile: infra/postgres/Dockerfile.patroni
+    environment:
+      PGDATA: /var/lib/postgresql/data
+      PATRONI_NAME: postgres-b
+      PATRONI_RESTAPI_CONNECT_ADDRESS: postgres-b:8008
+      PATRONI_POSTGRESQL_CONNECT_ADDRESS: postgres-b:5432
+      PATRONI_SUPERUSER_PASSWORD: ${POSTGRES_PASSWORD:-address}
+      PATRONI_REPLICATION_PASSWORD: ${POSTGRES_PASSWORD:-address}
+      PATRONI_REWIND_PASSWORD: ${POSTGRES_PASSWORD:-address}
+    volumes:
+      - postgres-b-data:/var/lib/postgresql/data
+      - ./infra/postgres/patroni-main.yml:/etc/patroni.yml:ro
+    depends_on:
+      etcd-1: { condition: service_healthy }
+      etcd-2: { condition: service_healthy }
+      etcd-3: { condition: service_healthy }
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U address -d address"]
+      interval: 5s
+      retries: 30
+  azurite:
+    image: mcr.microsoft.com/azure-storage/azurite:3.35.0
+    restart: unless-stopped
+    command: azurite --blobHost 0.0.0.0 --location /data
+    ports: ["127.0.0.1:10000:10000"]
+    volumes: ["azurite-data:/data"]
+  address-api:
+    restart: unless-stopped
+    build:
+      context: .
+      dockerfile: infra/docker/Dockerfile
+      args: { PROJECT: Address.Api }
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+      ASPNETCORE_URLS: http://+:8080
+      ApiConcurrency__PerReplica: ${API_CONCURRENCY_PER_REPLICA:-16}
+      ConnectionStrings__Postgres: Host=postgres,postgres-b;Database=address;Username=address;Password=${POSTGRES_PASSWORD:-address};Host Recheck Seconds=1;Timeout=2;Maximum Pool Size=32;Application Name=address-api-a
+      Storage__ConnectionString: "DefaultEndpointsProtocol=http;AccountName=devstoreaccount1;AccountKey=Eby8vdM02xNOcqFlqUwJPLlmEtlCDXJ1OUzFT50uSRZ6IFsuFq2UVErCz4I6tq/K1SZFPTOtr/KBHBeksoGMGw==;BlobEndpoint=http://azurite:10000/devstoreaccount1;"
+  address-api-b:
+    restart: unless-stopped
+    build:
+      context: .
+      dockerfile: infra/docker/Dockerfile
+      args: { PROJECT: Address.Api }
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+      ASPNETCORE_URLS: http://+:8080
+      ApiConcurrency__PerReplica: ${API_CONCURRENCY_PER_REPLICA:-16}
+      ConnectionStrings__Postgres: Host=postgres,postgres-b;Database=address;Username=address;Password=${POSTGRES_PASSWORD:-address};Host Recheck Seconds=1;Timeout=2;Maximum Pool Size=32;Application Name=address-api-b
+      Storage__ConnectionString: "DefaultEndpointsProtocol=http;AccountName=devstoreaccount1;AccountKey=Eby8vdM02xNOcqFlqUwJPLlmEtlCDXJ1OUzFT50uSRZ6IFsuFq2UVErCz4I6tq/K1SZFPTOtr/KBHBeksoGMGw==;BlobEndpoint=http://azurite:10000/devstoreaccount1;"
+  api-gateway:
+    image: haproxy:3.2.24-alpine
+    restart: unless-stopped
+    ports: ["127.0.0.1:8080:8080"]
+    volumes:
+      - ./infra/haproxy/haproxy.cfg:/usr/local/etc/haproxy/haproxy.cfg:ro
+  address-worker:
+    restart: unless-stopped
+    build:
+      context: .
+      dockerfile: infra/docker/Dockerfile
+      args: { PROJECT: Address.Worker }
+    environment:
+      ConnectionStrings__Postgres: Host=postgres,postgres-b;Database=address;Username=address;Password=${POSTGRES_PASSWORD:-address};Host Recheck Seconds=1;Timeout=2;Maximum Pool Size=8;Application Name=address-worker
+      Storage__ConnectionString: "DefaultEndpointsProtocol=http;AccountName=devstoreaccount1;AccountKey=Eby8vdM02xNOcqFlqUwJPLlmEtlCDXJ1OUzFT50uSRZ6IFsuFq2UVErCz4I6tq/K1SZFPTOtr/KBHBeksoGMGw==;BlobEndpoint=http://azurite:10000/devstoreaccount1;"
+  gnaf-admin:
+    restart: unless-stopped
+    build:
+      context: .
+      dockerfile: infra/docker/Dockerfile
+      args: { PROJECT: Gnaf.Admin }
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+      ASPNETCORE_URLS: http://+:8081
+      ConnectionStrings__Postgres: Host=postgres,postgres-b;Database=address;Username=address;Password=${POSTGRES_PASSWORD:-address};Host Recheck Seconds=1;Timeout=2;Maximum Pool Size=8;Application Name=gnaf-admin
+      Source__CacheDirectory: /data
+      Api__BaseUrl: http://api-gateway:8080
+    ports: ["127.0.0.1:8081:8081"]
+    volumes: ["gnaf-cache:/data"]
+  gnaf-loader:
+    profiles: ["tools"]
+    build:
+      context: .
+      dockerfile: infra/docker/Dockerfile.loader
+    environment:
+      ConnectionStrings__Postgres: Host=postgres,postgres-b;Database=address;Username=address;Password=${POSTGRES_PASSWORD:-address};Host Recheck Seconds=1;Timeout=2;Maximum Pool Size=4;Application Name=gnaf-loader
+      Source__CacheDirectory: /data
+      Quality__MaxCountDropFraction: ${GNAF_MAX_COUNT_DROP_FRACTION:-0.10}
+      Quality__MinGeocodeCoverage: ${GNAF_MIN_GEOCODE_COVERAGE:-0.90}
+    volumes: ["gnaf-cache:/data"]
+volumes:
+  azurite-data:
+  postgres-data:
+  postgres-b-data:
+  etcd-1:
+  etcd-2:
+  etcd-3:
+  gnaf-cache:

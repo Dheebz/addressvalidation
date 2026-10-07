@@ -1,0 +1,40 @@
+scope: address-auto-test
+namespace: /service/
+etcd3:
+  hosts: etcd-1:2379,etcd-2:2379,etcd-3:2379
+restapi:
+  listen: 0.0.0.0:8008
+postgresql:
+  listen: 0.0.0.0:5432
+  data_dir: /var/lib/postgresql/data
+  bin_dir: /usr/lib/postgresql/17/bin
+  authentication:
+    superuser:
+      username: postgres
+      password: address
+    replication:
+      username: replicator
+      password: address
+    rewind:
+      username: postgres
+      password: address
+bootstrap:
+  dcs:
+    ttl: 20
+    loop_wait: 2
+    retry_timeout: 3
+    maximum_lag_on_failover: 1048576
+    postgresql:
+      use_pg_rewind: true
+      parameters:
+        wal_level: replica
+        wal_log_hints: 'on'
+        hot_standby: 'on'
+        max_wal_senders: 10
+        max_replication_slots: 10
+  initdb:
+    - encoding: UTF8
+    - data-checksums
+  pg_hba:
+    - host replication replicator all scram-sha-256
+    - host all all all scram-sha-256

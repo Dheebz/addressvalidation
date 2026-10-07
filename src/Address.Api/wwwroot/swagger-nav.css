@@ -1,0 +1,11 @@
+/* Carry the AddressDesk navigation language into the generated Swagger page. */
+.swagger-ui .topbar { background: #fff; border-bottom: 1px solid #dceafa; }
+.swagger-ui .topbar .wrapper { display: flex; align-items: center; gap: 20px; max-width: 1410px; }
+.swagger-ui .topbar .link { display: none; }
+.swagger-ui .topbar .addressdesk-wordmark { color: #101a42; font: 800 25px Inter, ui-sans-serif, sans-serif; letter-spacing: -.065em; text-decoration: none; white-space: nowrap; }
+.swagger-ui .topbar .addressdesk-wordmark span { color: #087cec; }
+.swagger-ui .topbar .download-url-wrapper .select-label { color: #536a98; }
+.swagger-ui .topbar .download-url-wrapper select { color: #101a42; background: #fff; border-color: #bbd9fa; }
+#addressdesk-home { margin-left: auto; color: #087cec; font: 700 14px Inter, ui-sans-serif, sans-serif; text-decoration: none; white-space: nowrap; }
+#addressdesk-home:hover, #addressdesk-home:focus-visible { text-decoration: underline; }
+@media (max-width: 620px) { #addressdesk-home { font-size: 12px; } }

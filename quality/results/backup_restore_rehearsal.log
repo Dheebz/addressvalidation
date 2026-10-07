@@ -1,0 +1,270 @@
+ Image addressvalidation-gnaf-loader Building 
+ Image addressvalidation-address-api Building 
+#1 [internal] load local bake definitions
+#1 reading from stdin 1.17kB done
+#1 DONE 0.0s
+
+#2 [address-api internal] load build definition from Dockerfile
+#2 transferring dockerfile: 375B done
+#2 DONE 0.0s
+
+#3 [gnaf-loader internal] load build definition from Dockerfile.loader
+#3 transferring dockerfile: 320B done
+#3 DONE 0.0s
+
+#4 [address-api internal] load metadata for mcr.microsoft.com/dotnet/sdk:10.0
+#4 DONE 0.1s
+
+#5 [address-api internal] load metadata for mcr.microsoft.com/dotnet/aspnet:10.0
+#5 DONE 0.5s
+
+#6 [gnaf-loader internal] load metadata for mcr.microsoft.com/dotnet/runtime:10.0
+#6 DONE 0.5s
+
+#7 [gnaf-loader internal] load .dockerignore
+#7 transferring context: 99B done
+#7 DONE 0.0s
+
+#8 [address-api build 1/4] FROM mcr.microsoft.com/dotnet/sdk:10.0@sha256:35d40304542c8689331f8cab17c65926cdf48fe711e289321d71924b230a7d29
+#8 resolve mcr.microsoft.com/dotnet/sdk:10.0@sha256:35d40304542c8689331f8cab17c65926cdf48fe711e289321d71924b230a7d29 0.1s done
+#8 DONE 0.1s
+
+#9 [address-api internal] load build context
+#9 transferring context: 8.85kB 0.0s done
+#9 DONE 0.0s
+
+#10 [address-api stage-1 1/3] FROM mcr.microsoft.com/dotnet/aspnet:10.0@sha256:222759b391a1aaf241166672c8f99b2d4ada452e7b5319f3c6e8f265a37b5ad4
+#10 resolve mcr.microsoft.com/dotnet/aspnet:10.0@sha256:222759b391a1aaf241166672c8f99b2d4ada452e7b5319f3c6e8f265a37b5ad4 0.1s done
+#10 DONE 0.1s
+
+#11 [gnaf-loader stage-1 1/3] FROM mcr.microsoft.com/dotnet/runtime:10.0@sha256:b89586dc17781f25531909993658aa8161205ae38b8cec8847df4a8221a403d5
+#11 resolve mcr.microsoft.com/dotnet/runtime:10.0@sha256:b89586dc17781f25531909993658aa8161205ae38b8cec8847df4a8221a403d5 0.1s done
+#11 DONE 0.1s
+
+#12 [gnaf-loader build 2/4] WORKDIR /src
+#12 CACHED
+
+#13 [gnaf-loader build 3/4] COPY . .
+#13 DONE 0.1s
+
+#14 [gnaf-loader build 4/4] RUN dotnet publish src/Gnaf.Loader/Gnaf.Loader.csproj -c Release -o /app --nologo
+#14 0.924   Determining projects to restore...
+#14 1.605   Restored /src/src/Address.Core/Address.Core.csproj (in 84 ms).
+#14 3.832   Restored /src/src/Gnaf.Loader/Gnaf.Loader.csproj (in 2.33 sec).
+#14 3.833   Restored /src/src/Address.Data/Address.Data.csproj (in 2.33 sec).
+#14 6.924   Address.Core -> /src/src/Address.Core/bin/Release/net10.0/Address.Core.dll
+#14 8.492   Address.Data -> /src/src/Address.Data/bin/Release/net10.0/Address.Data.dll
+#14 8.826   Gnaf.Loader -> /src/src/Gnaf.Loader/bin/Release/net10.0/Gnaf.Loader.dll
+#14 8.866   Gnaf.Loader -> /app/
+#14 DONE 9.1s
+
+#15 [address-api build 4/4] RUN dotnet publish "src/Address.Api/Address.Api.csproj" -c Release -o /app --nologo
+#15 0.973   Determining projects to restore...
+#15 1.841   Restored /src/src/Address.Core/Address.Core.csproj (in 51 ms).
+#15 4.289   Restored /src/src/Address.Data/Address.Data.csproj (in 2.51 sec).
+#15 4.290   Restored /src/src/Address.Api/Address.Api.csproj (in 2.51 sec).
+#15 7.480   Address.Core -> /src/src/Address.Core/bin/Release/net10.0/Address.Core.dll
+#15 8.790   Address.Data -> /src/src/Address.Data/bin/Release/net10.0/Address.Data.dll
+#15 ...
+
+#16 [gnaf-loader stage-1 2/3] WORKDIR /app
+#16 CACHED
+
+#17 [gnaf-loader stage-1 3/3] COPY --from=build /app .
+#17 CACHED
+
+#18 [gnaf-loader] exporting to image
+#18 exporting layers done
+#18 exporting manifest sha256:d0c06017dfd6b75f324491d1cbbc2da675cae7e997769bbf890ef5abc2bc647e done
+#18 exporting config sha256:062ea70c4adbdc2ed990fca73ddf7638898e2fee3eae6fcde4edd61c28f50eb0 done
+#18 exporting attestation manifest sha256:1394045d848826021cd914883d8a7fd9e20c9908c617d42dcd3b9fe249137488 0.0s done
+#18 exporting manifest list sha256:cf2560b26ad9fbcb5ae80e9e8c3f0a6a6175e155f1e30974c9e7e64f3ff6b5b1 0.0s done
+#18 naming to docker.io/library/addressvalidation-gnaf-loader:latest
+#18 naming to docker.io/library/addressvalidation-gnaf-loader:latest done
+#18 unpacking to docker.io/library/addressvalidation-gnaf-loader:latest 0.0s done
+#18 DONE 0.1s
+
+#15 [address-api build 4/4] RUN dotnet publish "src/Address.Api/Address.Api.csproj" -c Release -o /app --nologo
+#15 ...
+
+#19 [gnaf-loader] resolving provenance for metadata file
+#19 DONE 0.0s
+
+#15 [address-api build 4/4] RUN dotnet publish "src/Address.Api/Address.Api.csproj" -c Release -o /app --nologo
+#15 10.69   Address.Api -> /src/src/Address.Api/bin/Release/net10.0/Address.Api.dll
+#15 10.79   Address.Api -> /app/
+#15 DONE 10.9s
+
+#20 [address-api stage-1 2/3] WORKDIR /app
+#20 CACHED
+
+#21 [address-api stage-1 3/3] COPY --from=build /app .
+#21 DONE 0.1s
+
+#22 [address-api] exporting to image
+#22 exporting layers 0.4s done
+#22 exporting manifest sha256:8f4dbc6e2380bc49a3590a5c03f687688e596aa48797d9fde373751308411d11 0.0s done
+#22 exporting config sha256:43d76f2f58985538c869b5bfc0920b3c7c0b695c15561fd4a6edd06f8ce64bf2 0.0s done
+#22 exporting attestation manifest sha256:24a82b8ef3bb5f2902e02de2d90d1fc12e44588e33ceb173a6546452382c2103 0.0s done
+#22 exporting manifest list sha256:f13970a85e1d4f6e7ed4ba1d7cb43a8faf37923905a11a96a3969191f7c05467 0.0s done
+#22 naming to docker.io/library/addressvalidation-address-api:latest
+#22 naming to docker.io/library/addressvalidation-address-api:latest done
+#22 unpacking to docker.io/library/addressvalidation-address-api:latest 0.1s done
+#22 DONE 0.6s
+
+#23 [address-api] resolving provenance for metadata file
+#23 DONE 0.0s
+ Image addressvalidation-address-api Built 
+ Image addressvalidation-gnaf-loader Built 
+ Network addressvalidation-auto-ha-test_default Creating 
+ Network addressvalidation-auto-ha-test_default Created 
+ Volume addressvalidation-auto-ha-test_etcd-2 Creating 
+ Volume addressvalidation-auto-ha-test_etcd-2 Created 
+ Volume addressvalidation-auto-ha-test_etcd-3 Creating 
+ Volume addressvalidation-auto-ha-test_etcd-3 Created 
+ Volume addressvalidation-auto-ha-test_pg-a Creating 
+ Volume addressvalidation-auto-ha-test_pg-a Created 
+ Volume addressvalidation-auto-ha-test_pg-b Creating 
+ Volume addressvalidation-auto-ha-test_pg-b Created 
+ Volume addressvalidation-auto-ha-test_etcd-1 Creating 
+ Volume addressvalidation-auto-ha-test_etcd-1 Created 
+ Container addressvalidation-auto-ha-test-etcd-1-1 Creating 
+ Container addressvalidation-auto-ha-test-etcd-2-1 Creating 
+ Container addressvalidation-auto-ha-test-etcd-3-1 Creating 
+ Container addressvalidation-auto-ha-test-etcd-2-1 Created 
+ Container addressvalidation-auto-ha-test-etcd-1-1 Created 
+ Container addressvalidation-auto-ha-test-etcd-3-1 Created 
+ Container addressvalidation-auto-ha-test-pg-a-1 Creating 
+ Container addressvalidation-auto-ha-test-pg-a-1 Created 
+ Container addressvalidation-auto-ha-test-pg-b-1 Creating 
+ Container addressvalidation-auto-ha-test-pg-b-1 Created 
+ Container addressvalidation-auto-ha-test-api-ha-1 Creating 
+ Container addressvalidation-auto-ha-test-api-ha-1 Created 
+ Container addressvalidation-auto-ha-test-etcd-3-1 Starting 
+ Container addressvalidation-auto-ha-test-etcd-1-1 Starting 
+ Container addressvalidation-auto-ha-test-etcd-2-1 Starting 
+ Container addressvalidation-auto-ha-test-etcd-2-1 Started 
+ Container addressvalidation-auto-ha-test-etcd-1-1 Started 
+ Container addressvalidation-auto-ha-test-etcd-3-1 Started 
+ Container addressvalidation-auto-ha-test-etcd-2-1 Waiting 
+ Container addressvalidation-auto-ha-test-etcd-3-1 Waiting 
+ Container addressvalidation-auto-ha-test-etcd-1-1 Waiting 
+ Container addressvalidation-auto-ha-test-etcd-2-1 Healthy 
+ Container addressvalidation-auto-ha-test-etcd-1-1 Healthy 
+ Container addressvalidation-auto-ha-test-etcd-3-1 Healthy 
+ Container addressvalidation-auto-ha-test-pg-a-1 Starting 
+ Container addressvalidation-auto-ha-test-pg-a-1 Started 
+ Container addressvalidation-auto-ha-test-pg-a-1 Waiting 
+ Container addressvalidation-auto-ha-test-pg-a-1 Healthy 
+ Container addressvalidation-auto-ha-test-pg-b-1 Starting 
+ Container addressvalidation-auto-ha-test-pg-b-1 Started 
+ Container addressvalidation-auto-ha-test-pg-b-1 Waiting 
+ Container addressvalidation-auto-ha-test-pg-a-1 Waiting 
+ Container addressvalidation-auto-ha-test-pg-a-1 Healthy 
+ Container addressvalidation-auto-ha-test-pg-b-1 Healthy 
+ Container addressvalidation-auto-ha-test-api-ha-1 Starting 
+ Container addressvalidation-auto-ha-test-api-ha-1 Started 
+ Container addressvalidation-auto-ha-test-etcd-2-1 Waiting 
+ Container addressvalidation-auto-ha-test-etcd-3-1 Waiting 
+ Container addressvalidation-auto-ha-test-pg-a-1 Waiting 
+ Container addressvalidation-auto-ha-test-pg-b-1 Waiting 
+ Container addressvalidation-auto-ha-test-api-ha-1 Waiting 
+ Container addressvalidation-auto-ha-test-etcd-1-1 Waiting 
+ Container addressvalidation-auto-ha-test-api-ha-1 Healthy 
+ Container addressvalidation-auto-ha-test-etcd-3-1 Healthy 
+ Container addressvalidation-auto-ha-test-pg-a-1 Healthy 
+ Container addressvalidation-auto-ha-test-etcd-2-1 Healthy 
+ Container addressvalidation-auto-ha-test-pg-b-1 Healthy 
+ Container addressvalidation-auto-ha-test-etcd-1-1 Healthy 
+ Container addressvalidation-auto-ha-test-etcd-1-1 Running 
+ Container addressvalidation-auto-ha-test-etcd-2-1 Running 
+ Container addressvalidation-auto-ha-test-etcd-3-1 Running 
+ Container addressvalidation-auto-ha-test-pg-a-1 Running 
+ Container addressvalidation-auto-ha-test-etcd-3-1 Waiting 
+ Container addressvalidation-auto-ha-test-etcd-1-1 Waiting 
+ Container addressvalidation-auto-ha-test-etcd-2-1 Waiting 
+ Container addressvalidation-auto-ha-test-etcd-2-1 Healthy 
+ Container addressvalidation-auto-ha-test-etcd-3-1 Healthy 
+ Container addressvalidation-auto-ha-test-etcd-1-1 Healthy 
+ Container addressvalidation-auto-ha-test-pg-a-1 Waiting 
+ Container addressvalidation-auto-ha-test-pg-a-1 Healthy 
+ Container addressvalidation-auto-ha-test-loader-ha-run-08b0dcef7ef0 Creating 
+ Container addressvalidation-auto-ha-test-loader-ha-run-08b0dcef7ef0 Created 
+Candidate demo_1 READY. Run promote demo_1 when ready.
+ Container addressvalidation-auto-ha-test-etcd-2-1 Running 
+ Container addressvalidation-auto-ha-test-etcd-3-1 Running 
+ Container addressvalidation-auto-ha-test-etcd-1-1 Running 
+ Container addressvalidation-auto-ha-test-pg-a-1 Running 
+ Container addressvalidation-auto-ha-test-etcd-1-1 Waiting 
+ Container addressvalidation-auto-ha-test-etcd-2-1 Waiting 
+ Container addressvalidation-auto-ha-test-etcd-3-1 Waiting 
+ Container addressvalidation-auto-ha-test-etcd-1-1 Healthy 
+ Container addressvalidation-auto-ha-test-etcd-3-1 Healthy 
+ Container addressvalidation-auto-ha-test-etcd-2-1 Healthy 
+ Container addressvalidation-auto-ha-test-pg-a-1 Waiting 
+ Container addressvalidation-auto-ha-test-pg-a-1 Healthy 
+ Container addressvalidation-auto-ha-test-loader-ha-run-23a4d4b81ed0 Creating 
+ Container addressvalidation-auto-ha-test-loader-ha-run-23a4d4b81ed0 Created 
+Promotion complete
+ Container addressvalidation-auto-ha-test-pg-a-1 Killing 
+ Container addressvalidation-auto-ha-test-pg-a-1 Killed 
+ Container addressvalidation-auto-ha-test-etcd-3-1 Waiting 
+ Container addressvalidation-auto-ha-test-etcd-1-1 Waiting 
+ Container addressvalidation-auto-ha-test-etcd-2-1 Waiting 
+ Container addressvalidation-auto-ha-test-etcd-2-1 Healthy 
+ Container addressvalidation-auto-ha-test-etcd-3-1 Healthy 
+ Container addressvalidation-auto-ha-test-etcd-1-1 Healthy 
+ Container addressvalidation-auto-ha-test-pg-a-1 Starting 
+ Container addressvalidation-auto-ha-test-pg-a-1 Started 
+{
+  "seconds": 90,
+  "requests": 900,
+  "statuses": {
+    "200": 699,
+    "503": 201
+  },
+  "errorCodes": {
+    "DATASTORE_UNAVAILABLE": 201
+  },
+  "correctIds": 699,
+  "longestSuccessGapSeconds": 20.21,
+  "last15SecondsSuccessful": true,
+  "unexpectedFailures": 0
+}
+Backup restore and failover passed: demo_1:3, SAMPLE-1, B promoted, A rejoined, 90-second API probe passed
+ Container addressvalidation-auto-ha-test-api-ha-1 Stopping 
+ Container addressvalidation-auto-ha-test-api-ha-1 Stopped 
+ Container addressvalidation-auto-ha-test-api-ha-1 Removing 
+ Container addressvalidation-auto-ha-test-api-ha-1 Removed 
+ Container addressvalidation-auto-ha-test-pg-b-1 Stopping 
+ Container addressvalidation-auto-ha-test-pg-b-1 Stopped 
+ Container addressvalidation-auto-ha-test-pg-b-1 Removing 
+ Container addressvalidation-auto-ha-test-pg-b-1 Removed 
+ Container addressvalidation-auto-ha-test-pg-a-1 Stopping 
+ Container addressvalidation-auto-ha-test-pg-a-1 Stopped 
+ Container addressvalidation-auto-ha-test-pg-a-1 Removing 
+ Container addressvalidation-auto-ha-test-pg-a-1 Removed 
+ Container addressvalidation-auto-ha-test-etcd-1-1 Stopping 
+ Container addressvalidation-auto-ha-test-etcd-2-1 Stopping 
+ Container addressvalidation-auto-ha-test-etcd-3-1 Stopping 
+ Container addressvalidation-auto-ha-test-etcd-2-1 Stopped 
+ Container addressvalidation-auto-ha-test-etcd-2-1 Removing 
+ Container addressvalidation-auto-ha-test-etcd-2-1 Removed 
+ Container addressvalidation-auto-ha-test-etcd-1-1 Stopped 
+ Container addressvalidation-auto-ha-test-etcd-1-1 Removing 
+ Container addressvalidation-auto-ha-test-etcd-1-1 Removed 
+ Container addressvalidation-auto-ha-test-etcd-3-1 Stopped 
+ Container addressvalidation-auto-ha-test-etcd-3-1 Removing 
+ Container addressvalidation-auto-ha-test-etcd-3-1 Removed 
+ Volume addressvalidation-auto-ha-test_etcd-2 Removing 
+ Volume addressvalidation-auto-ha-test_pg-a Removing 
+ Volume addressvalidation-auto-ha-test_etcd-3 Removing 
+ Volume addressvalidation-auto-ha-test_etcd-1 Removing 
+ Network addressvalidation-auto-ha-test_default Removing 
+ Volume addressvalidation-auto-ha-test_pg-b Removing 
+ Volume addressvalidation-auto-ha-test_pg-a Removed 
+ Volume addressvalidation-auto-ha-test_etcd-2 Removed 
+ Volume addressvalidation-auto-ha-test_pg-b Removed 
+ Volume addressvalidation-auto-ha-test_etcd-1 Removed 
+ Volume addressvalidation-auto-ha-test_etcd-3 Removed 
+ Network addressvalidation-auto-ha-test_default Removed 

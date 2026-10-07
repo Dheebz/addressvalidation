@@ -1,0 +1,10 @@
+<Solution>
+  <Project Path="src/Address.Core/Address.Core.csproj" />
+  <Project Path="src/Address.Data/Address.Data.csproj" />
+  <Project Path="src/Address.Api/Address.Api.csproj" />
+  <Project Path="src/Address.Worker/Address.Worker.csproj" />
+  <Project Path="src/Gnaf.Loader/Gnaf.Loader.csproj" />
+  <Project Path="src/Gnaf.Admin/Gnaf.Admin.csproj" />
+  <Project Path="tests/Address.Core.Tests/Address.Core.Tests.csproj" />
+  <Project Path="tests/Address.Integration.Tests/Address.Integration.Tests.csproj" />
+</Solution>
